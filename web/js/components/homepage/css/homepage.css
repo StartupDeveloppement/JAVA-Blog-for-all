@@ -1,0 +1,44 @@
+.homeRadius {
+    border-radius: 3px;
+}
+
+.homeContainerRight {
+    background-color: #EFEFEF;
+    padding-bottom:20%;
+}
+
+.homeSignupForm {
+    background-color: #F0F5F7;
+    max-width:500px;
+    margin-top:19%;
+    margin-bottom:1.5%;
+    padding-bottom:2%;
+    z-index:1;
+}
+
+.homeBackground {
+    /*background-image: url('./images/homepage/homepage-background1.jpg');*/
+    margin-top:3rem;
+    padding-bottom:6%;
+    position:relative;
+}
+
+.homeOverlay {
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.homeMainTitle {
+    font-family: 'Helvetica', serif;
+    margin-left:10%;
+}
+
+.homeAppName {
+    font-family: 'Segoe UI', serif;
+    font-weight: 300;
+    font-stretch: expanded;
+    font-size: 150%;
+}

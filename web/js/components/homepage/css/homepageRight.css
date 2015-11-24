@@ -1,0 +1,19 @@
+
+.rightElement {
+    background-color:white;
+    padding:1rem;
+    margin-bottom:1rem;
+}
+
+.rightTitle {
+    font-family: 'SegoeUI', serif;
+}
+
+.rightLogo {
+    height:40%;
+    width:40%;
+}
+
+.rightMarginBottom {
+    margin-bottom: 2rem;
+}
