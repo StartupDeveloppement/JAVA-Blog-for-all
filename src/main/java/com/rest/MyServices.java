@@ -1,6 +1,7 @@
 package com.rest;
 
 import com.test.services.ServiceTest;
+import com.user.services.UserServices;
 
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
@@ -14,6 +15,7 @@ public class MyServices extends Application {
 
     public MyServices() {
         singletons.add(new ServiceTest());
+        singletons.add(new UserServices());
     }
 
     @Override

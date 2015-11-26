@@ -2,11 +2,14 @@ var React = require('react');
 var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 
+var AuthenticationActions = require('./actions/authenticationActions.js');
+var AuthenticationStore = require('./stores/authenticationStore.js');
+
 var HomepageLeft = require('./components/homepage/homepageLeft.js');
 var HomepageRight = require('./components/homepage/homepageRight.js');
 
 var Main = React.createClass({
-
+    mixins: [Reflux.connect(AuthenticationStore)],
     getInitialState: function () {
         return {
             email:'',
@@ -17,7 +20,9 @@ var Main = React.createClass({
 
     handleClick:function(event){
         event.preventDefault();
-        //add code
+        AuthenticationActions.authenticate(this.state.email,this.state.password);
+        this.setState({email: ''});
+        this.setState({password: ''});
     },
 
     _onChangeEmail:function(e){
