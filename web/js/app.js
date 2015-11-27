@@ -40,27 +40,36 @@ var Main = React.createClass({
         };
         return (
             <div>
-                <nav className="navbar navbar-default navbar-fixed-top">
-                    <div className="container-fluid">
-                        <div className="navbar-header">
-                            <a className="navbar-brand homeAppName" href="#">Blog project</a>
+
+                <div className="row homeBackground" style={styles.styleBackground}>
+                    <div className="row homeContainer1">
+                    <div className="overlay homeOverlayImage"></div>
+                        <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  homeRadius">
+                            <h3 className="fontSignup">sign up</h3>
+                            <div className="divider"></div>
+                            <form onSubmit={this.handleClick}>
+                                <div className="form-group">
+                                    <input id="signupEmail" className="form-control" type="email" placeholder="e-mail" value={this.state.email} onChange={this._onChangeEmail}  />
+                                </div>
+                                <div className="form-group">
+                                    <input id="signupPassword" className="form-control" type="password" placeholder="password" value={this.state.password} onChange={this._onChangePassword} />
+                                </div>
+                                <button type="submit" className="btn btn-default">submit</button>
+                            </form>
                         </div>
                     </div>
-                </nav>
-                <div className="row homeBackground" style={styles.styleBackground}>
-                    <div className="homeOverlay"></div>
-                    <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  homeRadius">
-                        <h3>sign up</h3>
-                        <div className="divider"></div>
-                        <form onSubmit={this.handleClick}>
-                            <div className="form-group">
-                                <input id="signupEmail" className="form-control" type="email" placeholder="e-mail" value={this.state.email} onChange={this._onChangeEmail}  />
-                            </div>
-                            <div className="form-group">
-                                <input id="signupPassword" className="form-control" type="password" placeholder="password" value={this.state.password} onChange={this._onChangePassword} />
-                            </div>
-                            <button type="submit" className="btn btn-default">submit</button>
-                        </form>
+                    <div className="row homeSearchBar">
+                        <div className="overlay homeOverlaySearchBar"></div>
+
+                            <form className="navbar-form" role="search">
+                                <div className="input-group">
+                                    <input type="text" className="form-control" placeholder="Search" name="q" />
+                                    <div className="input-group-btn">
+                                        <button className="btn btn-default" type="submit"><span>valider</span></button>
+                                    </div>
+                                </div>
+                            </form>
+
                     </div>
                 </div>
                 <div className="row homeContainerRight">

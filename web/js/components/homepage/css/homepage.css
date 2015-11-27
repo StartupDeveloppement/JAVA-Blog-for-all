@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 .homeRadius {
     border-radius: 3px;
 }
@@ -8,27 +52,64 @@
 }
 
 .homeSignupForm {
-    background-color: #F0F5F7;
+    background-color: transparent;
+    border: 2px solid white;
     max-width:500px;
-    margin-top:19%;
-    margin-bottom:1.5%;
+    margin-top:15%;
+    margin-bottom:5%;
     padding-bottom:2%;
     z-index:1;
 }
 
-.homeBackground {
-    /*background-image: url('./images/homepage/homepage-background1.jpg');*/
-    margin-top:3rem;
-    padding-bottom:6%;
-    position:relative;
+.fontSignup{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
 }
 
-.homeOverlay {
-    position:absolute;
-    height:100%;
+.homeBackground {
+    /*background-image: url('./images/homepage/homepage-background1.jpg');*/
+    /*margin-top:3rem;*/
+    /*position:relative;*/
+    height: 90vh;
+}
+
+.homeContainer1{
+    position: relative;
+    height: calc(100% - 5rem);
+}
+
+.homeSearchBar{
+    position:relative;
+    height: 5rem;
+    padding:1rem;
+}
+
+.homeSearchBar form, .homeSearchBar form * {
+    width: 100%;
+    height: 3rem !important;
+
+    margin:0;
+}
+
+.overlay{
+    top:0;
+    bottom:0;
+    left:0;
     width:100%;
+    position:absolute;
+}
+
+.homeOverlayImage {
     background-color: black;
     opacity: 0.5;
+}
+
+.homeOverlaySearchBar {
+    /*left:0; */
+    background-color: black;
+    opacity: 0.8;
 }
 
 .homeMainTitle {
@@ -42,3 +123,4 @@
     font-stretch: expanded;
     font-size: 150%;
 }
+

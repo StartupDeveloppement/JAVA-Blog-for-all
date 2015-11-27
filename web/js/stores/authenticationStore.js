@@ -16,8 +16,10 @@ var AuthenticationStore = Reflux.createStore({
                 if (data) {
                     console.log("User Authentication OK");
                     console.log(data);
-                    localStorage.setItem("token", data);
+                    //localStorage.setItem("token", data);
+                    document.cookie = data.value();
                 }
+
                 else{
                     console.log("User Authentication KO");
                     console.log(data);
