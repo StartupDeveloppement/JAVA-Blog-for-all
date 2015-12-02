@@ -1,16 +1,12 @@
 var React = require('react');
 var ReactDom = require('react-dom');
 var Reflux = require('reflux');
-var Router = require('abyssa').Router;
-var State = require('abyssa').State;
-var Homepage = require('./components/homepage/homepage.js');
-var HomepageLeft = require('./components/homepage/homepageLeft.js');
 
-/*var AuthenticationActions = require('./actions/authenticationActions.js');
-var AuthenticationStore = require('./stores/authenticationStore.js');
+var AuthenticationActions = require('../../actions/authenticationActions.js');
+var AuthenticationStore = require('../../stores/authenticationStore.js');
 
-var HomepageLeft = require('./components/homepage/homepageLeft.js');
-var HomepageRight = require('./components/homepage/homepageRight.js');
+var HomepageLeft = require('./homepageLeft.js');
+var HomepageRight = require('./homepageRight.js');
 
 var Main = React.createClass({
     mixins: [Reflux.connect(AuthenticationStore)],
@@ -47,7 +43,7 @@ var Main = React.createClass({
 
                 <div className="row homeBackground" style={styles.styleBackground}>
                     <div className="row homeContainer1">
-                    <div className="overlay homeOverlayImage"></div>
+                        <div className="overlay homeOverlayImage"></div>
                         <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  homeRadius">
                             <h3 className="fontSignup">sign up</h3>
                             <div className="divider"></div>
@@ -65,14 +61,14 @@ var Main = React.createClass({
                     <div className="row homeSearchBar">
                         <div className="overlay homeOverlaySearchBar"></div>
 
-                            <form className="navbar-form" role="search">
-                                <div className="input-group">
-                                    <input type="text" className="form-control" placeholder="Search" name="q" />
-                                    <div className="input-group-btn">
-                                        <button className="btn btn-default" type="submit"><span>valider</span></button>
-                                    </div>
+                        <form className="navbar-form" role="search">
+                            <div className="input-group">
+                                <input type="text" className="form-control" placeholder="Search" name="q" />
+                                <div className="input-group-btn">
+                                    <button className="btn btn-default" type="submit"><span>valider</span></button>
                                 </div>
-                            </form>
+                            </div>
+                        </form>
 
                     </div>
                 </div>
@@ -88,16 +84,17 @@ var Main = React.createClass({
                     </div>
                 </div>
             </div>
-            );
+        );
     }
-});*/
+});
 
-var Router = Router()
-    .addState('homepage', State('homepage', Homepage))
-    .addState('essai', State('essai', HomepageLeft))
-    .configure({
-        enableLogs: true,
-        notFound: 'homepage'
-    }).init('homepage');
+module.exports = {
+    enter: function() {
+        ReactDom.render(<Main />, document.getElementById('app'));
+        console.log('index entered');
+    },
+    exit: function() {
+        console.log('index exited');
+    }
+};
 
-module.exports = Router;

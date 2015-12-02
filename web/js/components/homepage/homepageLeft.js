@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDom = require('react-dom');
 
 var HomepageLeft = React.createClass({
     render: function () {
@@ -91,3 +92,13 @@ var HomepageLeft = React.createClass({
 });
 
 module.exports = HomepageLeft;
+
+/*module.exports = {
+    enter: function() {
+        ReactDom.render(<HomepageLeft />, document.getElementById('app'));
+        console.log('index entered');
+    },
+    exit: function() {
+        console.log('index exited');
+    }
+};*/
