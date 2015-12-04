@@ -1,90 +1,35 @@
 var React = require('react');
 var ReactDom = require('react-dom');
+var ResultImageGroup = require('../_common/resultImageGroup.js');
 
 var HomepageLeft = React.createClass({
     render: function () {
 
+        var actualities = [
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
+                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'1'},
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
+                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'2'},
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
+                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'3'},
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
+                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'4'},
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
+                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'5'},
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
+                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'6'}
+        ];
+
         return (
 
                 <div>
-                    <div className="leftElement commonRadius">
-                        <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
-                        <hr className="leftDivider"></hr>
-                        <p className="leftText">
-                            Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium
-                            sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet,
-                            et si digesto plene consilio id placuerit fieri.
-                        </p>
-                        <div className="row">
-                            <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Claire</b></div>
-                        </div>
-                    </div>
-                    <div className="leftElement commonRadius">
-                        <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
-                        <hr className="leftDivider1"></hr>
-                        <p className="leftText">
-                        Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium
-                        sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet,
-                        et si digesto plene consilio id placuerit fieri.
-                        </p>
-                        <div className="row">
-                            <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Claire</b></div>
-                        </div>
-                    </div>
-                    <div className="leftElement commonRadius">
-                        <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
-                        <hr className="leftDivider2"></hr>
-                        <p className="leftText">
-                        Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium
-                        sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet,
-                        et si digesto plene consilio id placuerit fieri.
-                        </p>
-                        <div className="row">
-                            <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Claire</b></div>
-                        </div>
-                    </div>
-                    <div className="leftElement commonRadius">
-                        <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
-                        <hr className="leftDivider"></hr>
-                        <p className="leftText">
-                        Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium
-                        sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet,
-                        et si digesto plene consilio id placuerit fieri.
-                        </p>
-                        <div className="row">
-                            <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Claire</b></div>
-                        </div>
-                    </div>
-                    <div className="leftElement commonRadius">
-                        <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
-                        <hr className="leftDivider1"></hr>
-                        <p className="leftText">
-                        Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium
-                        sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet,
-                        et si digesto plene consilio id placuerit fieri.
-                        </p>
-                        <div className="row">
-                            <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Claire</b></div>
-                        </div>
-                    </div>
-                    <div className="leftElement commonRadius">
-                        <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
-                        <hr className="leftDivider2"></hr>
-                        <p className="leftText">
-                        Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium
-                        sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet,
-                        et si digesto plene consilio id placuerit fieri.
-                        </p>
-                        <div className="row">
-                            <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Claire</b></div>
-                        </div>
-                    </div>
+                    <ResultImageGroup articles={actualities} ></ResultImageGroup>
                 </div>
 
         );

@@ -1,5 +1,5 @@
 var React = require('react');
-var ResultImageGroup = require('./_common/resultImageGroup.js');
+var ResultImageGroup = require('../_common/resultImageGroup.js');
 
 var ActualitiesLeft = React.createClass({
     render: function(){

@@ -71,18 +71,18 @@ table {
     height: 90vh;
 }
 
-.homeContainer1{
+.homeContainerBackground{
     position: relative;
     height: calc(100% - 6.5rem);
 }
 
-.homeSearchBar{
+.homeContainerSearchBar{
     position:relative;
     height: 6.5rem;
     padding:2rem;
 }
 
-.homeSearchBar form, .homeSearchBar form * {
+.homeContainerSearchBar form, .homeContainerSearchBar form * {
     width: 85%;
     height: 2.5rem !important;
     margin:0;

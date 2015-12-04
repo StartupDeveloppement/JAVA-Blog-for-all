@@ -42,7 +42,7 @@ var Main = React.createClass({
             <div>
 
                 <div className="row homeBackground" style={styles.styleBackground}>
-                    <div className="row homeContainer1">
+                    <div className="row homeContainerBackground">
                         <div className="commonOverlay homeOverlayImage"></div>
                         <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  commonRadius">
                             <h3 className="fontSignup">sign up</h3>
@@ -58,7 +58,7 @@ var Main = React.createClass({
                             </form>
                         </div>
                     </div>
-                    <div className="row homeSearchBar">
+                    <div className="row homeContainerSearchBar">
                         <div className="commonOverlay homeOverlaySearchBar"></div>
 
                         <form className="navbar-form" role="search">

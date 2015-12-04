@@ -8,7 +8,10 @@ var ResultGroup = React.createClass({
             <div>
                 {this.props.articles.map(function (article){
                     return (
-                        <Result articleTitle={article.articleTitle} articleDivider={article.articleDivider} articleText={article.articleText} key={article.articleKey} />
+                        <Result articleTitle={article.articleTitle}
+                                articleDivider={article.articleDivider}
+                                articleText={article.articleText}
+                                key={article.articleKey} />
                         )
                     })
                 }

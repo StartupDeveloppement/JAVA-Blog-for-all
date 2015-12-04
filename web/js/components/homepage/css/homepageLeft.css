@@ -3,47 +3,6 @@
     padding:1rem;
 }
 
-.leftElement {
-    background-color:white;
-    padding:1rem;
-    margin-bottom:1rem
-}
-
-.leftTitle {
-    font-family: "SegoeUI", serif;
-    font-weight: bold;
-}
-
-.leftDivider {
-    border: 0;
-    width:25%;
-    background-color: blue;
-    height: 1px;
-}
-
-.leftDivider1 {
-    border: 0;
-    width:25%;
-    background-color: red;
-    height: 1px;
-}
-
-.leftDivider2 {
-    border: 0;
-    width:25%;
-    background-color: green;
-    height: 1px;
-}
-
-.leftText {
-    font-family: 'SegoeUI', serif;
-    font-size:120%;
-}
-
-.leftImage {
-    height:30px;
-}
-
 .leftDividerElement{
     position:relative;
 }
