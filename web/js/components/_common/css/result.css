@@ -1,0 +1,40 @@
+.resultElement {
+    background-color:white;
+    padding:1rem;
+    margin-bottom:1rem
+}
+
+.resultTitle {
+    font-family: "SegoeUI", serif;
+    font-weight: bold;
+}
+
+.resultDividerBlue {
+    border: 0;
+    width:25%;
+    background-color: blue;
+    height: 1px;
+}
+
+.resultDividerRed {
+    border: 0;
+    width:25%;
+    background-color: red;
+    height: 1px;
+}
+
+.resultDividerGreen {
+    border: 0;
+    width:25%;
+    background-color: green;
+    height: 1px;
+}
+
+.resultText {
+    font-family: 'SegoeUI', serif;
+    font-size:120%;
+}
+
+.resultImage {
+    height:30px;
+}

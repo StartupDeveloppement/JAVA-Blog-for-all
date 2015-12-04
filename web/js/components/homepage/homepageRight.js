@@ -6,7 +6,7 @@ var HomepageRight = React.createClass({
 
         return (
             <div>
-                <div className="form-group rightElement homeRadius">
+                <div className="form-group rightElement commonRadius">
                     <form>
                         <div className="form-group">
                             <h2 className="rightTitle">Discover what's new</h2>
@@ -17,7 +17,7 @@ var HomepageRight = React.createClass({
                         </div>
                     </form>
                 </div>
-                <div className="form-group rightElement homeRadius">
+                <div className="form-group rightElement commonRadius">
                     <form>
                         <div className="form-group rightMarginBottom">
                             <h2 className="rightTitle">Find us on</h2>
@@ -34,7 +34,7 @@ var HomepageRight = React.createClass({
                         </div>
                     </form>
                 </div>
-                <div className="form-group rightElement homeRadius">
+                <div className="form-group rightElement commonRadius">
                     <form>
                         <div className="form-group">
                             <h2 className="rightTitle">Invite your friends</h2>

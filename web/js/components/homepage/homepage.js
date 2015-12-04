@@ -43,8 +43,8 @@ var Main = React.createClass({
 
                 <div className="row homeBackground" style={styles.styleBackground}>
                     <div className="row homeContainer1">
-                        <div className="overlay homeOverlayImage"></div>
-                        <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  homeRadius">
+                        <div className="commonOverlay homeOverlayImage"></div>
+                        <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  commonRadius">
                             <h3 className="fontSignup">sign up</h3>
                             <div className="divider"></div>
                             <form onSubmit={this.handleClick}>
@@ -59,7 +59,7 @@ var Main = React.createClass({
                         </div>
                     </div>
                     <div className="row homeSearchBar">
-                        <div className="overlay homeOverlaySearchBar"></div>
+                        <div className="commonOverlay homeOverlaySearchBar"></div>
 
                         <form className="navbar-form" role="search">
                             <div className="input-group">

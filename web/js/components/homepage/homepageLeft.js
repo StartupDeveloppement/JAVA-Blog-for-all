@@ -7,7 +7,7 @@ var HomepageLeft = React.createClass({
         return (
 
                 <div>
-                    <div className="leftElement homeRadius">
+                    <div className="leftElement commonRadius">
                         <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
                         <hr className="leftDivider"></hr>
                         <p className="leftText">
@@ -17,10 +17,10 @@ var HomepageLeft = React.createClass({
                         </p>
                         <div className="row">
                             <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Marie-Claire</b></div>
+                            <div className="col-sm-2"><b>Claire</b></div>
                         </div>
                     </div>
-                    <div className="leftElement homeRadius">
+                    <div className="leftElement commonRadius">
                         <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
                         <hr className="leftDivider1"></hr>
                         <p className="leftText">
@@ -30,10 +30,10 @@ var HomepageLeft = React.createClass({
                         </p>
                         <div className="row">
                             <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Marie-Claire</b></div>
+                            <div className="col-sm-2"><b>Claire</b></div>
                         </div>
                     </div>
-                    <div className="leftElement homeRadius">
+                    <div className="leftElement commonRadius">
                         <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
                         <hr className="leftDivider2"></hr>
                         <p className="leftText">
@@ -43,10 +43,10 @@ var HomepageLeft = React.createClass({
                         </p>
                         <div className="row">
                             <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Marie-Claire</b></div>
+                            <div className="col-sm-2"><b>Claire</b></div>
                         </div>
                     </div>
-                    <div className="leftElement homeRadius">
+                    <div className="leftElement commonRadius">
                         <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
                         <hr className="leftDivider"></hr>
                         <p className="leftText">
@@ -56,10 +56,10 @@ var HomepageLeft = React.createClass({
                         </p>
                         <div className="row">
                             <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Marie-Claire</b></div>
+                            <div className="col-sm-2"><b>Claire</b></div>
                         </div>
                     </div>
-                    <div className="leftElement homeRadius">
+                    <div className="leftElement commonRadius">
                         <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
                         <hr className="leftDivider1"></hr>
                         <p className="leftText">
@@ -69,10 +69,10 @@ var HomepageLeft = React.createClass({
                         </p>
                         <div className="row">
                             <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Marie-Claire</b></div>
+                            <div className="col-sm-2"><b>Claire</b></div>
                         </div>
                     </div>
-                    <div className="leftElement homeRadius">
+                    <div className="leftElement commonRadius">
                         <h1 className="leftTitle">Profitetur aut secretiora quaedam se nosse confingit</h1>
                         <hr className="leftDivider2"></hr>
                         <p className="leftText">
@@ -82,7 +82,7 @@ var HomepageLeft = React.createClass({
                         </p>
                         <div className="row">
                             <img className="col-sm-1 col-sm-offset-8 img-responsive leftImage" src="./images/test/profile-test.jpg" alt="profile picture"></img>
-                            <div className="col-sm-2"><b>Marie-Claire</b></div>
+                            <div className="col-sm-2"><b>Claire</b></div>
                         </div>
                     </div>
                 </div>
