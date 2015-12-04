@@ -72,7 +72,7 @@ var Main = React.createClass({
 
                     </div>
                 </div>
-                <div className="row homeContainerRight">
+                <div className="row commonContainer">
                     <h3 className="homeMainTitle">LAST SHARED CONTENT</h3>
                     <div>
                         <div className="container col-sm-7 col-sm-offset-1">

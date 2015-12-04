@@ -1,0 +1,3 @@
+.row {
+    margin: 0; /* to overwrite the row margin set automatically by bootstrap */
+}

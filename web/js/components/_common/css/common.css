@@ -1,4 +1,6 @@
-
+.commonContainer{
+    background-color: #EFEFEF;
+}
 
 .commonRadius {
     border-radius: 3px;
@@ -10,5 +12,14 @@
     left:0;
     width:100%;
     position:absolute;
+}
+
+.commonMainTitle {
+    font-family: 'Helvetica', serif;
+    margin-left:10%;
+}
+
+.commonMarginNavbar{
+    margin-top: 10rem;
 }
 
