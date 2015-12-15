@@ -1,5 +1,5 @@
 var Reflux = require('reflux');
-var Router = require('../app.js');
+var Router = require('../router.js');
 var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
