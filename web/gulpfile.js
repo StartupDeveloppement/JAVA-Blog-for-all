@@ -11,7 +11,7 @@ var minifyCSS = require('gulp-minify-css');
 
 gulp.task('build-js', function () {
     browserify({
-        entries: './js/router.js',
+        entries: './js/app.js',
         extensions: ['.js'],
         debug: true
     })

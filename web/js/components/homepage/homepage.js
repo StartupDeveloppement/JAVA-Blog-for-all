@@ -97,10 +97,10 @@ var Main = React.createClass({
 module.exports = {
     enter: function() {
         ReactDom.render(<Main />, document.getElementById('app'));
-        console.log('index entered');
+        console.log('homepage entered');
     },
     exit: function() {
-        console.log('index exited');
+        console.log('homepage exited');
     }
 };
 
