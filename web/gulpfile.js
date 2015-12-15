@@ -44,4 +44,15 @@ gulp.task('watch-css', function() {
     gulp.watch(['./js/**/*.css', './js/*.css'], ['build-css']);
 });
 
-gulp.task('default', ['build-js', 'watch-js', 'build-css', 'watch-css']);
+gulp.task('build-overwrite-bootstrap-css', function () {
+    return gulp.src('./bootstrap-overwrite/**/*.css')
+        .pipe(concat('overwriteBootstrapTarget.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./target/'))
+});
+
+gulp.task('watch-overwrite-bootstrap-css', function() {
+    gulp.watch(['./bootstrap-overwrite/**/*.css', './bootstrap-overwrite/*.css'], ['build-overwrite-bootstrap-css']);
+});
+
+gulp.task('default', ['build-js', 'watch-js', 'build-css', 'watch-css','build-overwrite-bootstrap-css','watch-overwrite-bootstrap-css']);

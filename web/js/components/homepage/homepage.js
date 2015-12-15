@@ -44,6 +44,12 @@ var Main = React.createClass({
                 <div className="row homeBackground" style={styles.styleBackground}>
                     <div className="row homeContainerBackground">
                         <div className="commonOverlay homeOverlayImage"></div>
+
+                        <div className="row homeTopRow">
+                            <div className="col-sm-3 homeTopTitle"><h4 className="fontTopTitle">Blog Project</h4></div>
+                            <div className="col-sm-1 col-sm-offset-7 homeTopTitle"><h5 className="fontTopTitle">help</h5></div>
+                            <div className="col-sm-1 homeTopTitle"><h5 className="fontTopTitle">login</h5></div>
+                        </div>
                         <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  commonRadius">
                             <h3 className="fontSignup">sign up</h3>
                             <div className="divider"></div>

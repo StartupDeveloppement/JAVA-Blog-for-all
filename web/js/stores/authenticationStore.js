@@ -1,5 +1,8 @@
 var Reflux = require('reflux');
+var Router = require('../app.js');
 var $ = require('jquery');
+var base64 = require('base-64');
+var utf8 = require('utf8');
 var AuthenticationActions = require('../actions/authenticationActions.js');
 
 var AuthenticationStore = Reflux.createStore({
@@ -15,9 +18,18 @@ var AuthenticationStore = Reflux.createStore({
             success: function(data) {
                 if (data) {
                     console.log("User Authentication OK");
-                    console.log(data);
+                    var strJSON = JSON.stringify(data);
+                    var t = JSON.parse(strJSON);
                     //localStorage.setItem("token", data);
-                    document.cookie = data.value();
+                    try{
+                        var bytes = base64.decode(t['token']);
+                        var text = utf8.decode(bytes);
+                        console.log(text);
+                    } catch(err){
+                        console.log(err.message);
+                    }
+                    document.cookie = t['token'];
+                    Router.transitionTo('actualities');
                 }
 
                 else{

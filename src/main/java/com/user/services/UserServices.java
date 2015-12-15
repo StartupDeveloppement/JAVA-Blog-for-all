@@ -2,6 +2,8 @@ package com.user.services;
 
 import com.user.dao.UserDao;
 import com.user.dao.UserDaoImpl;
+import com.user.dao.UserProfileDao;
+import com.user.dao.UserProfileDaoImpl;
 import com.user.entity.User;
 
 import javax.ws.rs.*;
@@ -19,6 +21,7 @@ public class UserServices {
 
     public final String key = "TheOliverUnbreakableKey";
     public UserDao userDao = new UserDaoImpl();
+    public UserProfileDao userProfileDao = new UserProfileDaoImpl();
 
     @POST
     @Path("/authenticate")
@@ -31,13 +34,15 @@ public class UserServices {
         if (retrievedUser==null)
             return null;
         if (retrievedUser.getPassword().equals(password)) {
-            String token = email + md5Hex(email + ":" + password + ":" + key);
+            String username = userProfileDao.findProfileUsingUserEmail(email).getFirstname();
+            String token = email + ":" + username + ":" + md5Hex(email + ":" + password + ":" + key);
             byte[] bytesToken = token.getBytes(StandardCharsets.UTF_8);
             String encodedToken = Base64.getEncoder().encodeToString(bytesToken);
-                    /*System.out.println(token);
+                    System.out.println(username);
+                    System.out.println(token);
                     System.out.println(encodedToken);
                     System.out.println(email);
-                    System.out.println(password);*/
+                    System.out.println(password);
             tokenUtils = new TokenUtils();
             tokenUtils.setToken(encodedToken);
         }

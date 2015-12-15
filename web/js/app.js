@@ -12,6 +12,6 @@ var Router = Router()
     .configure({
         enableLogs: true,
         notFound: 'homepage'
-    }).init('actualities');
+    }).init('homepage');
 
 module.exports = Router;

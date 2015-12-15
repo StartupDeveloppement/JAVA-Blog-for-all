@@ -16,7 +16,7 @@ public abstract class AbstractDao<T, PK> implements Dao<T, PK> {
 
     private Class<T> type;
 
-    private void setType(){
+    public void setType(){
         //lines to add when using generic Class<T>
         Type t = getClass().getGenericSuperclass();
         ParameterizedType pt = (ParameterizedType) t;

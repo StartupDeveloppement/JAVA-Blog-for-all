@@ -2,7 +2,12 @@ package com.test.dao;
 
 import com.user.dao.UserDao;
 import com.user.dao.UserDaoImpl;
+import com.user.dao.UserProfileDao;
+import com.user.dao.UserProfileDaoImpl;
 import com.user.entity.User;
+import com.user.entity.UserProfile;
+
+import java.util.Date;
 
 /**
  * Created by olivier on 26/11/2015.
@@ -22,9 +27,18 @@ public class TestDao {
         boolean user1Ok = userDao.create(user1);
         boolean user2Ok =userDao.create(user2);
 
+        UserProfile userProfile = new UserProfile();
+            userProfile.setBirthday(new Date());
+            userProfile.setFirstname("hellofirstname");
+            userProfile.setLastname("hellolastname");
+            userProfile.setUser(user1);
+
+        UserProfileDao userProfileDao = new UserProfileDaoImpl();
+        boolean userProfile1Ok = userProfileDao.create(userProfile);
+
         System.out.println("User1: " + user1Ok);
         System.out.println("User2: " + user2Ok);
-
+        System.out.println("UserProfile1: " + userProfile1Ok);
 
     }
 
