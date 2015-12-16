@@ -1,0 +1,7 @@
+.sidebar {
+    position: fixed;
+}
+
+small.text-muted {
+    font-family:courier,courier-new,monospace;
+}

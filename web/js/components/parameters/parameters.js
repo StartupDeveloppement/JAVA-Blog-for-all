@@ -3,7 +3,7 @@ var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 
 
-var Profile = React.createClass({
+var Parameters = React.createClass({
 
     render: function () {
         return (
@@ -53,32 +53,24 @@ var Profile = React.createClass({
                 <div className="wrapper">
                     <div className="box">
                         <div className="row">
-                            <div className="column col-sm-3 sidebar" id="sidebar">
+                            <div className="column col-sm-2 sidebar" id="sidebar">
                                 <br />
-                                <div className="row">
-                                    <a class="logo" href="#"><img src="http://api.randomuser.me/portraits/thumb/men/19.jpg" className="img-circle" /></a>
-                                </div>
-                                <br />
-                                <div className="row">
-                                    <ul className="nav">
-                                        <li className="active"><a href="#featured">Personal</a>
-                                        </li>
-                                        <li><a href="#stories">Status</a>
-                                        </li>
-                                        <li><a href="#stories">University</a>
-                                        </li>
-                                        <li><a href="#stories">Work</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul className="nav">
+                                    <li className="active"><a href="#featured">Languages</a>
+                                    </li>
+                                    <li><a href="#stories">Theme</a>
+                                    </li>
+                                    <li><a href="#stories">Security</a>
+                                    </li>
+                                </ul>
                             </div>
 
 
-                            <div className="column col-sm-8 col-sm-offset-4" id="main">
+                            <div className="column col-sm-8 col-sm-offset-3" id="main">
                                 <div className="padding">
                                     <div className="full col-sm-9">
 
-                                        <div className="col-sm-12" id="featured">
+                                        <div className="col-sm-12">
                                             <div className="page-header text-muted">
                                                 Featured
                                             </div>
@@ -96,7 +88,7 @@ var Profile = React.createClass({
                                             </div>
                                         </div>
 
-                                        <div className="col-sm-12" id="stories">
+                                        <div className="col-sm-12">
                                             <div className="page-header text-muted divider">
                                                 Top Stories
                                             </div>
@@ -202,7 +194,7 @@ var Profile = React.createClass({
 
 module.exports = {
     enter: function() {
-        ReactDom.render(<Profile />, document.getElementById('app'));
+        ReactDom.render(<Parameters />, document.getElementById('app'));
         console.log('profile entered');
     },
     exit: function() {
