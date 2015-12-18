@@ -23,3 +23,20 @@
     margin-top: 10rem;
 }
 
+.commonUnderlineNavbar{
+    border: 0;
+    width:100%;
+    background-color: #99A1A3;
+    height: 1px;
+}
+
+.commonForm{
+    background-color: white;
+}
+
+.commonSidebarLink{
+    color: white;
+}
+
+
+

@@ -19,12 +19,12 @@ var Actualities = React.createClass({
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                             </button>
-                        <a href="#" className="navbar-brand">Blog Project</a>
+                        <a href={Router.link('homepage')} className="navbar-brand">Blog Project</a>
                         </div>
 
                         <div id="navbarCollapse" className="collapse navbar-collapse">
                             <ul className="nav navbar-nav">
-                                <li><a href="#">Actualities</a></li>
+                                <li><a href={Router.link('actualities')}>Actualities</a></li>
                                 <li><a href="#">Projects</a></li>
                             </ul>
                             <form role="search" className="navbar-form navbar-right">
@@ -36,15 +36,16 @@ var Actualities = React.createClass({
                                 <li className="dropdown">
                                     <a data-toggle="dropdown" className="dropdown-toggle" href="#">Claire<b className="caret"></b></a>
                                     <ul role="menu" className="dropdown-menu">
-                                        <li><a href="#">Profile</a></li>
-                                        <li><a href="#">Parameters</a></li>
+                                        <li><a href={Router.link('profile')} >Profile</a></li>
+                                        <li><a href={Router.link('parameters')}>Parameters</a></li>
                                         <li className="divider"></li>
                                         <li><a href="#">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-
+                    </div>
+                    <div className="row commonUnderlineNavbar">
                     </div>
                 </nav>
                 <div className="row commonContainer">

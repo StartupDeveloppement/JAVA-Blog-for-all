@@ -1,5 +1,7 @@
 .sidebar {
     position: fixed;
+    background-color:#586266;
+    height:35.5rem;
 }
 
 small.text-muted {

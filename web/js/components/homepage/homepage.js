@@ -2,6 +2,8 @@ var React = require('react');
 var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 
+var Router = require('../../router.js');
+
 var AuthenticationActions = require('../../actions/authenticationActions.js');
 var AuthenticationStore = require('../../stores/authenticationStore.js');
 
@@ -47,7 +49,11 @@ var Main = React.createClass({
 
                         <div className="row homeTopRow">
                             <div className="col-sm-3 homeTopTitle"><h4 className="fontTopTitle">Blog Project</h4></div>
-                            <div className="col-sm-1 col-sm-offset-7 homeTopTitle"><h5 className="fontTopTitle">help</h5></div>
+                            <div className="col-sm-1 col-sm-offset-7 homeTopTitle">
+                                <h5 className="fontTopTitle">
+                                    <a href={Router.link('help')}>help</a>
+                                </h5>
+                            </div>
                             <div className="col-sm-1 homeTopTitle"><h5 className="fontTopTitle">login</h5></div>
                         </div>
                         <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  commonRadius">
@@ -69,9 +75,9 @@ var Main = React.createClass({
 
                         <form className="navbar-form" role="search">
                             <div className="input-group">
-                                <input type="text" className="form-control" placeholder="Search" name="q" />
+                                <input type="text" className="form-control" placeholder="look for content" name="q" />
                                 <div className="input-group-btn">
-                                    <button className="btn btn-default" type="submit"><span>valider</span></button>
+                                    <button className="btn btn-default" type="submit"><span>Search</span></button>
                                 </div>
                             </div>
                         </form>

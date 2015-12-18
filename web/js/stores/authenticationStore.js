@@ -29,7 +29,7 @@ var AuthenticationStore = Reflux.createStore({
                         console.log(err.message);
                     }
                     document.cookie = t['token'] + "; path=/"; //path=/ make the cookie global
-                    Router.transitionTo('parameters');
+                    Router.transitionTo('actualities');
                 }
 
                 else{
