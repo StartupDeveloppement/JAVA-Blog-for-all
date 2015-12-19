@@ -2,7 +2,16 @@ var React = require('react');
 var ReactDom = require('react-dom');
 var ResultImageGroup = require('../_common/resultImageGroup.js');
 
+var ResultsAction = require('../../actions/resultsActions.js');
+var ResultsStore = require('../../stores/resultsStore.js');
+
 var HomepageLeft = React.createClass({
+    mixins: [Reflux.connect(ResultsStore, "results")],
+    getInitialState: function () {
+        return {
+            results: ResultsStore.results
+        }
+    },
     render: function () {
 
         var actualities = [
@@ -29,7 +38,7 @@ var HomepageLeft = React.createClass({
         return (
 
                 <div>
-                    <ResultImageGroup articles={actualities} ></ResultImageGroup>
+                    <ResultImageGroup articles={this.state.results} ></ResultImageGroup>
                 </div>
 
         );
@@ -38,12 +47,6 @@ var HomepageLeft = React.createClass({
 
 module.exports = HomepageLeft;
 
-/*module.exports = {
-    enter: function() {
-        ReactDom.render(<HomepageLeft />, document.getElementById('app'));
-        console.log('index entered');
-    },
-    exit: function() {
-        console.log('index exited');
-    }
-};*/
+/*<div>
+ <ResultImageGroup articles={actualities} ></ResultImageGroup>
+ </div>*/

@@ -1,7 +1,7 @@
 package com.rest;
 
 import com.test.services.ServiceTest;
-import com.user.services.UserServices;
+import com.project.user.services.UserServices;
 
 import javax.ws.rs.core.Application;
 import java.util.HashSet;

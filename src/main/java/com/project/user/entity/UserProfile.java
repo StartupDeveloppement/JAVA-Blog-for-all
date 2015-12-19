@@ -1,33 +1,35 @@
-package com.user.entity;
+package com.project.user.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import com.project.articles.entity.Article;
+
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by olivier on 26/11/2015.
  */
 @Entity
 @XmlRootElement
-public class UserProfile {
+public class UserProfile implements java.io.Serializable {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private Integer idUserProfile;
     @OneToOne
-    private User user;
+    private UserAuth user;
     private String firstname;
     private String lastname;
     private Date birthday;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="userProfile")
+    private List<Article> articleList;
 
 
-    public Integer getId() {return id;}
+    public Integer getIdUserProfile() {return idUserProfile;}
 
-    public User getUser() {return user;}
-    public void setUser(User user) {this.user = user;}
+    public UserAuth getUser() {return user;}
+    public void setUser(UserAuth user) {this.user = user;}
 
     public String getFirstname() {return firstname;}
     public void setFirstname(String firstname) {this.firstname = firstname;}

@@ -1,7 +1,7 @@
-package com.user.dao;
+package com.project.user.dao;
 
 import com.common.Dao;
-import com.user.entity.UserProfile;
+import com.project.user.entity.UserProfile;
 
 /**
  * Created by olivier on 10/12/2015.

@@ -1,4 +1,4 @@
-package com.user.services;
+package com.project.user.services;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

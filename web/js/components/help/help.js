@@ -6,7 +6,7 @@ var Router = require('../../router.js');
 var Help = React.createClass({
    render: function () {
        return (
-           <div>
+           <div className="commonContainer">
                <nav role="navigation" className="navbar navbar-default navbar-fixed-top">
                    <div className="container">
 
@@ -49,7 +49,7 @@ var Help = React.createClass({
                <br />
                <br />
                <br />
-                <div className="row commonContainer">
+                <div className="row">
                     <h2>Help page</h2>
                 </div>
            </div>

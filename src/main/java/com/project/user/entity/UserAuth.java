@@ -1,16 +1,15 @@
-package com.user.entity;
+package com.project.user.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Created by olivier on 26/11/2015.
+ * Created by olivier on 19/12/2015.
  */
 @Entity
 @XmlRootElement
-public class User {
+public class UserAuth implements java.io.Serializable{
 
     @Id
     private String email;

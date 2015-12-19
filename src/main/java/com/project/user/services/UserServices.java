@@ -1,10 +1,11 @@
-package com.user.services;
+package com.project.user.services;
 
-import com.user.dao.UserDao;
-import com.user.dao.UserDaoImpl;
-import com.user.dao.UserProfileDao;
-import com.user.dao.UserProfileDaoImpl;
-import com.user.entity.User;
+import com.project.user.dao.UserAuthDao;
+import com.project.user.dao.UserAuthDaoImpl;
+import com.project.user.dao.UserProfileDao;
+import com.project.user.dao.UserProfileDaoImpl;
+import com.project.user.entity.User;
+import com.project.user.entity.UserAuth;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -20,7 +21,7 @@ import java.util.Base64;
 public class UserServices {
 
     public final String key = "TheOliverUnbreakableKey";
-    public UserDao userDao = new UserDaoImpl();
+    public UserAuthDao userAuthDao = new UserAuthDaoImpl();
     public UserProfileDao userProfileDao = new UserProfileDaoImpl();
 
     @POST
@@ -30,7 +31,7 @@ public class UserServices {
     public TokenUtils doAuthentication(@FormParam("email") String email, @FormParam("password") String password){
         //String token = email+":"+password;
         TokenUtils tokenUtils = null;
-        User retrievedUser = userDao.read(email);
+        UserAuth retrievedUser = userAuthDao.read(email);
         if (retrievedUser==null)
             return null;
         if (retrievedUser.getPassword().equals(password)) {
