@@ -2,16 +2,20 @@ package com.test.dao;
 
 import com.project.articles.dao.ArticleDao;
 import com.project.articles.dao.ArticleDaoImpl;
+import com.project.articles.dao.ArticleKeyWordDao;
+import com.project.articles.dao.ArticleKeyWordDaoImpl;
 import com.project.articles.entity.Article;
+import com.project.articles.entity.ArticleKeyWord;
 import com.project.user.dao.UserAuthDao;
 import com.project.user.dao.UserAuthDaoImpl;
 import com.project.user.dao.UserProfileDao;
 import com.project.user.dao.UserProfileDaoImpl;
-import com.project.user.entity.User;
 import com.project.user.entity.UserAuth;
 import com.project.user.entity.UserProfile;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by olivier on 26/11/2015.
@@ -41,22 +45,41 @@ public class TestDao {
         boolean userProfile1Ok = userProfileDao.create(userProfile);
 
 
-        /*{articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'1'},
-                */
+        ArticleKeyWord articleKeyWord1 = new ArticleKeyWord();
+            articleKeyWord1.setLabel("fighter");
+        ArticleKeyWord articleKeyWord2 = new ArticleKeyWord();
+            articleKeyWord2.setLabel("street");
+        ArticleKeyWord articleKeyWord3 = new ArticleKeyWord();
+            articleKeyWord3.setLabel("fatal");
+        ArticleKeyWordDao articleKeyWordDao = new ArticleKeyWordDaoImpl();
+        boolean articleKeyWord1Ok = articleKeyWordDao.create(articleKeyWord1);
+        boolean articleKeyWord2Ok = articleKeyWordDao.create(articleKeyWord2);
+        boolean articleKeyWord3Ok = articleKeyWordDao.create(articleKeyWord3);
+
+
+        List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
+            articleKeyWordList.add(articleKeyWord1);
+            articleKeyWordList.add(articleKeyWord2);
+            articleKeyWordList.add(articleKeyWord3);
+
 
         Article article1 = new Article();
             article1.setArticleDivider("resultDividerBlue");
             article1.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article1.setUserProfile(userProfile);
+            article1.getArticleKeyWordList().add(articleKeyWord1);
+            article1.getArticleKeyWordList().add(articleKeyWord2);
+            article1.getArticleKeyWordList().add(articleKeyWord3);
 
         Article article2 = new Article();
             article2.setArticleDivider("resultDividerRed");
             article2.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article2.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article2.setUserProfile(userProfile);
+            article2.getArticleKeyWordList().add(articleKeyWord1);
+            article2.getArticleKeyWordList().add(articleKeyWord2);
+            article2.getArticleKeyWordList().add(articleKeyWord3);
 
         Article article3 = new Article();
             article3.setArticleDivider("resultDividerBlue");
@@ -82,6 +105,24 @@ public class TestDao {
             article6.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article6.setUserProfile(userProfile);
 
+        Article article7 = new Article();
+            article7.setArticleDivider("resultDividerRed");
+            article7.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article7.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article7.setUserProfile(userProfile);
+
+        Article article8 = new Article();
+            article8.setArticleDivider("resultDividerBlue");
+            article8.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article8.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article8.setUserProfile(userProfile);
+
+        Article article9 = new Article();
+            article9.setArticleDivider("resultDividerRed");
+            article9.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article9.setUserProfile(userProfile);
+
         ArticleDao articleDao = new ArticleDaoImpl();
         boolean article1Ok = articleDao.create(article1);
         boolean article2Ok = articleDao.create(article2);
@@ -89,6 +130,9 @@ public class TestDao {
         boolean article4Ok = articleDao.create(article4);
         boolean article5Ok = articleDao.create(article5);
         boolean article6Ok = articleDao.create(article6);
+        boolean article7Ok = articleDao.create(article7);
+        boolean article8Ok = articleDao.create(article8);
+        boolean article9Ok = articleDao.create(article9);
 
 
         System.out.println("User1: " + user1Ok);
@@ -100,6 +144,15 @@ public class TestDao {
         System.out.println("Article4: " + article4Ok);
         System.out.println("Article5: " + article5Ok);
         System.out.println("Article6: " + article6Ok);
+        System.out.println("Article7: " + article7Ok);
+        System.out.println("Article8: " + article8Ok);
+        System.out.println("Article9: " + article9Ok);
+
+        for (Article article : articleDao.findSomeArticles()){
+            System.out.println("-----------------");
+            System.out.println("article id: " + article.getArticleKey());
+            System.out.println("article title: " + article.getArticleTitle());
+        }
 
     }
 

@@ -21,6 +21,7 @@ public class UserProfile implements java.io.Serializable {
     private UserAuth user;
     private String firstname;
     private String lastname;
+    @Temporal(TemporalType.DATE)
     private Date birthday;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="userProfile")
     private List<Article> articleList;

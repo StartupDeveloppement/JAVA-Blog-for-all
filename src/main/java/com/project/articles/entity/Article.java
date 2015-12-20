@@ -4,6 +4,8 @@ import com.project.user.entity.UserProfile;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by olivier on 19/12/2015.
@@ -22,6 +24,8 @@ public class Article implements java.io.Serializable{
     private String articleText;
     @ManyToOne(targetEntity =UserProfile.class, fetch = FetchType.LAZY)
     private UserProfile userProfile;
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
 
 
     public Integer getArticleKey() {return articleKey;}
@@ -37,5 +41,8 @@ public class Article implements java.io.Serializable{
 
     public UserProfile getUserProfile() {return userProfile;}
     public void setUserProfile(UserProfile userProfile) {this.userProfile = userProfile;}
+
+    public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
+    public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}
 
 }
