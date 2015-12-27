@@ -7,7 +7,7 @@ var ActualitiesRight = React.createClass({
                 <div className="form-group rightElement homeRadius">
                     <form>
                         <div className="form-group">
-                            <h2 className="rightTitle">Discover what's new</h2>
+                            <h3 className="rightTitle">Discover what's new</h3>
                         </div>
                         <br />
                         <div className="form-group">

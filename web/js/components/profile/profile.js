@@ -3,11 +3,16 @@ var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
+var CommonImageCropper = require('../_common/commonImageCropper.js')
 
 
 var Profile = React.createClass({
 
     render: function () {
+
+        /*const defaultPicture= './images/profile/default profile picture.jpg';*/
+        const defaultPicture= '';
+
         return (
             <div className="commonContainer">
                 <CommonNavBar />
@@ -19,7 +24,7 @@ var Profile = React.createClass({
                         <div className="col-sm-2 sidebar" >
                             <br />
                             <div className="row">
-                                <a class="logo" href="#"><img src="http://api.randomuser.me/portraits/thumb/men/19.jpg" className="img-circle" /></a>
+                                <a className="logo" href="#"><img src="http://api.randomuser.me/portraits/thumb/men/19.jpg" className="img-circle" /></a>
                             </div>
                             <br />
                             <div className="row">
@@ -31,7 +36,7 @@ var Profile = React.createClass({
                                         <span className="commonSidebarLink">Status</span></a>
                                     </li>
                                     <li><a href="#">
-                                        <span className="commonSidebarLink">University</span></a>
+                                        <span className="commonSidebarLink">Universit</span></a>
                                     </li>
                                     <li><a href="#">
                                         <span className="commonSidebarLink">Work</span></a>
@@ -66,7 +71,8 @@ var Profile = React.createClass({
                             </div>
                             <div className="row">
                                 <div className="form-group">
-                                    <input className="form-control" type="text" placeholder="e-mail"  />
+                                    <label className="col-sm-2">profile picture</label>
+                                    <CommonImageCropper defaultImage={defaultPicture}/>
                                 </div>
                             </div>
                             <div className="row divider">
