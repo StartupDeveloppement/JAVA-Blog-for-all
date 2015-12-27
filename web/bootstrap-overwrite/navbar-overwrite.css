@@ -6,7 +6,7 @@
     color: #81888b;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #19191a;
+    color: #1a1aff;
 }
 .navbar-default .navbar-text {
     color: #81888b;
@@ -15,7 +15,7 @@
     color: #81888b;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #19191a;
+    color: #1a1aff;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
     background-color: #ffffff;
@@ -25,18 +25,18 @@
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-    color: #19191a;
+    color: #1a1aff;
     background-color: #ffffff;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
     background-color: #ffffff;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #19191a;
+    color: #1a1aff;
     background-color: #ffffff;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    color: #19191a;
+    color: #1a1aff;
     background-color: #ffffff;
 }
 .navbar-default .navbar-toggle {
@@ -56,7 +56,7 @@
     color: #81888b;
 }
 .navbar-default .navbar-link:hover {
-    color: #19191a;
+    color: #1a1aff;
 }
 
 @media (max-width: 767px) {
@@ -64,10 +64,10 @@
         color: #81888b;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #19191a;
+        color: #1a1aff;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-        color: #19191a;
+        color: #1a1aff;
         background-color: #ffffff;
     }
 }
@@ -80,7 +80,7 @@
     }
     .navbar-default .navbar-nav > li > a:hover,
     .navbar-default .navbar-nav > li > a:focus {
-        border-bottom: 2px solid #9e1e22;
+        border-bottom: 2px solid #1a1aff;
     }
 
 }
@@ -89,6 +89,6 @@
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    border-bottom: 2px solid #9e1e22;
+    border-bottom: 2px solid #1a1aff;
 }
 

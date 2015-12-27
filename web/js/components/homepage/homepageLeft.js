@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDom = require('react-dom');
+var Reflux = require('reflux');
 var ResultImageGroup = require('../_common/resultImageGroup.js');
+
 
 var ResultsAction = require('../../actions/resultsActions.js');
 var ResultsStore = require('../../stores/resultsStore.js');
@@ -37,9 +39,10 @@ var HomepageLeft = React.createClass({
 
         return (
 
-                <div>
-                    <ResultImageGroup articles={this.state.results} ></ResultImageGroup>
-                </div>
+            <div>
+                <ResultImageGroup articles={actualities} ></ResultImageGroup>
+            </div>
+
 
         );
     }
@@ -48,5 +51,5 @@ var HomepageLeft = React.createClass({
 module.exports = HomepageLeft;
 
 /*<div>
- <ResultImageGroup articles={actualities} ></ResultImageGroup>
+ <ResultImageGroup articles={this.state.results} ></ResultImageGroup>
  </div>*/

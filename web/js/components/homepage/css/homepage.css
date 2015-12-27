@@ -93,10 +93,11 @@ table {
 }
 
 .homeContainerSearchBar form, .homeContainerSearchBar form * {
-    width: 95%;
-    height: 2.5rem !important;
+    /*width: 15%;*/
+    /*height: 2.5rem !important;*/
     margin:0;
     margin-left:2rem;
+    margin-right:2rem;
 }
 
 .homeOverlayImage {

@@ -9,7 +9,7 @@ var HomepageRight = React.createClass({
                 <div className="form-group rightElement commonRadius">
                     <form>
                         <div className="form-group">
-                            <h2 className="rightTitle">Discover what's new</h2>
+                            <h3 className="rightTitle">Discover what's new</h3>
                         </div>
                         <br />
                         <div className="form-group">
@@ -20,7 +20,7 @@ var HomepageRight = React.createClass({
                 <div className="form-group rightElement commonRadius">
                     <form>
                         <div className="form-group rightMarginBottom">
-                            <h2 className="rightTitle">Find us on</h2>
+                            <h3 className="rightTitle">Find us on</h3>
                         </div>
                         <div className="form-group">
                             <a href="https://www.facebook.com/ElizabethHurley/">
@@ -37,7 +37,7 @@ var HomepageRight = React.createClass({
                 <div className="form-group rightElement commonRadius">
                     <form>
                         <div className="form-group">
-                            <h2 className="rightTitle">Invite your friends</h2>
+                            <h3 className="rightTitle">Invite your friends</h3>
                         </div>
                         <div className="form-group">
                             <input type="email" className="form-control" placeholder="type email of your friends" />

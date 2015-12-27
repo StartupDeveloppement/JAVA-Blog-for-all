@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDom = require('react-dom');
 var Reflux = require('reflux');
+var Input = require('react-bootstrap').Input;
+var Button = require('react-bootstrap').Button;
 
 var Router = require('../../router.js');
 
@@ -40,6 +42,9 @@ var Main = React.createClass({
         const styles = {
             styleBackground: {backgroundImage: 'url("./images/homepage/homepage-background1.jpg")'}
         };
+
+        const innerButton = <Button> Submit </Button>;
+
         return (
             <div>
 
@@ -72,14 +77,8 @@ var Main = React.createClass({
                     </div>
                     <div className="row homeContainerSearchBar">
                         <div className="commonOverlay homeOverlaySearchBar"></div>
-
-                        <form className="navbar-form" role="search">
-                            <div className="input-group">
-                                <input type="text" className="form-control" placeholder="look for content" name="q" />
-                                <div className="input-group-btn">
-                                    <button className="btn btn-default" type="submit"><span>Search</span></button>
-                                </div>
-                            </div>
+                        <form className="" >
+                                <Input type="text" buttonAfter={innerButton} />
                         </form>
 
                     </div>
@@ -109,4 +108,11 @@ module.exports = {
         console.log('homepage exited');
     }
 };
+
+/*
+ <input type="text" className="form-control" placeholder="look for content" name="q" />
+ <div className="input-group-btn">
+ <button className="btn btn-default" type="submit"><span>Search</span></button>
+ </div>
+ */
 

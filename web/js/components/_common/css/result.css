@@ -5,8 +5,13 @@
 }
 
 .resultTitle {
-    font-family: "SegoeUI", serif;
-    font-weight: bold;
+    font-family: "Helvetica", serif;
+    /*font-weight: bold;*/
+}
+
+.resultTitle:hover {
+    color: #1a1aff;
+    /*font-weight: bold;*/
 }
 
 .resultDividerBlue {
@@ -36,5 +41,6 @@
 }
 
 .resultImage {
-    height:30px;
+    max-width: 5rem;
+    min-width: 5rem;
 }
