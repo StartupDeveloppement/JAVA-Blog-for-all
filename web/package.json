@@ -32,6 +32,11 @@
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-router": "^0.13.5",
-    "reflux": "^0.3.0"
+    "reflux": "^0.3.0",
+    "base-64": "^0.1.0",
+    "keymirror": "^0.1.1",
+    "react-avatar-cropper": "^0.1.1",
+    "react-bootstrap": "^0.28.1",
+    "utf8": "^2.1.1"
   }
 }
