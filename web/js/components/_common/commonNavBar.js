@@ -30,7 +30,7 @@ var CommonNavBar = React.createClass({
                         </ul>
                         <form role="search" className="navbar-form navbar-right">
                             <div className="form-group">
-                                <Input type="text" buttonAfter={innerButton} placeholder="Search" />
+                                <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" />
                             </div>
                         </form>
 

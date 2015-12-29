@@ -31,7 +31,7 @@
 
 #sidebar a.logo {
     display:block;
-    padding:3px;
+    padding:5px;
     background-color:#fff;
     color:#777777;
     height:3rem;
@@ -44,10 +44,6 @@
     text-shadow:0 0 0;
 }
 
-.formProfile{
-    padding:1rem;
-    margin-bottom:1rem
-}
 
 /* center and adjust the sidebar contents on smaller devices */
 @media (max-width: 768px) {
@@ -63,4 +59,22 @@
         width:75px;
         margin-bottom:30px;
     }
+}
+
+
+.formProfile{
+    padding:1rem;
+    margin-bottom:1rem;
+    border-style: solid;
+    border-width: 0.07rem;
+    border-color: gainsboro;
+}
+
+.socialNetworkLogo {
+    height:20px;
+    width:20px;
+}
+
+.titleProfile{
+    color: black;
 }
