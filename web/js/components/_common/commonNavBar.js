@@ -1,10 +1,14 @@
 var React = require('react');
 var Router = require('../../router.js');
 var State = require('abyssa').State;
+var Input = require('react-bootstrap').Input;
+var Button = require('react-bootstrap').Button;
 
 
 var CommonNavBar = React.createClass({
     render: function(){
+        const innerButton = <Button> Submit </Button>;
+
         return (
             <div className="navbar navbar-default navbar-fixed-top">
                 <div className="container">
@@ -26,7 +30,7 @@ var CommonNavBar = React.createClass({
                         </ul>
                         <form role="search" className="navbar-form navbar-right">
                             <div className="form-group">
-                                <input type="text" placeholder="Search" className="form-control" />
+                                <Input type="text" buttonAfter={innerButton} placeholder="Search" />
                             </div>
                         </form>
 

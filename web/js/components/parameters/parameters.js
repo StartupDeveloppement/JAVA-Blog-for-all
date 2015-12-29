@@ -15,102 +15,98 @@ var Parameters = React.createClass({
                 <br />
                 <br />
                 <br />
-                <div className="row container">
-                    <div className="col-sm-2 sidebar" >
-                        <br />
-                        <h3>Parameters</h3>
-                        <br />
+                <div data-spy="scroll" data-target="#myParametersScrollspy" data-offset="20">
+                    <div className="">
                         <div className="row">
-                            <ul className="nav">
-                                <li className="active"><a href="#">
-                                    <span className="commonSidebarLink">Personal</span></a>
-                                </li>
-                                <li><a href="#">
-                                    <span className="commonSidebarLink">Status</span></a>
-                                </li>
-                                <li><a href="#">
-                                    <span className="commonSidebarLink">University</span></a>
-                                </li>
-                                <li><a href="#">
-                                    <span className="commonSidebarLink">Work</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                            <nav className="col-sm-offset-0 col-sm-2 sidebar commonRadius" id="myParametersScrollspy">
+                                <br />
+                                <div className="row">
+                                    <h2>Parameters</h2>
+                                </div>
+                                <br />
+                                <ul className="nav nav-pills nav-stacked">
+                                    <li><a href="#accountParameters">Account</a></li>
+                                    <li><a href="#passwordParameters">Password</a></li>
+                                    <li><a href="#notificationsParameters">Notifications</a></li>
+                                </ul>
+                            </nav>
 
-                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm">
-                        <h3>Profile</h3>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group form-inline">
-                                <label className="col-sm-2" >name</label>
-                                <input className="col-sm-3 col-sm-offset-1 form-control" type="text" placeholder="firstname"  />
-                                <input className="col-sm-3 form-control" type="text" placeholder="lastname"  />
+                            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                                <div id="accountParameters">
+                                    <h3>Account</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" for="oldPasswordParameters">Old password :</label>
+                                        <div className="col-sm-6">
+                                            <input type="password" className="form-control" id="oldPasswordParameters" placeholder=" old password" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group form-inline">
-                                <label className="col-sm-2">user name</label>
-                                <input className="col-sm-6 col-sm-offset-1 form-control" type="text" placeholder="firstname"  />
+
+                            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                                <div id="passwordParameters">
+                                    <h3>Password</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" for="oldPasswordParameters">Old password :</label>
+                                        <div className="col-sm-6">
+                                            <input type="password" className="form-control" id="oldPasswordParameters" placeholder=" old password" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" for="newPasswordParameters">New password :</label>
+                                        <div className="col-sm-6">
+                                            <input type="password" className="form-control" id="newPasswordParameters" placeholder=" new password" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" for="newPasswordParameters2">New password :</label>
+                                        <div className="col-sm-6">
+                                            <input type="password" className="form-control" id="newPasswordParameters2" placeholder=" new password" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="e-mail"  />
+
+                            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                                <div id="notificationsParameters">
+                                    <h3>Notifications</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" for="oldPasswordParameters">Old password :</label>
+                                        <div className="col-sm-6">
+                                            <input type="password" className="form-control" id="oldPasswordParameters" placeholder=" old password" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="e-mail"  />
-                            </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="e-mail"  />
-                            </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="e-mail"  />
-                            </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-12"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="e-mail"  />
-                            </div>
-                        </div>
-                        <div className="row divider">
-                            <div className="col-sm-11"><hr></hr></div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="e-mail"  />
-                            </div>
+
                         </div>
                     </div>
 
                 </div>
-
             </div>
         );
     }
@@ -121,9 +117,9 @@ var Parameters = React.createClass({
 module.exports = {
     enter: function() {
         ReactDom.render(<Parameters />, document.getElementById('app'));
-        console.log('profile entered');
+        console.log('parameters entered');
     },
     exit: function() {
-        console.log('profile exited');
+        console.log('parameters exited');
     }
 };
