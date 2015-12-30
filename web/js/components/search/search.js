@@ -106,41 +106,53 @@ var Search = React.createClass({
                     <br />
                     <br />
                     <br />
-                    <div className="row container marginResultThumbnail affix thumbnailCategory" data-offset-top="125">
-                        <div className="col-sm-3">
+                    <div className="row container affix thumbnailCategory" data-offset-top="125">
+                        <div className="container col-sm-3">
                             <h4>HighRollers</h4>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="container col-sm-3">
                             <h4>OnTheWays</h4>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="container col-sm-3">
                             <h4>Newbies</h4>
                         </div>
                     </div>
                     <br />
                     <br />
                     <br />
-
-                    <div className="row container marginResultThumbnail">
-                        <div className="col-sm-3">
+                    <div className="row marginResultThumbnail">
+                        <div className="container col-sm-3">
                             <ResultThumbnailGroup articles={articlesHighRoller} />
                         </div>
-                        <div className="col-sm-3">
+                        <div className="container col-sm-3">
                             <ResultThumbnailGroup articles={articlesMedium} />
                         </div>
-                        <div className="col-sm-3">
+                        <div className="container col-sm-3">
                             <ResultThumbnailGroup articles={articlesNewbies} />
                         </div>
-                        <div className="rightElement commonRadius marginLeftPromotion col-sm-2">
-                            <form>
-                                <div className="form-group">
-                                    <h3 className="rightTitle">Invite your friendss</h3>
-                                </div>
-                                <div className="form-group">
-                                    <input type="email" className="form-control" placeholder="type email of your friends" />
-                                </div>
-                                <button type="submit" className="btn btn-default">invite</button>
-                            </form>
+                        <div className="container col-sm-3">
+                            <div className="rightElement commonRadius marginPromotion">
+                                <form>
+                                    <div className="form-group">
+                                        <h3 className="rightTitle">Invite your friends</h3>
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="email" className="form-control" placeholder="type email of your friends" />
+                                    </div>
+                                    <button type="submit" className="btn btn-default">invite</button>
+                                </form>
+                            </div>
+                            <div className="rightElement commonRadius marginPromotion">
+                                <form>
+                                    <div className="form-group">
+                                        <h3 className="rightTitle">Invite your friends</h3>
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="email" className="form-control" placeholder="type email of your friends" />
+                                    </div>
+                                    <button type="submit" className="btn btn-default">invite</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
