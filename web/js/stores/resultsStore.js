@@ -1,14 +1,14 @@
 var Reflux = require('reflux');
 var Router = require('../router.js');
 var $ = require('jquery');
-var ResultsActions = require('../actions/authenticationActions.js');
+var ResultsActions = require('../actions/resultsActions.js');
 
 var ResultsStore = Reflux.createStore({
     listenables: ResultsActions,
     init: function () {
         this.results = [];
     },
-    onAuthenticate: function () {
+    onGetLastArticles: function () {
         $.ajax({
             url: 'http://localhost:8080/app/rest/results/lastarticles',
             type: 'POST',

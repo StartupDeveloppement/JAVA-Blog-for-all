@@ -59,7 +59,11 @@ var Main = React.createClass({
                                     <a href={Router.link('help')}>help</a>
                                 </h5>
                             </div>
-                            <div className="col-sm-1 homeTopTitle"><h5 className="fontTopTitle">login</h5></div>
+                            <div className="col-sm-1 homeTopTitle">
+                                <h5 className="fontTopTitle">
+                                    <a href={Router.link('search')}>login</a>
+                                </h5>
+                            </div>
                         </div>
                         <div className="container col-sm-4 col-sm-offset-7 homeSignupForm  commonRadius">
                             <h3 className="fontSignup">sign up</h3>

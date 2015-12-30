@@ -1,11 +1,23 @@
 var React = require('react');
+var Reflux = require('reflux');
 var Router = require('../../router.js');
 var State = require('abyssa').State;
 var Input = require('react-bootstrap').Input;
 var Button = require('react-bootstrap').Button;
 
+var SearchActions = require('../../actions/searchActions.js');
+var SearchStore = require('../../stores/searchStore.js')
+
 
 var CommonNavBar = React.createClass({
+
+    mixins: [Reflux.connect(SearchStore)],
+    handleSearch:function(event){
+        event.preventDefault();
+        SearchActions.searchResults();
+        //this.setState({email: ''});
+    },
+
     render: function(){
         const innerButton = <Button> Submit </Button>;
 
@@ -28,7 +40,7 @@ var CommonNavBar = React.createClass({
                             <li><a href={Router.link('actualities')}>Actualities</a></li>
                             <li><a href="#">Projects</a></li>
                         </ul>
-                        <form role="search" className="navbar-form navbar-right">
+                        <form role="search" className="navbar-form navbar-right" onSubmit={this.handleSearch}>
                             <div className="form-group">
                                 <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" />
                             </div>
@@ -58,4 +70,4 @@ module.exports = CommonNavBar;
 /*
  <div className="row commonUnderlineNavbar">
  </div>
- */
+    */
