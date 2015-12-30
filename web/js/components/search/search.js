@@ -106,31 +106,29 @@ var Search = React.createClass({
                     <br />
                     <br />
                     <br />
-                    <div className="row container affix thumbnailCategory" data-offset-top="125">
-                        <div className="container col-sm-3">
-                            <h4>HighRollers</h4>
+                    <div className="row thumbnailCategory">
+                        <div className="container col-sm-3 col-md-3">
+                            <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
                         </div>
-                        <div className="container col-sm-3">
-                            <h4>OnTheWays</h4>
+                        <div className="container col-sm-3 col-md-3">
+                            <h4 className="textThumbnailCategory">ON THE WAYS</h4>
                         </div>
-                        <div className="container col-sm-3">
-                            <h4>Newbies</h4>
+                        <div className="container col-sm-3 col-md-3">
+                            <h4 className="textThumbnailCategory">NEWBIES</h4>
                         </div>
                     </div>
                     <br />
-                    <br />
-                    <br />
                     <div className="row marginResultThumbnail">
-                        <div className="container col-sm-3">
+                        <div className="container col-sm-3 col-md-3">
                             <ResultThumbnailGroup articles={articlesHighRoller} />
                         </div>
-                        <div className="container col-sm-3">
+                        <div className="container col-sm-3 col-md-3">
                             <ResultThumbnailGroup articles={articlesMedium} />
                         </div>
-                        <div className="container col-sm-3">
+                        <div className="container col-sm-3 col-md-3">
                             <ResultThumbnailGroup articles={articlesNewbies} />
                         </div>
-                        <div className="container col-sm-3">
+                        <div className="container col-sm-3 col-md-3">
                             <div className="rightElement commonRadius marginPromotion">
                                 <form>
                                     <div className="form-group">

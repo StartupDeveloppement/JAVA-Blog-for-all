@@ -12,9 +12,9 @@ var resultThumbnail = React.createClass({
         return (
             <Grid>
                 <Row>
-                    <Col xs={5} md={3}>
+                    <Col xs={6} md={4}>
                         <a href="https://www.youtube.com/watch?v=tLHVEmCro2A">
-                            <Thumbnail src={this.props.articlePicture} alt="cool article">
+                            <Thumbnail className="resultThumbnail" src={this.props.articlePicture} alt="cool article">
                                 <h3>{this.props.articleTitle}</h3>
                                 <p>{this.props.articleDescription}</p>
                                 <div className="row divider">
