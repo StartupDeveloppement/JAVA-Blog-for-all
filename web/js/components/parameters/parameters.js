@@ -18,12 +18,9 @@ var Parameters = React.createClass({
         return (
             <div className="commonContainer">
                 <CommonNavBar />
-                <br />
-                <br />
-                <br />
+                <div className="commonContainerNavBar">
                 <br />
                 <div data-spy="scroll" data-target="#myParametersScrollspy" data-offset="20">
-                    <div className="">
                         <div className="row">
                             <nav className="col-sm-offset-0 col-sm-2 sidebar commonRadius" id="myParametersScrollspy">
                                 <br />

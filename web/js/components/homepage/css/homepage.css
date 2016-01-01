@@ -42,36 +42,53 @@ table {
     border-spacing: 0;
 }
 
+.homeTopTitle{
+    /*position:relative;*/
+    z-index:1;
+}
+.onHoverHomeTitle{
+    cursor: pointer; cursor: hand;
+}
+.homeTopRow{
+    padding:0.7rem;
+}
+.fontTopTitle{
+    letter-spacing: 1px;
+    color: white;
+}
 
-.homeSignupForm {
+.marginHowItWorks{
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+
+.homeMainTitle {
+    position:relative;
     background-color: transparent;
-    border: 2px solid white;
-    max-width:500px;
+    /*border: 2px solid white;
+    max-width:1000px;*/
     margin-top:14%;
     margin-bottom:0%;
     padding-bottom:2%;
     z-index:1;
 }
 
-.fontSignup{
-    text-transform: uppercase;
+.homeResultsTitle{
+    /*position:relative;*/
+    /*background-color: transparent;
+    /*margin-bottom:0%;*/
+    padding-bottom:2%;
+    /*z-index:1;*/
+}
+
+.fontMainTitle{
     letter-spacing: 1px;
     text-align: center;
     color: white;
 }
-
-.homeTopTitle{
-    /*position:relative;*/
-    z-index:1;
-}
-
-.homeTopRow{
-    padding:0.7rem;
-}
-
-.fontTopTitle{
-    letter-spacing: 1px;
-    color: white;
+.buttonMainTitle{
+    text-align: center;
+    opacity: 0.5;
 }
 
 .homeBackground {
@@ -96,8 +113,13 @@ table {
     /*width: 15%;*/
     /*height: 2.5rem !important;*/
     margin:0;
-    margin-left:2rem;
-    margin-right:2rem;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+.buttonSearchBar{
+    background-color: #3B87B1;
+    color: white;
 }
 
 .homeOverlayImage {

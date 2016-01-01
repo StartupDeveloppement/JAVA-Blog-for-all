@@ -7,7 +7,7 @@ var SearchActions = require('../actions/searchActions.js');
 
 var SearchStore = Reflux.createStore({
     listenables: SearchActions,
-    onSearch: function () {
+    onSearchResults: function () {
         Router.transitionTo('search');
     }
 });

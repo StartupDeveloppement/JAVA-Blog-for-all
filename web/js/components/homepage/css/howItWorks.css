@@ -1,0 +1,9 @@
+
+.howItWorksImage {
+    max-width: 10rem;
+    min-width: 10rem;
+}
+
+.howItWorksButton{
+    z-index: 1;
+}

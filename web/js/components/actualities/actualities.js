@@ -10,23 +10,20 @@ var Actualities = React.createClass({
     render: function(){
         return (
             <div>
-
                 <CommonNavBar />
-                <div className="row commonContainer">
-                    <br />
-                    <br />
-                    <br />
-                    <h3 className="commonMainTitle">LAST SHARED CONTENT of my contact</h3>
-                    <div>
-                        <div className="container col-sm-7 col-sm-offset-1">
-                            <ActualitiesLeft></ActualitiesLeft>
-                        </div>
-                        <div className="container col-sm-3 col-sm-offset-0.5">
-                            <ActualitiesRight></ActualitiesRight>
+                <div className="commonContainerNavBar">
+                    <div className="row">
+                        <h3 className="commonMainTitle">LAST SHARED CONTENT of my contact</h3>
+                        <div>
+                            <div className="container col-sm-7 col-sm-offset-1">
+                                <ActualitiesLeft></ActualitiesLeft>
+                            </div>
+                            <div className="container col-sm-3 col-sm-offset-0.5">
+                                <ActualitiesRight></ActualitiesRight>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }

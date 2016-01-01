@@ -1,6 +1,10 @@
 .commonContainer{
     background-color: #EFEFEF;
 }
+.commonContainerNavBar{
+    background-color: #EFEFEF;
+    margin-top: 51px;
+}
 
 .commonRadius {
     border-radius: 3px;
@@ -23,7 +27,7 @@
 }
 
 .commonMarginNavbar{
-    margin-top: 10rem;
+    /*margin-top: 10rem;*/
 }
 
 .commonUnderlineNavbar{

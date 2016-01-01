@@ -7,15 +7,13 @@ var CommonNavBar = require('../_common/commonNavBar.js');
 var Help = React.createClass({
    render: function () {
        return (
-           <div className="commonContainer">
+           <div>
                <CommonNavBar />
-               <br />
-               <br />
-               <br />
-               <br />
-                <div className="row">
-                    <h2>Help page</h2>
-                </div>
+               <div className="commonContainerNavBar">
+                    <div className="row">
+                        <h2>Help page</h2>
+                    </div>
+               </div>
            </div>
        );
    }

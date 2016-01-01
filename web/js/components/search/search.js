@@ -101,55 +101,55 @@ var Search = React.createClass({
             ];
 
             return (
-                <div className="commonContainer">
+                <div>
                     <CommonNavBar />
-                    <br />
-                    <br />
-                    <br />
-                    <div className="row thumbnailCategory">
-                        <div className="container col-sm-3 col-md-3">
-                            <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
-                        </div>
-                        <div className="container col-sm-3 col-md-3">
-                            <h4 className="textThumbnailCategory">ON THE WAYS</h4>
-                        </div>
-                        <div className="container col-sm-3 col-md-3">
-                            <h4 className="textThumbnailCategory">NEWBIES</h4>
-                        </div>
-                    </div>
-                    <br />
-                    <div className="row marginResultThumbnail">
-                        <div className="container col-sm-3 col-md-3">
-                            <ResultThumbnailGroup articles={articlesHighRoller} />
-                        </div>
-                        <div className="container col-sm-3 col-md-3">
-                            <ResultThumbnailGroup articles={articlesMedium} />
-                        </div>
-                        <div className="container col-sm-3 col-md-3">
-                            <ResultThumbnailGroup articles={articlesNewbies} />
-                        </div>
-                        <div className="container col-sm-3 col-md-3">
-                            <div className="rightElement commonRadius marginPromotion">
-                                <form>
-                                    <div className="form-group">
-                                        <h3 className="rightTitle">Invite your friends</h3>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="email" className="form-control" placeholder="type email of your friends" />
-                                    </div>
-                                    <button type="submit" className="btn btn-default">invite</button>
-                                </form>
+                    <div className="commonContainerNavBar">
+                        <br />
+                        <div className="row thumbnailCategory">
+                            <div className="container col-sm-3 col-md-3">
+                                <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
                             </div>
-                            <div className="rightElement commonRadius marginPromotion">
-                                <form>
-                                    <div className="form-group">
-                                        <h3 className="rightTitle">Invite your friends</h3>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="email" className="form-control" placeholder="type email of your friends" />
-                                    </div>
-                                    <button type="submit" className="btn btn-default">invite</button>
-                                </form>
+                            <div className="container col-sm-3 col-md-3">
+                                <h4 className="textThumbnailCategory">ON THE WAYS</h4>
+                            </div>
+                            <div className="container col-sm-3 col-md-3">
+                                <h4 className="textThumbnailCategory">NEWBIES</h4>
+                            </div>
+                        </div>
+                        <br />
+                        <div className="row marginResultThumbnail">
+                            <div className="container col-sm-3 col-md-3">
+                                <ResultThumbnailGroup articles={articlesHighRoller} />
+                            </div>
+                            <div className="container col-sm-3 col-md-3">
+                                <ResultThumbnailGroup articles={articlesMedium} />
+                            </div>
+                            <div className="container col-sm-3 col-md-3">
+                                <ResultThumbnailGroup articles={articlesNewbies} />
+                            </div>
+                            <div className="container col-sm-3 col-md-3">
+                                <div className="rightElement commonRadius marginPromotion">
+                                    <form>
+                                        <div className="form-group">
+                                            <h3 className="rightTitle">Invite your friends</h3>
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="email" className="form-control" placeholder="type email of your friends" />
+                                        </div>
+                                        <button type="submit" className="btn btn-default">invite</button>
+                                    </form>
+                                </div>
+                                <div className="rightElement commonRadius marginPromotion">
+                                    <form>
+                                        <div className="form-group">
+                                            <h3 className="rightTitle">Invite your friends</h3>
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="email" className="form-control" placeholder="type email of your friends" />
+                                        </div>
+                                        <button type="submit" className="btn btn-default">invite</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

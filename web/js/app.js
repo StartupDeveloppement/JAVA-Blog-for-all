@@ -9,6 +9,7 @@ var Profile = require('./components/profile/profile.js');
 var Parameters = require('./components/parameters/parameters.js');
 var Help = require('./components/help/help.js');
 var Search = require('./components/search/search.js');
+var Login = require('./components/login/login.js');
 
 
 Router
@@ -17,7 +18,8 @@ Router
     .addState('profile', State('profile', Profile))
     .addState('parameters', State('parameters', Parameters))
     .addState('help', State('help', Help))
-    .addState('search', State('search', Search));
+    .addState('search', State('search', Search))
+    .addState('login', State('login', Login));
 
 document.addEventListener("DOMContentLoaded", function(event) {
     Router.init('homepage')
