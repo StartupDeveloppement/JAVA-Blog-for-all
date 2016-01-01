@@ -29,12 +29,10 @@
 .commonMarginNavbar{
     /*margin-top: 10rem;*/
 }
-
-.commonUnderlineNavbar{
-    border: 0;
-    width:100%;
-    background-color: #99A1A3;
-    height: 1px;
+.commonBoxShadowNavbar{
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 }
 
 .commonForm{

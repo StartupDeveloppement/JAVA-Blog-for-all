@@ -22,7 +22,7 @@ var CommonNavBar = React.createClass({
         const innerButton = <button type="submit" className="btn btn-default">submit</button>;
 
         return (
-            <div className="navbar navbar-default navbar-fixed-top">
+            <div className="navbar navbar-default navbar-fixed-top commonBoxShadowNavbar">
                 <div className="container">
 
                     <div className="navbar-header">
