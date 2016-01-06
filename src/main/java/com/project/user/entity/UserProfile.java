@@ -27,6 +27,7 @@ public class UserProfile implements java.io.Serializable {
     private List<Article> articleList;
 
 
+
     public Integer getIdUserProfile() {return idUserProfile;}
 
     public UserAuth getUser() {return user;}
@@ -41,4 +42,6 @@ public class UserProfile implements java.io.Serializable {
     public Date getBirthday() {return birthday;}
     public void setBirthday(Date birthday) {this.birthday = birthday;}
 
+    public List<Article> getArticleList() {return articleList;}
+    public void setArticleList(List<Article> articleList) {this.articleList = articleList;}
 }

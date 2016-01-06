@@ -14,7 +14,7 @@ import java.util.List;
 public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements ArticleDao{
 
 
-    public List<Article> findSomeArticles() {
+    public List<Article> findLastArticles() {
 
         EntityManager em = getEntityManager();
         EntityTransaction t = em.getTransaction();
@@ -22,7 +22,7 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
 
         try {
             t.begin();
-            TypedQuery<Article> typedQuery = em.createQuery("Select a from Article a",Article.class);
+            TypedQuery<Article> typedQuery = em.createQuery("Select a from Article a Order by a.articleDate DESC",Article.class);
                 typedQuery.setMaxResults(7);
             articleList = typedQuery.getResultList();
             t.commit();

@@ -14,6 +14,7 @@ import com.project.user.entity.UserAuth;
 import com.project.user.entity.UserProfile;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -62,6 +63,9 @@ public class TestDao {
             articleKeyWordList.add(articleKeyWord2);
             articleKeyWordList.add(articleKeyWord3);
 
+        Date myDate;
+        Calendar calendar = Calendar.getInstance();
+
 
         Article article1 = new Article();
             article1.setArticleDivider("resultDividerBlue");
@@ -71,6 +75,11 @@ public class TestDao {
             article1.getArticleKeyWordList().add(articleKeyWord1);
             article1.getArticleKeyWordList().add(articleKeyWord2);
             article1.getArticleKeyWordList().add(articleKeyWord3);
+                calendar.set(Calendar.MONTH, 8);
+                calendar.set(Calendar.DATE, 24);
+                calendar.set(Calendar.YEAR, 2013);
+                myDate = calendar.getTime();
+            article1.setArticleDate(myDate);
 
         Article article2 = new Article();
             article2.setArticleDivider("resultDividerRed");
@@ -80,48 +89,88 @@ public class TestDao {
             article2.getArticleKeyWordList().add(articleKeyWord1);
             article2.getArticleKeyWordList().add(articleKeyWord2);
             article2.getArticleKeyWordList().add(articleKeyWord3);
+                calendar.set(Calendar.MONTH, 8);
+                calendar.set(Calendar.DATE, 14);
+                calendar.set(Calendar.YEAR, 2014);
+                myDate = calendar.getTime();
+            article2.setArticleDate(myDate);
 
         Article article3 = new Article();
             article3.setArticleDivider("resultDividerBlue");
             article3.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article3.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article3.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 8);
+                calendar.set(Calendar.DATE, 14);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article3.setArticleDate(myDate);
 
         Article article4 = new Article();
             article4.setArticleDivider("resultDividerRed");
             article4.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article4.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article4.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 8);
+                calendar.set(Calendar.DATE, 10);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article4.setArticleDate(myDate);
 
         Article article5 = new Article();
             article5.setArticleDivider("resultDividerBlue");
             article5.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article5.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article5.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 10);
+                calendar.set(Calendar.DATE, 5);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article5.setArticleDate(myDate);
 
         Article article6 = new Article();
             article6.setArticleDivider("resultDividerRed");
             article6.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article6.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article6.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 2);
+                calendar.set(Calendar.DATE, 21);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article6.setArticleDate(myDate);
 
         Article article7 = new Article();
             article7.setArticleDivider("resultDividerRed");
             article7.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article7.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article7.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 8);
+                calendar.set(Calendar.DATE, 22);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article7.setArticleDate(myDate);
 
         Article article8 = new Article();
             article8.setArticleDivider("resultDividerBlue");
             article8.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article8.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article8.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 18);
+                calendar.set(Calendar.DATE, 5);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article8.setArticleDate(myDate);
 
         Article article9 = new Article();
             article9.setArticleDivider("resultDividerRed");
             article9.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article9.setUserProfile(userProfile);
+                calendar.set(Calendar.MONTH, 8);
+                calendar.set(Calendar.DATE, 6);
+                calendar.set(Calendar.YEAR, 2015);
+                myDate = calendar.getTime();
+            article9.setArticleDate(myDate);
 
         ArticleDao articleDao = new ArticleDaoImpl();
         boolean article1Ok = articleDao.create(article1);
@@ -148,7 +197,7 @@ public class TestDao {
         System.out.println("Article8: " + article8Ok);
         System.out.println("Article9: " + article9Ok);
 
-        for (Article article : articleDao.findSomeArticles()){
+        for (Article article : articleDao.findLastArticles()){
             System.out.println("-----------------");
             System.out.println("article id: " + article.getArticleKey());
             System.out.println("article title: " + article.getArticleTitle());

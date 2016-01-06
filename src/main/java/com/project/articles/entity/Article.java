@@ -5,6 +5,7 @@ import com.project.user.entity.UserProfile;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,6 +20,7 @@ public class Article implements java.io.Serializable{
     private Integer articleKey;
     private String articleTitle;
     private String articleDivider;
+    private Date articleDate;
     @Lob
     @Column(columnDefinition="TEXT")
     private String articleText;
@@ -44,5 +46,8 @@ public class Article implements java.io.Serializable{
 
     public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
     public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}
+
+    public Date getArticleDate() {return articleDate;}
+    public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}
 
 }

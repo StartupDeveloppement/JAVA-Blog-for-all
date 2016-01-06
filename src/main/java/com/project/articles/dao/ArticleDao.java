@@ -10,6 +10,6 @@ import java.util.List;
  */
 public interface ArticleDao extends Dao<Article,Integer> {
 
-    public List<Article> findSomeArticles();
+    public List<Article> findLastArticles();
 
 }
