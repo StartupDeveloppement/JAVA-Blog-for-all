@@ -54,7 +54,7 @@ var Parameters = React.createClass({
                                         <div className="col-sm-12"><hr></hr></div>
                                     </div>
                                     <div className="row form-group">
-                                        <label className="control-label col-sm-3" for="countryParameters">Language :</label>
+                                        <label className="control-label col-sm-3" for="countryParameters">Country :</label>
                                         <div className="col-sm-6">
                                             <select className="form-control input-sm" id="countryParameters">
                                                 <option>United Kingdom</option>
@@ -74,7 +74,7 @@ var Parameters = React.createClass({
                                     </div>
                                     <div className="row form-group">
                                         <div className="col-sm-6">
-                                           <a href="" style={styles.styleDeactivateAccount}>deactivate my accounnt</a>
+                                           <a href="" style={styles.styleDeactivateAccount}>deactivate my account</a>
                                         </div>
                                     </div>
                                     <div className="row divider">
