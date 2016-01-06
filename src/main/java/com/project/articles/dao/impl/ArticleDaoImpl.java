@@ -1,6 +1,7 @@
-package com.project.articles.dao;
+package com.project.articles.dao.impl;
 
-import com.common.AbstractDao;
+import com.common.dao.AbstractDao;
+import com.project.articles.dao.ArticleDao;
 import com.project.articles.entity.Article;
 
 import javax.persistence.EntityManager;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * Created by olivier on 19/12/2015.
  */
-public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements ArticleDao{
+public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements ArticleDao {
 
 
     public List<Article> findLastArticles() {

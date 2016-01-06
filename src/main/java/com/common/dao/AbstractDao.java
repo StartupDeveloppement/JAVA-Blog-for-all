@@ -1,4 +1,4 @@
-package com.common;
+package com.common.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

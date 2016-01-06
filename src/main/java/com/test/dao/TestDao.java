@@ -1,15 +1,15 @@
 package com.test.dao;
 
 import com.project.articles.dao.ArticleDao;
-import com.project.articles.dao.ArticleDaoImpl;
+import com.project.articles.dao.impl.ArticleDaoImpl;
 import com.project.articles.dao.ArticleKeyWordDao;
-import com.project.articles.dao.ArticleKeyWordDaoImpl;
+import com.project.articles.dao.impl.ArticleKeyWordDaoImpl;
 import com.project.articles.entity.Article;
 import com.project.articles.entity.ArticleKeyWord;
 import com.project.user.dao.UserAuthDao;
-import com.project.user.dao.UserAuthDaoImpl;
+import com.project.user.dao.impl.UserAuthDaoImpl;
 import com.project.user.dao.UserProfileDao;
-import com.project.user.dao.UserProfileDaoImpl;
+import com.project.user.dao.impl.UserProfileDaoImpl;
 import com.project.user.entity.UserAuth;
 import com.project.user.entity.UserProfile;
 

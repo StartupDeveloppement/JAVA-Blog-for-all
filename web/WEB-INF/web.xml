@@ -18,7 +18,7 @@
         </servlet-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>com.rest.MyServices</param-value>
+            <param-value>com.common.rest.MyServices</param-value>
         </init-param>
     </servlet>
 

@@ -1,6 +1,7 @@
-package com.project.user.dao;
+package com.project.user.dao.impl;
 
-import com.common.AbstractDao;
+import com.common.dao.AbstractDao;
+import com.project.user.dao.UserProfileDao;
 import com.project.user.entity.UserProfile;
 
 import javax.persistence.EntityManager;

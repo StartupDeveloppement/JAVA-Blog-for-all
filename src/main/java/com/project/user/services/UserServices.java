@@ -1,10 +1,9 @@
 package com.project.user.services;
 
 import com.project.user.dao.UserAuthDao;
-import com.project.user.dao.UserAuthDaoImpl;
+import com.project.user.dao.impl.UserAuthDaoImpl;
 import com.project.user.dao.UserProfileDao;
-import com.project.user.dao.UserProfileDaoImpl;
-import com.project.user.entity.User;
+import com.project.user.dao.impl.UserProfileDaoImpl;
 import com.project.user.entity.UserAuth;
 
 import javax.ws.rs.*;

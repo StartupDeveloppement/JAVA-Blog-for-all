@@ -1,4 +1,4 @@
-package com.rest;
+package com.common.rest;
 
 import com.test.services.ServiceTest;
 import com.project.user.services.UserServices;

@@ -1,6 +1,6 @@
 package com.project.articles.dao;
 
-import com.common.Dao;
+import com.common.dao.Dao;
 import com.project.articles.entity.Article;
 
 import java.util.List;

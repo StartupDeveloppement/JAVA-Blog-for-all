@@ -1,4 +1,4 @@
-package com.common;
+package com.common.dao;
 
 /**
  * Created by olivier on 20/11/15.
