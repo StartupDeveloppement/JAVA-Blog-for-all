@@ -1,0 +1,22 @@
+{
+  "name": "blogproject",
+  "description": "Project Blog",
+  "main": "gulpfile.js",
+  "authors": [
+    "Olivier Couliibaly <olivier.ingesup@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/StartupDeveloppement/JAVA-Blog-for-all",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-cycle2": "~2.1.6",
+    "medium-editor-insert-plugin": "2.1"
+  }
+}

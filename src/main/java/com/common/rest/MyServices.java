@@ -1,5 +1,6 @@
 package com.common.rest;
 
+import com.project.articles.services.ArticleServices;
 import com.test.services.ServiceTest;
 import com.project.user.services.UserServices;
 
@@ -16,6 +17,7 @@ public class MyServices extends Application {
     public MyServices() {
         singletons.add(new ServiceTest());
         singletons.add(new UserServices());
+        singletons.add(new ArticleServices());
     }
 
     @Override

@@ -24,9 +24,9 @@ public class Article implements java.io.Serializable{
     @Lob
     @Column(columnDefinition="TEXT")
     private String articleText;
-    @ManyToOne(targetEntity =UserProfile.class, fetch = FetchType.LAZY)
-    private UserProfile userProfile;
-    @ManyToMany(fetch = FetchType.LAZY)
+    /*@ManyToOne(targetEntity =UserProfile.class, fetch = FetchType.EAGER)
+    private UserProfile userProfile;*/
+    @OneToMany(fetch = FetchType.EAGER)
     private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
 
 
@@ -41,8 +41,8 @@ public class Article implements java.io.Serializable{
     public String getArticleText() {return articleText;}
     public void setArticleText(String articleText) {this.articleText = articleText;}
 
-    public UserProfile getUserProfile() {return userProfile;}
-    public void setUserProfile(UserProfile userProfile) {this.userProfile = userProfile;}
+    /*public UserProfile getUserProfile() {return userProfile;}
+    public void setUserProfile(UserProfile userProfile) {this.userProfile = userProfile;}*/
 
     public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
     public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}

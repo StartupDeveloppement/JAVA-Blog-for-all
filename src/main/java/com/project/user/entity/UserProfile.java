@@ -23,7 +23,7 @@ public class UserProfile implements java.io.Serializable {
     private String lastname;
     @Temporal(TemporalType.DATE)
     private Date birthday;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="userProfile")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //, mappedBy="userProfile")
     private List<Article> articleList;
 
 

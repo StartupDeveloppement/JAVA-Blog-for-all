@@ -3,26 +3,37 @@ var Router = require('../router.js');
 var $ = require('jquery');
 var ResultsActions = require('../actions/resultsActions.js');
 
+var results = [];
+
 var ResultsStore = Reflux.createStore({
     listenables: ResultsActions,
-    init: function () {
-        this.results = [];
-    },
+    /*getInitialState: function () {
+        return {
+            results: []
+        };
+    },*/
     onGetLastArticles: function () {
         $.ajax({
-            url: 'http://localhost:8080/app/rest/results/lastarticles',
-            type: 'POST',
-            contentType: 'application/x-www-form-urlencoded',
-            //data: {email:email,password:password},
-            dataType: "json",
+            beforeSend: function(xhrObj){
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader("Accept","application/json");
+            },
+            url: 'http://localhost:8080/app/rest/articles/lastarticles',
+            type: 'GET',
+            /*//contentType: 'application/x-www-form-urlencoded',
+            //data: {email:email,password:password},*/
+            /*contentType: "application/json",
+            dataType: "json",*/
             context:this,
             success: function(data) {
                 if (data) {
-                    console.log("Result OK");
-                    this.results.concat(data);
-                    Router.transitionTo('actualities');
+                    console.log("Result OKK");
+                    results = results.concat(data);
+                    this.trigger(results);
+                    console.log(data);
+                    console.log(results);
                 }else{
-                    console.log("User Authentication KO");
+                    console.log("Search Result KO");
                     console.log(data);
                 }
             }

@@ -10,12 +10,13 @@ var ResultsStore = require('../../stores/resultsStore.js');
 var HomepageLeft = React.createClass({
     mixins: [Reflux.connect(ResultsStore, "results")],
     getInitialState: function () {
+        ResultsAction.getLastArticles();
         return {
-            results: ResultsStore.results
+            actualities: ResultsStore.results
         }
     },
     render: function () {
-
+        console.log("actualities" + this.state.actualities);
         var actualities = [
             {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
                 articleText:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
