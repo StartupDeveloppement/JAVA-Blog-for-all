@@ -15,6 +15,43 @@ var Login = React.createClass({
         };
     },
 
+    componentDidMount:function(){
+        var editor = new MediumEditor('.editable', {
+            buttonLabels: 'fontawesome'
+        });
+
+        $(function () {
+            $('.editable').mediumInsert({
+                editor: editor,
+                addons: {
+                    images: {
+                        styles: {
+                            slideshow: {
+                                label: '<span class="fa fa-play"></span>',
+                                added: function ($el) {
+                                    $el
+                                        .data('cycle-center-vert', true)
+                                        .cycle({
+                                            slides: 'figure'
+                                        });
+                                },
+                                removed: function ($el) {
+                                    $el.cycle('destroy');
+                                }
+                            }
+                        },
+                        actions: false
+                    }
+                }
+            });
+        });
+
+        var cssLink = document.getElementById('medium-editor-theme');
+        document.getElementById('sel-themes').addEventListener('change', function () {
+            cssLink.href = this.value + '.css';
+        });
+    },
+
     handleClick:function(event){
         event.preventDefault();
         AuthenticationActions.authenticate(this.state.email,this.state.password);
@@ -57,6 +94,9 @@ var Login = React.createClass({
                             </div>
                             <button type="submit" className="btn btn-default">submit</button>
                         </form>
+                    </div>
+                    <div className="editable">
+                        be the best from the l'est
                     </div>
                 </div>
             </div>

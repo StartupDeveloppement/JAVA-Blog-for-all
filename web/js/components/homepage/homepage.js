@@ -22,6 +22,7 @@ var Main = React.createClass({
             openHowItWorks:false
         }
     },
+
     handleClickHowItWorks:function (event) {
         event.preventDefault();
         this.setState({openHowItWorks:true});

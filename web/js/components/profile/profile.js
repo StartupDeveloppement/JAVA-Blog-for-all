@@ -3,7 +3,7 @@ var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
-var CommonImageCropper = require('../_common/commonImageCropper.js')
+var CommonImageCropper = require('../_common/commonImageCropper.js');
 
 
 var Profile = React.createClass({

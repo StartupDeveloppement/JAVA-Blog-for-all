@@ -16,7 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-cycle2": "~2.1.6",
-    "medium-editor-insert-plugin": "2.1"
-  }
+    "medium-editor-insert-plugin": "^2.0.1",
+    "medium-editor": "^5.2.0",
+    "jquery-cycle2": "~2.1.6"
+  },
+    "resolutions": {
+      "medium-editor": "^5.2.0"
+    }
 }
