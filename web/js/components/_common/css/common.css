@@ -44,8 +44,24 @@
     background-color: white;
 }
 
+.commonHeight{
+    height: 41rem;
+}
+
 .commonSidebarLink{
     color: white;
+}
+
+.commonFooterStyle{
+    background-color: #2a2730;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    padding-left:4rem;
+}
+
+.commonFooterStyle p{
+    color:#99979c;
+    padding-left:3rem;
 }
 
 

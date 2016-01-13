@@ -35,10 +35,9 @@ var CreateForm = React.createClass({
         return (
             <div className="commonContainer">
                 <CommonNavBar />
-                <div className="commonContainerNavBar">
-                    <br />
-                    <br />
-                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                <div className="commonContainerNavBar commonHeight">
+                    <div>
+                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile createMargin">
                         <form onSubmit={this.handleClick}>
                             <div>
                                 <h3 className="titleProfile"> Create new content </h3>
@@ -81,6 +80,7 @@ var CreateForm = React.createClass({
                             </div>
                         </form>
                     </div>
+                        </div>
                 </div>
             </div>
         )

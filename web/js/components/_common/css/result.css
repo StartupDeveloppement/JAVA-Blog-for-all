@@ -11,6 +11,7 @@
 
 .resultTitle:hover {
     color: #1a1aff;
+    cursor: pointer; cursor: hand;
     /*font-weight: bold;*/
 }
 

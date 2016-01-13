@@ -18,11 +18,8 @@ var ImportForm = React.createClass({
         return (
             <div className="commonContainer">
                 <CommonNavBar />
-                <div className="commonContainerNavBar">
-                    <br />
-                    <br />
-                    <br />
-                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                <div className="commonContainerNavBar commonHeight">
+                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile importMargin">
                         <form onSubmit={this.handleClick}>
                             <h3 className="titleProfile"> Import content </h3>
                             <div className="row divider">
