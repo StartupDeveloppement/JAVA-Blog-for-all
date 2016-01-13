@@ -72,7 +72,7 @@ var Main = React.createClass({
 
                         <div className="row homeTopRow">
                             <div className="col-sm-3 homeTopTitle"><h4 className="fontTopTitle">Blog Project</h4></div>
-                            <div className="col-sm-1 col-sm-offset-5 homeTopTitle onHoverHomeTitle">
+                            <div className="col-sm-2 col-sm-offset-5 homeTopTitle onHoverHomeTitle">
                                 <ModalAddContent />
                             </div>
                             <div className="col-sm-1 col-sm-offset-1 homeTopTitle onHoverHomeTitle">
