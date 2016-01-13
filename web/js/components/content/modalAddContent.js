@@ -17,8 +17,14 @@ var ModalAddContent = React.createClass({
         this.setState({ showModal: true });
     },
 
-    handleClick:function(event){
+    goToImportFormPage:function(event){
         event.preventDefault();
+        Router.transitionTo('importForm');
+    },
+
+    goToCreateFormPage:function(event){
+        event.preventDefault();
+        Router.transitionTo('createForm');
     },
 
     render() {
@@ -33,13 +39,13 @@ var ModalAddContent = React.createClass({
                     <Modal.Body>
                         <div className="row">
                             <div className="col-sm-4 col-sm-offset-1">
-                                <form onSubmit={this.handleClick}>
-                                    <img src="./images/content/import.jpg" onclick={Router.transitionTo('importForm')}/>
+                                <form onSubmit={this.goToImportFormPage}>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> import content </button>
                                 </form>
                             </div>
                             <div className="col-sm-4 col-sm-offset-1">
-                                <form onSubmit={this.handleClick}>
-                                    <img src="./images/content/create.jpg" onclick={Router.transitionTo('createForm')}/>
+                                <form onSubmit={this.goToCreateFormPage}>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> create content </button>
                                 </form>
                             </div>
                         </div>
@@ -54,3 +60,18 @@ var ModalAddContent = React.createClass({
 });
 
 module.exports = ModalAddContent;
+
+/*<Modal.Body>
+ <div className="row">
+ <div className="col-sm-4 col-sm-offset-1">
+ <form onSubmit={this.handleClick}>
+ <img src="./images/content/import.jpg" onclick={Router.transitionTo('importForm')}/>
+ </form>
+ </div>
+ <div className="col-sm-4 col-sm-offset-1">
+ <form onSubmit={this.handleClick}>
+ <img src="./images/content/create.jpg" onclick={Router.transitionTo('createForm')}/>
+ </form>
+ </div>
+ </div>
+ </Modal.Body>*/

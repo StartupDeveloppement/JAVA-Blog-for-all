@@ -11,6 +11,7 @@ var HomepageLeft = require('./homepageLeft.js');
 var HomepageRight = require('./homepageRight.js');
 var HowItWorks = require('./howItWorks.js');
 var ModalSignUp = require('../signup/modalSignUp.js');
+var ModalAddContent = require('../content/modalAddContent.js');
 
 var SearchActions = require('../../actions/searchActions.js');
 var SearchStore = require('../../stores/searchStore.js')
@@ -71,7 +72,10 @@ var Main = React.createClass({
 
                         <div className="row homeTopRow">
                             <div className="col-sm-3 homeTopTitle"><h4 className="fontTopTitle">Blog Project</h4></div>
-                            <div className="col-sm-1 col-sm-offset-7 homeTopTitle onHoverHomeTitle">
+                            <div className="col-sm-1 col-sm-offset-5 homeTopTitle onHoverHomeTitle">
+                                <ModalAddContent />
+                            </div>
+                            <div className="col-sm-1 col-sm-offset-1 homeTopTitle onHoverHomeTitle">
                                 <ModalSignUp />
                             </div>
                             <div className="col-sm-1 homeTopTitle">

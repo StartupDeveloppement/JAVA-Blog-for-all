@@ -20,8 +20,10 @@ var ImportForm = React.createClass({
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
                     <br />
-                    <form onSubmit={this.handleClick}>
-                        <div>
+                    <br />
+                    <br />
+                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                        <form onSubmit={this.handleClick}>
                             <h3 className="titleProfile"> Import content </h3>
                             <div className="row divider">
                                 <div className="col-sm-12"><hr></hr></div>
@@ -36,14 +38,22 @@ var ImportForm = React.createClass({
                                 <div className="col-sm-12"><hr></hr></div>
                             </div>
                             <div className="row">
-                                <button type="button" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                <button type="button" className="btn btn-primary btn-sm pull-right"> import </button>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         )
     }
 });
 
-module.exports = ImportForm;
+module.exports = {
+    enter: function() {
+        ReactDom.render(<ImportForm />, document.getElementById('app'));
+        console.log('Import Form entered');
+    },
+    exit: function() {
+        console.log('Import Form exited');
+    }
+};

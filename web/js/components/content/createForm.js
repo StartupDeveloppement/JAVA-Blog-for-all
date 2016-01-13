@@ -36,8 +36,10 @@ var CreateForm = React.createClass({
             <div className="commonContainer">
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
-                    <form onSubmit={this.handleClick}>
-                        <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                    <br />
+                    <br />
+                    <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                        <form onSubmit={this.handleClick}>
                             <div>
                                 <h3 className="titleProfile"> Create new content </h3>
                                 <div className="row divider">
@@ -74,15 +76,23 @@ var CreateForm = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row">
-                                    <button type="button" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> create </button>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         )
     }
 });
 
-module.exports = CreateForm;
+module.exports = {
+    enter: function() {
+        ReactDom.render(<CreateForm />, document.getElementById('app'));
+        console.log('Create Form entered');
+    },
+    exit: function() {
+        console.log('Create Form exited');
+    }
+};

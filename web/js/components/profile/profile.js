@@ -88,7 +88,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row">
-                                    <button type="button" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row">
-                                    <button type="button" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row">
-                                    <button type="button" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row">
-                                    <button type="button" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
                                 </div>
                             </div>
                         </div>
