@@ -4,6 +4,7 @@ var Reflux = require('reflux');
 var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var CommonImageCropper = require('../_common/commonImageCropper.js');
+var CommonFooter = require('../_common/commonFooter.js');
 
 
 var CreateForm = React.createClass({
@@ -82,6 +83,7 @@ var CreateForm = React.createClass({
                     </div>
                         </div>
                 </div>
+                <CommonFooter />
             </div>
         )
     }

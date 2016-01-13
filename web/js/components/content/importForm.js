@@ -3,17 +3,13 @@ var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
+var CommonFooter = require('../_common/commonFooter.js');
 
 
 var ImportForm = React.createClass({
 
 
     render: function () {
-
-        const styles = {
-            styleDeactivateAccount: {color: 'blue'}
-        };
-
 
         return (
             <div className="commonContainer">
@@ -40,6 +36,7 @@ var ImportForm = React.createClass({
                         </form>
                     </div>
                 </div>
+                <CommonFooter />
             </div>
         )
     }
