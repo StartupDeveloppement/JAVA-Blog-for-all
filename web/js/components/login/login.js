@@ -32,7 +32,7 @@ var Login = React.createClass({
     render: function () {
         return (
             <div>
-                <div className="navbar navbar-default navbar-fixed-top">
+                <div className="navbar navbar-default navbar-fixed-top commonBoxShadowNavbar">
                     <div className="container">
 
                         <div className="navbar-header">
