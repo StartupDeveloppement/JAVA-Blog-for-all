@@ -82,6 +82,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2013);
                 myDate = calendar.getTime();
             article1.setArticleDate(myDate);
+            article1.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG");
+            article1.setArticleDescription("Cum autem commodis portularum, exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article1.setArticleApprove(5);
 
         Article article2 = new Article();
             article2.setArticleDivider("resultDividerRed");
@@ -96,6 +99,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2014);
                 myDate = calendar.getTime();
             article2.setArticleDate(myDate);
+            article2.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Torino_Comics_2006_Star_Wars_cosplayers.jpg/800px-Torino_Comics_2006_Star_Wars_cosplayers.jpg");
+            article2.setArticleDescription("Cum autem commodis exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article2.setArticleApprove(1);
 
         Article article3 = new Article();
             article3.setArticleDivider("resultDividerBlue");
@@ -107,6 +113,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article3.setArticleDate(myDate);
+            article3.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Boba_Fet.jpg/800px-Boba_Fet.jpg");
+            article3.setArticleDescription("Cum autem commodis anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum fieri.");
+            article3.setArticleApprove(145);
 
         Article article4 = new Article();
             article4.setArticleDivider("resultDividerRed");
@@ -118,6 +127,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article4.setArticleDate(myDate);
+            article4.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Torino_Comics_2006_Star_Wars_cosplayers.jpg/800px-Torino_Comics_2006_Star_Wars_cosplayers.jpg");
+            article4.setArticleDescription("Cum sportularum, vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article4.setArticleApprove(155);
 
         Article article5 = new Article();
             article5.setArticleDivider("resultDividerBlue");
@@ -129,6 +141,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article5.setArticleDate(myDate);
+            article5.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
+            article5.setArticleDescription("Cum autem commodis coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article5.setArticleApprove(15);
 
         Article article6 = new Article();
             article6.setArticleDivider("resultDividerRed");
@@ -140,6 +155,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article6.setArticleDate(myDate);
+            article6.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG");
+            article6.setArticleDescription("Cum autem apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article6.setArticleApprove(65);
 
         Article article7 = new Article();
             article7.setArticleDivider("resultDividerRed");
@@ -151,6 +169,9 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article7.setArticleDate(myDate);
+            article7.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg");
+            article7.setArticleDescription("Cum a tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article7.setArticleApprove(15);
 
         Article article8 = new Article();
             article8.setArticleDivider("resultDividerBlue");
@@ -162,17 +183,23 @@ public class TestDao {
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article8.setArticleDate(myDate);
+            article8.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG");
+            article8.setArticleDescription("Cum autem apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article8.setArticleApprove(5);
 
         Article article9 = new Article();
             article9.setArticleDivider("resultDividerRed");
             article9.setArticleTitle("Facebook, Twitter, Google, Pinterest: How to stay wired in");
-            article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
             article9.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 6);
                 calendar.set(Calendar.YEAR, 2015);
                 myDate = calendar.getTime();
             article9.setArticleDate(myDate);
+            article9.setArticlePicture("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Boba_Fet.jpg/800px-Boba_Fet.jpg");
+            article9.setArticleDescription("Cum autem apparari vel distributio sollemnium  sportularum, anxia deliberatione apparari vel distributio sollemnium  sportularum, anxia deliberatione apparari vel distributio sollemnium  sportularum, anxia deliberatione consilio id placuerit fieri.");
+            article9.setArticleApprove(145);
 
         ArticleDao articleDao = new ArticleDaoImpl();
         boolean article1Ok = articleDao.create(article1);

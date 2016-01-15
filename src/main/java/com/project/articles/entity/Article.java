@@ -21,6 +21,9 @@ public class Article implements java.io.Serializable{
     private String articleTitle;
     private String articleDivider;
     private Date articleDate;
+    private String articlePicture;
+    private String articleDescription;
+    private Integer articleApprove;
     @Lob
     @Column(columnDefinition="TEXT")
     private String articleText;
@@ -37,6 +40,15 @@ public class Article implements java.io.Serializable{
     public String getArticleDivider() {return articleDivider;}
     public void setArticleDivider(String articleDivider) {this.articleDivider = articleDivider;}
 
+    public String getArticlePicture() {return articlePicture;}
+    public void setArticlePicture(String articlePicture) {this.articlePicture = articlePicture;}
+
+    public String getArticleDescription() {return articleDescription;}
+    public void setArticleDescription(String articleDescription) {this.articleDescription = articleDescription;}
+
+    public Integer getArticleApprove() {return articleApprove;}
+    public void setArticleApprove(Integer articleApprove) {this.articleApprove = articleApprove;}
+
     public String getArticleText() {return articleText;}
     public void setArticleText(String articleText) {this.articleText = articleText;}
 
@@ -48,5 +60,6 @@ public class Article implements java.io.Serializable{
 
     public Date getArticleDate() {return articleDate;}
     public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}
+
 
 }

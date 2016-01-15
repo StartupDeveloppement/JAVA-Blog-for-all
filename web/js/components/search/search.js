@@ -5,8 +5,16 @@ var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var ResultThumbnailGroup = require('../_common/resultThumbnailGroup.js');
 
+var SearchResultsAction = require('../../actions/searchActions.js');
+var SearchResultsStore = require('../../stores/searchStore.js');
+
 var Search = React.createClass({
+        mixins: [Reflux.connect(SearchResultsStore, "store")],
+        getInitialState: function () {
+            SearchResultsAction.searchResults();
+        },
         render: function () {
+            console.log(this.state.store);
             var articlesHighRoller = [
                 {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
                     articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
@@ -100,6 +108,30 @@ var Search = React.createClass({
                     articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'}
             ];
 
+            if ( !this.state.store ) {
+                // Note that you can return false it you want nothing to be put in the dom
+                // This is also your chance to render a spinner or something...
+                return (<div>
+                    <CommonNavBar />
+                    <div className="commonContainerNavBar">
+                        <br />
+                        <div className="row thumbnailCategory">
+                            <div className="container col-sm-3 col-md-3">
+                                <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
+                            </div>
+                            <div className="container col-sm-3 col-md-3">
+                                <h4 className="textThumbnailCategory">ON THE WAYS</h4>
+                            </div>
+                            <div className="container col-sm-3 col-md-3">
+                                <h4 className="textThumbnailCategory">NEWBIES</h4>
+                            </div>
+                        </div>
+                        <br />
+                        <img src="./images/homepage/loading.gif" alt="loading" />
+                    </div>
+                    </div>)
+            }
+
             return (
                 <div>
                     <CommonNavBar />
@@ -119,7 +151,7 @@ var Search = React.createClass({
                         <br />
                         <div className="row marginResultThumbnail">
                             <div className="container col-sm-3 col-md-3">
-                                <ResultThumbnailGroup articles={articlesHighRoller} />
+                                <ResultThumbnailGroup articles={this.state.store} />
                             </div>
                             <div className="container col-sm-3 col-md-3">
                                 <ResultThumbnailGroup articles={articlesMedium} />

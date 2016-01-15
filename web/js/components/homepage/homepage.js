@@ -99,7 +99,7 @@ var Main = React.createClass({
                     <div className="row homeContainerSearchBar">
                         <div className="commonOverlay homeOverlaySearchBar"></div>
                         <form onSubmit={this.handleSearch} >
-                                <Input type="text" buttonAfter={innerButton} />
+                                <Input type="text" placeholder="what are you looking for ?" buttonAfter={innerButton} />
                         </form>
                     </div>
                 </div>
@@ -119,7 +119,6 @@ var Main = React.createClass({
         );
     }
 });
-
 
 module.exports = {
     enter: function() {

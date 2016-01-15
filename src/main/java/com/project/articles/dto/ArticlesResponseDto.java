@@ -17,6 +17,9 @@ public class ArticlesResponseDto {
     private String articleTitle;
     private String articleDivider;
     private Date articleDate;
+    private String articlePicture;
+    private String articleDescription;
+    private Integer articleApprove;
     private String articleText;
     private List<ArticleKeyWord> articleKeyWordList;
     private String profileName;
@@ -33,6 +36,15 @@ public class ArticlesResponseDto {
 
     public Date getArticleDate() {return articleDate;}
     public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}
+
+    public String getArticlePicture() {return articlePicture;}
+    public void setArticlePicture(String articlePicture) {this.articlePicture = articlePicture;}
+
+    public String getArticleDescription() {return articleDescription;}
+    public void setArticleDescription(String articleDescription) {this.articleDescription = articleDescription;}
+
+    public Integer getArticleApprove() {return articleApprove;}
+    public void setArticleApprove(Integer articleApprove) {this.articleApprove = articleApprove;}
 
     public String getArticleText() {return articleText;}
     public void setArticleText(String articleText) {this.articleText = articleText;}
