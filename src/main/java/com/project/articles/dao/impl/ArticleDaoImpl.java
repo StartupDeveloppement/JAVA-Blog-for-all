@@ -3,6 +3,7 @@ package com.project.articles.dao.impl;
 import com.common.dao.AbstractDao;
 import com.project.articles.dao.ArticleDao;
 import com.project.articles.entity.Article;
+import com.project.user.entity.UserProfile;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -37,5 +38,6 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         }
         return articleList;
     }
+
 
 }

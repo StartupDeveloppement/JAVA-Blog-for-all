@@ -12,6 +12,7 @@ var ResultsStore = Reflux.createStore({
             results: []
         };
     },*/
+
     onGetLastArticles: function () {
         $.ajax({
             beforeSend: function(xhrObj){
@@ -30,8 +31,8 @@ var ResultsStore = Reflux.createStore({
                     console.log("Result OKK");
                     results = results.concat(data);
                     this.trigger(results);
-                    console.log(data);
-                    console.log(results);
+                    /*console.log(data);
+                    console.log(results);*/
                 }else{
                     console.log("Search Result KO");
                     console.log(data);

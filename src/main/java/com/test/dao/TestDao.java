@@ -25,7 +25,7 @@ public class TestDao {
 
     public static void main (String[] args){
 
-        /*UserAuth user1 = new UserAuth();
+        UserAuth user1 = new UserAuth();
             user1.setEmail("hello@hello.com");
             user1.setPassword("world");
         UserAuth user2 = new UserAuth();
@@ -41,9 +41,11 @@ public class TestDao {
             userProfile.setFirstname("hellofirstname");
             userProfile.setLastname("hellolastname");
             userProfile.setUser(user1);
+            userProfile.setProfileName("megan");
+            userProfile.setProfilePicture("./images/test/profile-test.jpg");
 
         UserProfileDao userProfileDao = new UserProfileDaoImpl();
-        boolean userProfile1Ok = userProfileDao.create(userProfile);*/
+        boolean userProfile1Ok = userProfileDao.create(userProfile);
 
 
         ArticleKeyWord articleKeyWord1 = new ArticleKeyWord();
@@ -71,7 +73,7 @@ public class TestDao {
             article1.setArticleDivider("resultDividerBlue");
             article1.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-           // article1.setUserProfile(userProfile);
+            article1.setIdUserProfile(1);
             article1.getArticleKeyWordList().add(articleKeyWord1);
             article1.getArticleKeyWordList().add(articleKeyWord2);
             article1.getArticleKeyWordList().add(articleKeyWord3);
@@ -85,7 +87,7 @@ public class TestDao {
             article2.setArticleDivider("resultDividerRed");
             article2.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article2.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article2.setUserProfile(userProfile);
+            article2.setIdUserProfile(1);
             article2.getArticleKeyWordList().add(articleKeyWord1);
             article2.getArticleKeyWordList().add(articleKeyWord2);
             article2.getArticleKeyWordList().add(articleKeyWord3);
@@ -99,7 +101,7 @@ public class TestDao {
             article3.setArticleDivider("resultDividerBlue");
             article3.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article3.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article3.setUserProfile(userProfile);
+            article3.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 14);
                 calendar.set(Calendar.YEAR, 2015);
@@ -110,7 +112,7 @@ public class TestDao {
             article4.setArticleDivider("resultDividerRed");
             article4.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article4.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article4.setUserProfile(userProfile);
+            article4.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 10);
                 calendar.set(Calendar.YEAR, 2015);
@@ -121,7 +123,7 @@ public class TestDao {
             article5.setArticleDivider("resultDividerBlue");
             article5.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article5.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article5.setUserProfile(userProfile);
+            article5.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 8);
                 calendar.set(Calendar.DATE, 5);
                 calendar.set(Calendar.YEAR, 2015);
@@ -132,7 +134,7 @@ public class TestDao {
             article6.setArticleDivider("resultDividerRed");
             article6.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article6.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article6.setUserProfile(userProfile);
+            article6.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 3);
                 calendar.set(Calendar.DATE, 21);
                 calendar.set(Calendar.YEAR, 2015);
@@ -143,7 +145,7 @@ public class TestDao {
             article7.setArticleDivider("resultDividerRed");
             article7.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article7.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article7.setUserProfile(userProfile);
+            article7.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 2);
                 calendar.set(Calendar.YEAR, 2015);
@@ -154,7 +156,7 @@ public class TestDao {
             article8.setArticleDivider("resultDividerBlue");
             article8.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article8.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article8.setUserProfile(userProfile);
+            article8.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 1);
                 calendar.set(Calendar.DATE, 5);
                 calendar.set(Calendar.YEAR, 2015);
@@ -165,7 +167,7 @@ public class TestDao {
             article9.setArticleDivider("resultDividerRed");
             article9.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
             article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article9.setUserProfile(userProfile);
+            article9.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 6);
                 calendar.set(Calendar.YEAR, 2015);
@@ -184,9 +186,9 @@ public class TestDao {
         boolean article9Ok = articleDao.create(article9);
 
 
-       /* System.out.println("User1: " + user1Ok);
+        System.out.println("User1: " + user1Ok);
         System.out.println("User2: " + user2Ok);
-        System.out.println("UserProfile1: " + userProfile1Ok);*/
+        System.out.println("UserProfile1: " + userProfile1Ok);
         System.out.println("Article1: " + article1Ok);
         System.out.println("Article2: " + article2Ok);
         System.out.println("Article3: " + article3Ok);
@@ -197,11 +199,12 @@ public class TestDao {
         System.out.println("Article8: " + article8Ok);
         System.out.println("Article9: " + article9Ok);
 
-        /*for (Article article : articleDao.findLastArticles()){
+        for (Article article : articleDao.findLastArticles()){
             System.out.println("-----------------");
             System.out.println("article id: " + article.getArticleKey());
             System.out.println("article title: " + article.getArticleTitle());
-        }*/
+            System.out.println("article user name: " + userProfileDao.read(article.getIdUserProfile()).getProfileName());
+        }
 
     }
 

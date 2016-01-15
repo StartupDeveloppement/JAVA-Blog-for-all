@@ -2,6 +2,7 @@ package com.project.articles.dao;
 
 import com.common.dao.Dao;
 import com.project.articles.entity.Article;
+import com.project.user.entity.UserProfile;
 
 import java.util.List;
 

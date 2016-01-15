@@ -1,35 +1,29 @@
-package com.project.articles.entity;
+package com.project.articles.dto;
 
-import com.project.user.entity.UserProfile;
+import com.project.articles.entity.ArticleKeyWord;
 
-import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
- * Created by olivier on 19/12/2015.
+ * Created by olivier on 14/01/2016.
  */
-@Entity
-@XmlRootElement
-public class Article implements java.io.Serializable{
 
-    @Id
-    @GeneratedValue
+@XmlRootElement
+public class ArticlesResponseDto {
+
     private Integer articleKey;
     private String articleTitle;
     private String articleDivider;
     private Date articleDate;
-    @Lob
-    @Column(columnDefinition="TEXT")
     private String articleText;
-    private Integer idUserProfile;
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
-
+    private List<ArticleKeyWord> articleKeyWordList;
+    private String profileName;
+    private String profilePicture;
 
     public Integer getArticleKey() {return articleKey;}
+    public void setArticleKey(Integer articleKey) {this.articleKey = articleKey;}
 
     public String getArticleTitle() {return articleTitle;}
     public void setArticleTitle(String articleTitle) {this.articleTitle = articleTitle;}
@@ -37,16 +31,19 @@ public class Article implements java.io.Serializable{
     public String getArticleDivider() {return articleDivider;}
     public void setArticleDivider(String articleDivider) {this.articleDivider = articleDivider;}
 
+    public Date getArticleDate() {return articleDate;}
+    public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}
+
     public String getArticleText() {return articleText;}
     public void setArticleText(String articleText) {this.articleText = articleText;}
-
-    public Integer getIdUserProfile() {return idUserProfile;}
-    public void setIdUserProfile(Integer idUserProfile) {this.idUserProfile = idUserProfile;}
 
     public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
     public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}
 
-    public Date getArticleDate() {return articleDate;}
-    public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}
+    public String getProfileName() {return profileName;}
+    public void setProfileName(String profileName) {this.profileName = profileName;}
+
+    public String getProfilePicture() {return profilePicture;}
+    public void setProfilePicture(String profilePicture) {this.profilePicture = profilePicture;}
 
 }

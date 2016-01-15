@@ -45,19 +45,6 @@ gulp.task('watch-css', function() {
 });
 
 
-gulp.task('build-medium-js', function() {
-    return gulp.src('./mediumNotMinify/**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./medium_editor/'));
-});
-
-gulp.task('build-medium-css', function () {
-    return gulp.src('./mediumNotMinify/**/*.css')
-        .pipe(concat('mediumTarget.css'))
-        .pipe(minifyCSS())
-        .pipe(gulp.dest('./medium_editor/'))
-});
-
 gulp.task('build-overwrite-bootstrap-css', function () {
     return gulp.src('./bootstrap-overwrite/**/*.css')
         .pipe(concat('overwriteBootstrapTarget.css'))
@@ -69,4 +56,4 @@ gulp.task('watch-overwrite-bootstrap-css', function() {
     gulp.watch(['./bootstrap-overwrite/**/*.css', './bootstrap-overwrite/*.css'], ['build-overwrite-bootstrap-css']);
 });
 
-gulp.task('default', ['build-js', 'watch-js', 'build-css', 'build-medium-js', 'build-medium-css', 'watch-css','build-overwrite-bootstrap-css','watch-overwrite-bootstrap-css']);
+gulp.task('default', ['build-js', 'watch-js', 'build-css', 'watch-css','build-overwrite-bootstrap-css','watch-overwrite-bootstrap-css']);

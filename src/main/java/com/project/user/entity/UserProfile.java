@@ -21,9 +21,11 @@ public class UserProfile implements java.io.Serializable {
     private UserAuth user;
     private String firstname;
     private String lastname;
+    private String profileName;
+    private String profilePicture;
     @Temporal(TemporalType.DATE)
     private Date birthday;
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //, mappedBy="userProfile")
+    @OneToMany(fetch = FetchType.EAGER)//, mappedBy="userProfile")
     private List<Article> articleList;
 
 
@@ -39,9 +41,16 @@ public class UserProfile implements java.io.Serializable {
     public String getLastname() {return lastname;}
     public void setLastname(String lastname) {this.lastname = lastname;}
 
+    public String getProfileName() {return profileName;}
+    public void setProfileName(String profileName) {this.profileName = profileName;}
+
+    public String getProfilePicture() {return profilePicture;}
+    public void setProfilePicture(String profilePicture) {this.profilePicture = profilePicture;}
+
     public Date getBirthday() {return birthday;}
     public void setBirthday(Date birthday) {this.birthday = birthday;}
 
     public List<Article> getArticleList() {return articleList;}
     public void setArticleList(List<Article> articleList) {this.articleList = articleList;}
+
 }

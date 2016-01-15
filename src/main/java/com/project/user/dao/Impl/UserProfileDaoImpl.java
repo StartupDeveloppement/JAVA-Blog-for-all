@@ -11,10 +11,10 @@ import javax.persistence.Query;
 /**
  * Created by olivier on 11/12/2015.
  */
-public class UserProfileDaoImpl extends AbstractDao<UserProfile,String> implements UserProfileDao {
+public class UserProfileDaoImpl extends AbstractDao<UserProfile,Integer> implements UserProfileDao {
 
 
-    @Override
+
     public UserProfile findProfileUsingUserEmail(String email) {
         EntityManager em = getEntityManager();
         EntityTransaction t = em.getTransaction();
@@ -36,4 +36,7 @@ public class UserProfileDaoImpl extends AbstractDao<UserProfile,String> implemen
         }
         return userProfile;
     }
+
+
+
 }
