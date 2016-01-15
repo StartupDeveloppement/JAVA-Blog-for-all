@@ -7,6 +7,7 @@ import com.project.user.entity.UserProfile;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -27,6 +28,32 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
             TypedQuery<Article> typedQuery = em.createQuery("Select a from Article a Order by a.articleDate DESC",Article.class);
                 typedQuery.setMaxResults(7);
             articleList = typedQuery.getResultList();
+            t.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (t.isActive()) {
+                t.rollback();
+                em.close();
+            }
+        }
+        return articleList;
+    }
+
+    public List<Article> findSearchedArticles(List<String> listRequest) {
+        EntityManager em = getEntityManager();
+        EntityTransaction t = em.getTransaction();
+        List<Article> articleList = null;
+
+        String req = "SELECT a FROM Article a WHERE 1=1";
+        for (String elem: listRequest){
+            req = req + " AND articleTitle LIKE '%"+elem+"%'";
+        }
+
+        try {
+            t.begin();
+            TypedQuery<Article> query = em.createQuery(req,Article.class);
+            articleList = query.getResultList();
             t.commit();
         } catch (Exception e) {
             e.printStackTrace();

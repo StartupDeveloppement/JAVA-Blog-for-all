@@ -71,7 +71,7 @@ public class TestDao {
 
         Article article1 = new Article();
             article1.setArticleDivider("resultDividerBlue");
-            article1.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article1.setArticleTitle("Star wars the force awakens");
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article1.setIdUserProfile(1);
             article1.getArticleKeyWordList().add(articleKeyWord1);
@@ -85,7 +85,7 @@ public class TestDao {
 
         Article article2 = new Article();
             article2.setArticleDivider("resultDividerRed");
-            article2.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article2.setArticleTitle("Fatal fury");
             article2.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article2.setIdUserProfile(1);
             article2.getArticleKeyWordList().add(articleKeyWord1);
@@ -99,7 +99,7 @@ public class TestDao {
 
         Article article3 = new Article();
             article3.setArticleDivider("resultDividerBlue");
-            article3.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article3.setArticleTitle("The Flash 2014");
             article3.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article3.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
@@ -110,7 +110,7 @@ public class TestDao {
 
         Article article4 = new Article();
             article4.setArticleDivider("resultDividerRed");
-            article4.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article4.setArticleTitle("Comment Air France compte revenir à la croissance");
             article4.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article4.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
@@ -121,7 +121,7 @@ public class TestDao {
 
         Article article5 = new Article();
             article5.setArticleDivider("resultDividerBlue");
-            article5.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article5.setArticleTitle("Dragon Ball Super: nouvel episode");
             article5.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article5.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 8);
@@ -132,7 +132,7 @@ public class TestDao {
 
         Article article6 = new Article();
             article6.setArticleDivider("resultDividerRed");
-            article6.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article6.setArticleTitle("Les dernières tendances du secteur High-Tech");
             article6.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article6.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 3);
@@ -143,7 +143,7 @@ public class TestDao {
 
         Article article7 = new Article();
             article7.setArticleDivider("resultDividerRed");
-            article7.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article7.setArticleTitle("Les français à la CES");
             article7.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article7.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);
@@ -154,7 +154,7 @@ public class TestDao {
 
         Article article8 = new Article();
             article8.setArticleDivider("resultDividerBlue");
-            article8.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article8.setArticleTitle("15 nouveautés pour courir au chaud cet hiver");
             article8.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article8.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 1);
@@ -165,7 +165,7 @@ public class TestDao {
 
         Article article9 = new Article();
             article9.setArticleDivider("resultDividerRed");
-            article9.setArticleTitle("Profitetur aut secretiora quaedam se nosse confingit");
+            article9.setArticleTitle("Facebook, Twitter, Google, Pinterest: How to stay wired in");
             article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article9.setIdUserProfile(1);
                 calendar.set(Calendar.MONTH, 6);

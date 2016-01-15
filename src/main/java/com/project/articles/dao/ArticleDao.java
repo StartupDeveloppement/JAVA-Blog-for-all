@@ -12,5 +12,6 @@ import java.util.List;
 public interface ArticleDao extends Dao<Article,Integer> {
 
     public List<Article> findLastArticles();
+    public List<Article> findSearchedArticles(List<String> listRequest);
 
 }
