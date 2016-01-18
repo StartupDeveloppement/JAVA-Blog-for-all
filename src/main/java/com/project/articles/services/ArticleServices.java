@@ -61,9 +61,8 @@ public class ArticleServices {
                 articlesResponseDto.setArticlePicture(article.getArticlePicture());
                 articlesResponseDto.setArticleDescription(article.getArticleDescription());
                 articlesResponseDto.setArticleApprove(article.getArticleApprove());
-            UserProfile userProfile = userProfileDao.read(article.getIdUserProfile());
-                articlesResponseDto.setProfileName(userProfile.getProfileName());
-                articlesResponseDto.setProfilePicture(userProfile.getProfilePicture());
+                articlesResponseDto.setProfileName(article.getUserProfile().getProfileName());
+                articlesResponseDto.setProfilePicture(article.getUserProfile().getProfilePicture());
             finalList.add(articlesResponseDto);
         }
         return finalList;

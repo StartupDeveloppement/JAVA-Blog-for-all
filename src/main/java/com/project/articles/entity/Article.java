@@ -1,6 +1,8 @@
 package com.project.articles.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.project.user.entity.UserProfile;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -16,7 +18,7 @@ import java.util.List;
 public class Article implements java.io.Serializable{
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer articleKey;
     private String articleTitle;
     private String articleDivider;
@@ -27,7 +29,9 @@ public class Article implements java.io.Serializable{
     @Lob
     @Column(columnDefinition="TEXT")
     private String articleText;
-    private Integer idUserProfile;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JsonIgnore
+    private UserProfile userProfile;
     @OneToMany(fetch = FetchType.EAGER)
     private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
 
@@ -52,14 +56,13 @@ public class Article implements java.io.Serializable{
     public String getArticleText() {return articleText;}
     public void setArticleText(String articleText) {this.articleText = articleText;}
 
-    public Integer getIdUserProfile() {return idUserProfile;}
-    public void setIdUserProfile(Integer idUserProfile) {this.idUserProfile = idUserProfile;}
-
     public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
     public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}
 
     public Date getArticleDate() {return articleDate;}
     public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}
 
+    public UserProfile getUserProfile() {return userProfile;}
+    public void setUserProfile(UserProfile userProfile) {this.userProfile = userProfile;}
 
 }

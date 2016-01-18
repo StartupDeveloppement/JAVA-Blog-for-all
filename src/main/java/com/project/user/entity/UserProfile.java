@@ -1,5 +1,6 @@
 package com.project.user.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.project.articles.entity.Article;
 
 import javax.persistence.*;
@@ -15,7 +16,7 @@ import java.util.List;
 public class UserProfile implements java.io.Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer idUserProfile;
     @OneToOne
     private UserAuth user;
@@ -25,7 +26,8 @@ public class UserProfile implements java.io.Serializable {
     private String profilePicture;
     @Temporal(TemporalType.DATE)
     private Date birthday;
-    @OneToMany(fetch = FetchType.EAGER)//, mappedBy="userProfile")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="userProfile")
+    //@JsonManagedReference
     private List<Article> articleList;
 
 
