@@ -15,16 +15,16 @@ var ModalAddContent = require('../content/modalAddContent.js');
 var CommonFooter = require('../_common/commonFooter.js');
 
 var SearchActions = require('../../actions/searchActions.js');
-var SearchStore = require('../../stores/searchStore.js');
+//var SearchStore = require('../../stores/searchStore.js');
 
 var Main = React.createClass({
-    mixins: [Reflux.connect(SearchStore)],
+    //mixins: [Reflux.connect(SearchStore)],
     getInitialState: function () {
         return {
-            openHowItWorks:false
+            openHowItWorks:false,
+            searchValue: ''
         }
     },
-
     handleClickHowItWorks:function (event) {
         event.preventDefault();
         this.setState({openHowItWorks:true});
@@ -37,7 +37,12 @@ var Main = React.createClass({
 
     handleSearch:function(event){
         event.preventDefault();
-        SearchActions.searchResults();
+        SearchActions.searchResults(this.state.searchValue);
+        this.setState({searchValue: ''});
+    },
+
+    _onChangeSearchValue:function(e){
+        this.setState({searchValue: e.target.value})
     },
 
    render: function () {
@@ -46,7 +51,7 @@ var Main = React.createClass({
             styleBackground: {backgroundImage: 'url("./images/homepage/homepage-background1.jpg")'}
         };
 
-        const innerButton = <button type="submit" className="btn buttonSearchBar"><b>search</b></button>;
+        var innerButton = <button type="submit" className="btn buttonSearchBar"><b>search</b></button>;
 
         return (
             <div>
@@ -89,22 +94,24 @@ var Main = React.createClass({
                             <h1 className="fontMainTitle"><b>WELCOME TO THIS COOL WEBSITE</b></h1>
                             <h4 className="fontMainTitle">Share and find useful content that will help you</h4>
                             <br />
-                            <h4 className="buttonMainTitle">
+                            <div className="buttonMainTitle">
                                 <form onSubmit={this.handleClickHowItWorks}>
                                     <button type="submit" className="btn btn-default">how it works</button>
                                 </form>
-                            </h4>
+                            </div>
                         </div>
                     </div>
                     <div className="row homeContainerSearchBar">
                         <div className="commonOverlay homeOverlaySearchBar"></div>
                         <form onSubmit={this.handleSearch} >
-                                <Input type="text" placeholder="what are you looking for ?" buttonAfter={innerButton} />
+                            <Input type="text" placeholder="what are you looking for ?" buttonAfter={innerButton} value={this.state.searchValue} onChange={this._onChangeSearchValue} />
                         </form>
                     </div>
                 </div>
                 <div className="row commonContainer">
-                    <h3 className="container homeResultsTitle">LAST SHARED CONTENT</h3>
+                    <br />
+                    .
+                    <br />
                     <div>
                         <div className="container col-sm-7 col-sm-offset-1">
                             <HomepageLeft></HomepageLeft>
@@ -129,3 +136,9 @@ module.exports = {
         console.log('homepage exited');
     }
 };
+
+
+/*
+ <h3 className="container homeResultsTitle">LAST SHARED CONTENT</h3>
+ <Input type="text" placeholder="what are you looking for ?" buttonAfter={innerButton} value={this.state.searchValue} onChange={this._onChangeSearchValue} />
+ */

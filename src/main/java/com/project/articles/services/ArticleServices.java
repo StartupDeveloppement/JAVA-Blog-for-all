@@ -38,9 +38,11 @@ public class ArticleServices {
     @Produces(MediaType.APPLICATION_JSON)
     public List<ArticlesResponseDto> findSearchedArticles(@FormParam("search") String search){
         List<String> requestList = new ArrayList<String>();
-        StringTokenizer st = new StringTokenizer(search);
-        while (st.hasMoreTokens()){
-            requestList.add(st.nextToken());
+        if (search !=null) {
+            StringTokenizer st = new StringTokenizer(search);
+            while (st.hasMoreTokens()) {
+                requestList.add(st.nextToken());
+            }
         }
         List<Article> searchedArticlesList = articleDao.findSearchedArticles(requestList);
         //searchedArticlesList.size();

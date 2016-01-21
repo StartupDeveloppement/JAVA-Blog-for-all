@@ -12,12 +12,19 @@ var SearchStore = require('../../stores/searchStore.js')
 var CommonNavBar = React.createClass({
 
     mixins: [Reflux.connect(SearchStore)],
+    getInitialState: function (){
+        return {
+            searchValue: ''
+        };
+    },
     handleSearch:function(event){
         event.preventDefault();
-        SearchActions.searchResults();
-        //this.setState({email: ''});
+        SearchActions.searchResults(this.state.searchValue);
+        this.setState({searchValue: ''});
     },
-
+    _onChangeSearchValue:function(e){
+      this.setState({searchValue: e.target.value})
+    },
     render: function(){
         const innerButton = <button type="submit" className="btn btn-default">submit</button>;
 
@@ -42,7 +49,7 @@ var CommonNavBar = React.createClass({
                         </ul>
                         <form role="search" className="navbar-form navbar-right" onSubmit={this.handleSearch}>
                             <div className="form-group">
-                                <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" />
+                                <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" value={this.state.searchValue} onChange={this._onChangeSearchValue} />
                             </div>
                         </form>
 

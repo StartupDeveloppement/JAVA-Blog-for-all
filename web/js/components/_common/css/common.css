@@ -64,6 +64,10 @@
     padding-left:3rem;
 }
 
+.commonZindex{
+    z-index: 1;
+}
+
 
 /* unvisited link */
 a:link {

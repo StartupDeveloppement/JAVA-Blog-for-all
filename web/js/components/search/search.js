@@ -10,9 +10,12 @@ var SearchResultsStore = require('../../stores/searchStore.js');
 
 var Search = React.createClass({
         mixins: [Reflux.connect(SearchResultsStore, "store")],
-        getInitialState: function () {
-            SearchResultsAction.searchResults();
+        getInitialState: function (){
+            return {
+                /*res: SearchResultsStore.searchResults*/
+            };
         },
+
         render: function () {
             console.log(this.state.store);
             var articlesHighRoller = [
@@ -151,7 +154,7 @@ var Search = React.createClass({
                         <br />
                         <div className="row marginResultThumbnail">
                             <div className="container col-sm-3 col-md-3">
-                                <ResultThumbnailGroup articles={this.state.store} />
+                                <ResultThumbnailGroup articles={this.state.store.searchResults} />
                             </div>
                             <div className="container col-sm-3 col-md-3">
                                 <ResultThumbnailGroup articles={articlesMedium} />
