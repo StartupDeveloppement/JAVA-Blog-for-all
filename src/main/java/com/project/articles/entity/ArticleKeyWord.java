@@ -1,5 +1,6 @@
 package com.project.articles.entity;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -18,6 +19,9 @@ public class ArticleKeyWord implements java.io.Serializable{
     @GeneratedValue
     private Integer idKeyWord;
     private String label;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JsonIgnore
+    private List<Article> articleList = new ArrayList<Article>();
 
 
     public Integer getIdKeyWord() {return idKeyWord;}

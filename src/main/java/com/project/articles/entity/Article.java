@@ -32,7 +32,7 @@ public class Article implements java.io.Serializable{
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonIgnore
     private UserProfile userProfile;
-    @OneToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "articleList")
     private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
 
 
