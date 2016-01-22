@@ -10,6 +10,7 @@ import com.project.user.entity.UserProfile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 /**
@@ -19,16 +20,12 @@ public class RandomTest {
 
     public static void main (String[] args){
 
-        String search = "les la";
-        List<String> requestList = new ArrayList<String>();
-        StringTokenizer st = new StringTokenizer(search);
-        while (st.hasMoreTokens()){
-            requestList.add(st.nextToken());
-        }
+        ArticleDao articleDao = new ArticleDaoImpl();
 
+        Map<String,List<Article>> articleMap = articleDao.findSearchedArticles2(new ArrayList<String>());
 
-        for (String str : requestList){
-            System.out.println(str);
-        }
+        for(String key: articleMap.keySet())
+            System.out.println(key + " - " + articleMap.get(key));
+
     }
 }

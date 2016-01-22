@@ -12,6 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 /**
@@ -48,6 +49,25 @@ public class ArticleServices {
         //searchedArticlesList.size();
         List<ArticlesResponseDto> finalList = doArticlesMapping(searchedArticlesList);
         return finalList;
+    }
+
+    @Path("/searchedarticles")
+    @POST
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Map<String,List<ArticlesResponseDto>> findSearchedArticles2(@FormParam("search") String search){
+        List<String> requestList = new ArrayList<String>();
+        if (search !=null) {
+            StringTokenizer st = new StringTokenizer(search);
+            while (st.hasMoreTokens()) {
+                requestList.add(st.nextToken());
+            }
+        }
+        Map<String, List<Article>> searchedArticlesMap = articleDao.findSearchedArticles2(requestList);
+        //searchedArticlesList.size();
+        Map<String,List<ArticlesResponseDto>> mapArticle = null;
+        //List<ArticlesResponseDto> finalList = doArticlesMapping(searchedArticlesList);
+        return mapArticle;
     }
 
     private List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {
