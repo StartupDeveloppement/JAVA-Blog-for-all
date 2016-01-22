@@ -72,6 +72,8 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
     public Map<String, List<Article>> findSearchedArticles2(List<String> listRequest) {
         EntityManager em = getEntityManager();
         EntityTransaction t = em.getTransaction();
+
+        final Integer maxCategoryResult = 15;
         Map<String, List<Article>> articleMap = new HashMap<String, List<Article>>();
         List<Article> highRollersList = null;
         List<Article> onTheWayList = null;
@@ -95,14 +97,14 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
             Long count = (Long) queryCount.getSingleResult();
             //queryCount.si
             long indice = count/3;
-            if (indice < 15){
+            if (indice < maxCategoryResult){
                 reqHighRollers = req + " LIMIT 0,"+(indice);
                 reqOnTheWays = req + " LIMIT "+indice+","+(indice);
                 reqNewbies = req + " LIMIT "+(indice*2)+","+(indice+count%3);
             }else{
-                reqHighRollers = req + " LIMIT 0,14";
-                reqOnTheWays = req + " LIMIT "+indice+","+(indice+14);
-                reqNewbies = req + " LIMIT "+(indice*2)+","+(indice*2+14);
+                reqHighRollers = req + " LIMIT 0,"+maxCategoryResult;
+                reqOnTheWays = req + " LIMIT "+indice+","+maxCategoryResult;
+                reqNewbies = req + " LIMIT "+(indice*2)+","+maxCategoryResult;
             }
             Query queryHighRollers = em.createNativeQuery(reqHighRollers,Article.class);
             highRollersList = queryHighRollers.getResultList();
