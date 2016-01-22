@@ -75,7 +75,7 @@ public class ArticleServices {
         for (Article article: lastArticlesList){
             ArticlesResponseDto articlesResponseDto = new ArticlesResponseDto();
                 articlesResponseDto.setArticleDate(article.getArticleDate());
-                articlesResponseDto.setArticleKeyWordList(article.getArticleKeyWordList());
+                //articlesResponseDto.setArticleKeyWordList(article.getArticleKeyWordList());
                 articlesResponseDto.setArticleKey(article.getArticleKey());
                 articlesResponseDto.setArticleDivider(article.getArticleDivider());
                 articlesResponseDto.setArticleText(article.getArticleText());

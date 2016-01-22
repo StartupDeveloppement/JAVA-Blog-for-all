@@ -19,9 +19,9 @@ public class ArticleKeyWord implements java.io.Serializable{
     @GeneratedValue
     private Integer idKeyWord;
     private String label;
-    @ManyToMany(fetch = FetchType.EAGER)
+    /*@ManyToMany(fetch = FetchType.EAGER)
     @JsonIgnore
-    private List<Article> articleList = new ArrayList<Article>();
+    private List<Article> articleList = new ArrayList<Article>();*/
 
 
     public Integer getIdKeyWord() {return idKeyWord;}

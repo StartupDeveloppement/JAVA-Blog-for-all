@@ -32,8 +32,8 @@ public class Article implements java.io.Serializable{
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonIgnore
     private UserProfile userProfile;
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "articleList")
-    private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();
+    /*@ManyToMany(fetch = FetchType.EAGER, mappedBy = "articleList")
+    private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();*/
 
 
     public Integer getArticleKey() {return articleKey;}
@@ -56,8 +56,8 @@ public class Article implements java.io.Serializable{
     public String getArticleText() {return articleText;}
     public void setArticleText(String articleText) {this.articleText = articleText;}
 
-    public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
-    public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}
+    /*public List<ArticleKeyWord> getArticleKeyWordList() {return articleKeyWordList;}
+    public void setArticleKeyWordList(List<ArticleKeyWord> articleKeyWordList) {this.articleKeyWordList = articleKeyWordList;}*/
 
     public Date getArticleDate() {return articleDate;}
     public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}

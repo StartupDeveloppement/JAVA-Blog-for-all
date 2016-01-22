@@ -75,9 +75,9 @@ public class TestDao {
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article1.setIdUserProfile(1);
             article1.setUserProfile(userProfile);
-            article1.getArticleKeyWordList().add(articleKeyWord1);
+            /*article1.getArticleKeyWordList().add(articleKeyWord1);
             article1.getArticleKeyWordList().add(articleKeyWord2);
-            article1.getArticleKeyWordList().add(articleKeyWord3);
+            article1.getArticleKeyWordList().add(articleKeyWord3);*/
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 24);
                 calendar.set(Calendar.YEAR, 2013);
@@ -93,9 +93,9 @@ public class TestDao {
             article2.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article2.setIdUserProfile(1);
             article2.setUserProfile(userProfile);
-            article2.getArticleKeyWordList().add(articleKeyWord1);
+            /*article2.getArticleKeyWordList().add(articleKeyWord1);
             article2.getArticleKeyWordList().add(articleKeyWord2);
-            article2.getArticleKeyWordList().add(articleKeyWord3);
+            article2.getArticleKeyWordList().add(articleKeyWord3);*/
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 14);
                 calendar.set(Calendar.YEAR, 2014);
@@ -215,9 +215,9 @@ public class TestDao {
         article10.setArticleTitle("Star wars revenge of the sith");
         article10.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article10.setUserProfile(userProfile);
-        article10.getArticleKeyWordList().add(articleKeyWord1);
+        /*article10.getArticleKeyWordList().add(articleKeyWord1);
         article10.getArticleKeyWordList().add(articleKeyWord2);
-        article10.getArticleKeyWordList().add(articleKeyWord3);
+        article10.getArticleKeyWordList().add(articleKeyWord3);*/
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 24);
             calendar.set(Calendar.YEAR, 2013);
@@ -232,9 +232,9 @@ public class TestDao {
         article11.setArticleTitle("The king of fighter");
         article11.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article11.setUserProfile(userProfile);
-        article11.getArticleKeyWordList().add(articleKeyWord1);
+        /*article11.getArticleKeyWordList().add(articleKeyWord1);
         article11.getArticleKeyWordList().add(articleKeyWord2);
-        article11.getArticleKeyWordList().add(articleKeyWord3);
+        article11.getArticleKeyWordList().add(articleKeyWord3);*/
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 14);
             calendar.set(Calendar.YEAR, 2014);
@@ -361,9 +361,9 @@ public class TestDao {
         article20.setArticleTitle("Star wars the phantom menace");
         article20.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article20.setUserProfile(userProfile);
-        article20.getArticleKeyWordList().add(articleKeyWord1);
+        /*article20.getArticleKeyWordList().add(articleKeyWord1);
         article20.getArticleKeyWordList().add(articleKeyWord2);
-        article20.getArticleKeyWordList().add(articleKeyWord3);
+        article20.getArticleKeyWordList().add(articleKeyWord3);*/
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 24);
             calendar.set(Calendar.YEAR, 2013);
@@ -378,9 +378,9 @@ public class TestDao {
         article21.setArticleTitle("Terry Bogard vs Andy Bogard");
         article21.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article21.setUserProfile(userProfile);
-        article21.getArticleKeyWordList().add(articleKeyWord1);
+        /*article21.getArticleKeyWordList().add(articleKeyWord1);
         article21.getArticleKeyWordList().add(articleKeyWord2);
-        article21.getArticleKeyWordList().add(articleKeyWord3);
+        article21.getArticleKeyWordList().add(articleKeyWord3);*/
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 14);
             calendar.set(Calendar.YEAR, 2014);
@@ -493,9 +493,9 @@ public class TestDao {
         article29.setArticleTitle("Star wars empire strike back");
         article29.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article29.setUserProfile(userProfile);
-        article29.getArticleKeyWordList().add(articleKeyWord1);
+        /*article29.getArticleKeyWordList().add(articleKeyWord1);
         article29.getArticleKeyWordList().add(articleKeyWord2);
-        article29.getArticleKeyWordList().add(articleKeyWord3);
+        article29.getArticleKeyWordList().add(articleKeyWord3);*/
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 24);
             calendar.set(Calendar.YEAR, 2013);
@@ -510,9 +510,9 @@ public class TestDao {
         article30.setArticleTitle("Marvel vs Capcom");
         article30.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article30.setUserProfile(userProfile);
-        article30.getArticleKeyWordList().add(articleKeyWord1);
+        /*article30.getArticleKeyWordList().add(articleKeyWord1);
         article30.getArticleKeyWordList().add(articleKeyWord2);
-        article30.getArticleKeyWordList().add(articleKeyWord3);
+        article30.getArticleKeyWordList().add(articleKeyWord3);*/
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 14);
             calendar.set(Calendar.YEAR, 2014);
