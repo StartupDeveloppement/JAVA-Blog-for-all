@@ -8,6 +8,7 @@ var ResultThumbnailGroup = require('../_common/resultThumbnailGroup.js');
 var SearchResultsAction = require('../../actions/searchActions.js');
 var SearchResultsStore = require('../../stores/searchStore.js');
 
+
 var Search = React.createClass({
         mixins: [Reflux.connect(SearchResultsStore, "store")],
         getInitialState: function (){
@@ -18,36 +19,6 @@ var Search = React.createClass({
 
         render: function () {
             console.log(this.state.store);
-            var articlesHighRoller = [
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'1',
-                articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                    articleDescription:'Cum autem sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'2',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'3',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'4',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'5',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'6',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'7',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'}
-            ];
 
             var articlesMedium = [
                 {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',

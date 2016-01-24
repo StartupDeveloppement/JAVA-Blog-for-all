@@ -51,7 +51,7 @@ public class ArticleServices {
         return finalList;
     }
 
-    @Path("/searchedarticles")
+    @Path("/searchedarticles2")
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)

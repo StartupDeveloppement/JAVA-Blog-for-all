@@ -55,7 +55,7 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         try {
             t.begin();
             TypedQuery<Article> query = em.createQuery(req,Article.class);
-                query.setMaxResults(24);
+                query.setMaxResults(30);
             articleList = query.getResultList();
             t.commit();
         } catch (Exception e) {
@@ -73,7 +73,7 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         EntityManager em = getEntityManager();
         EntityTransaction t = em.getTransaction();
 
-        final Integer maxCategoryResult = 8;
+        final Integer maxCategoryResult = 7;
         Map<String, List<Article>> articleMap = new HashMap<String, List<Article>>();
         List<Article> highRollersList = null;
         List<Article> onTheWayList = null;

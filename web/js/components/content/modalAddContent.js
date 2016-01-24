@@ -30,7 +30,7 @@ var ModalAddContent = React.createClass({
     render() {
         return (
             <div>
-                <h5 className="fontTopTitle" onClick={this.open}> add content </h5>
+                <h5 className="fontModalAddContent" onClick={this.open}> add content </h5>
 
                 <Modal show={this.state.showModal} onHide={this.close} >
                     <Modal.Header closeButton>

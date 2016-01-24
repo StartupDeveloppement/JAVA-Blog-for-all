@@ -2,3 +2,9 @@
     max-width: 10rem;
     min-width: 10rem;
 }
+
+.fontModalAddContent{
+    letter-spacing: 1px;//
+    color: darkred;
+    cursor: pointer; cursor: hand;
+}
