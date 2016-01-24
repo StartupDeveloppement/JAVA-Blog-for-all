@@ -42,10 +42,8 @@ var AuthenticationStore = Reflux.createStore({
                     var strJSON = JSON.stringify(data);
                     var t = JSON.parse(strJSON);
                     if (t['authenticate']==true)
-                        ;
                         //alert(getEmail()+ " is authenticated YESSS");
-                        //Router.transitionTo('actualities');
-
+                        Router.transitionTo('actualities');
                 }
             })
     },

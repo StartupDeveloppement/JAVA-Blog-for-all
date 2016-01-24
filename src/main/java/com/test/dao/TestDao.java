@@ -37,17 +37,17 @@ public class TestDao {
         boolean user2Ok = userAuthDao.create(user2);
 
         UserProfile userProfile = new UserProfile();
-            userProfile.setBirthday(new Date());
+            /*userProfile.setBirthday(new Date());
             userProfile.setFirstname("hellofirstname");
-            userProfile.setLastname("hellolastname");
+            userProfile.setLastname("hellolastname");*/
             userProfile.setUser(user1);
             userProfile.setProfileName("megan");
             userProfile.setProfilePicture("./images/test/profile-test.jpg");
-            userProfile.setLanguage("fr");
+            /*userProfile.setLanguage("fr");
             userProfile.setCountry("France");
             userProfile.seteMailWhenFollow(true);
             userProfile.seteMailWhenLikeContent(true);
-            userProfile.seteMailWhenNewMessage(true);
+            userProfile.seteMailWhenNewMessage(true);*/
 
         UserProfileDao userProfileDao = new UserProfileDaoImpl();
         boolean userProfile1Ok = userProfileDao.create(userProfile);

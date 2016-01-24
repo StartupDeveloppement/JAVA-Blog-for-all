@@ -39,15 +39,15 @@ public class UserServices {
             return null;
         if (retrievedUser.getPassword().equals(password)) {
             retrieveUserProfile = userProfileDao.findProfileUsingUserEmail(email);
-            String username = retrieveUserProfile.getFirstname();
+            String username = retrieveUserProfile.getProfileName();
             String token = email + ":" + username + ":" + md5Hex(email + ":" + password + ":" + key);
             byte[] bytesToken = token.getBytes(StandardCharsets.UTF_8);
             String encodedToken = Base64.getEncoder().encodeToString(bytesToken);
             String profileToken =
                     retrieveUserProfile.getProfileName()+":"+
-                    retrieveUserProfile.getProfilePicture()+":"+
+                    retrieveUserProfile.getProfilePicture(); /*+":"+
                     retrieveUserProfile.getCountry()+":"+
-                    retrieveUserProfile.getLanguage();
+                    retrieveUserProfile.getLanguage();*/
             byte[] bytesProfileToken = profileToken.getBytes(StandardCharsets.UTF_8);
             String encodedProfileToken = Base64.getEncoder().encodeToString(bytesProfileToken);
                     System.out.println(username);
