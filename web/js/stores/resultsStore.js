@@ -19,7 +19,7 @@ var ResultsStore = Reflux.createStore({
                 xhrObj.setRequestHeader("Content-Type","application/json");
                 xhrObj.setRequestHeader("Accept","application/json");
             },
-            url: 'http://localhost:8080/app/rest/articles/lastarticles',
+            url: 'http://localhost:8080/rest/articles/lastarticles',
             type: 'GET',
             /*//contentType: 'application/x-www-form-urlencoded',
             //data: {email:email,password:password},*/

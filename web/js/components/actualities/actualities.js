@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDom = require('react-dom');
 var Router = require('../../router.js');
 var State = require('abyssa').State;
+
 var ActualitiesLeft = require('./actualitiesLeft.js');
 var ActualitiesRight = require('./actualitiesRight.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
@@ -15,7 +16,7 @@ var Actualities = React.createClass({
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
                     <div className="row">
-                        <h3 className="commonMainTitle">LAST SHARED CONTENT of my contact</h3>
+                        <h3 className="commonMainTitle">LAST SHARED CONTENT of my contacts</h3>
                         <div>
                             <div className="container col-sm-7 col-sm-offset-1">
                                 <ActualitiesLeft></ActualitiesLeft>

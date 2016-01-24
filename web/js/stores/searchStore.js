@@ -16,7 +16,7 @@ var SearchStore = Reflux.createStore({
     },
     onSearchResults: function (searchRequest) {
         $.ajax({
-            url: 'http://localhost:8080/app/rest/articles/searchedarticles',
+            url: 'http://localhost:8080/rest/articles/searchedarticles',
             type: 'POST',
             contentType: 'application/x-www-form-urlencoded',
             data: {search:searchRequest},

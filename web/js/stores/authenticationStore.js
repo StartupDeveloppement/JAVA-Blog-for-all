@@ -31,8 +31,9 @@ var AuthenticationStore = Reflux.createStore({
     listenables: AuthenticationActions,
     onCheckAuthentication: function(){
         if (getEmail()!="")
-            $.ajax({
-                url: 'http://localhost:8080/app/rest/user/checkauthentication',
+            Router.transitionTo('actualities');
+            /*$.ajax({
+                url: 'http://localhost:8080/rest/user/checkauthentication',
                 type: 'POST',
                 contentType: 'application/x-www-form-urlencoded',
                 data: {email: getEmail()},
@@ -45,11 +46,11 @@ var AuthenticationStore = Reflux.createStore({
                         //alert(getEmail()+ " is authenticated YESSS");
                         Router.transitionTo('actualities');
                 }
-            })
+            })*/
     },
     onAuthenticate: function (email,password) {
         $.ajax({
-            url: 'http://localhost:8080/app/rest/user/authenticate',
+            url: 'http://localhost:8080/rest/user/authenticate',
             type: 'POST',
             contentType: 'application/x-www-form-urlencoded',
             data: {email:email,password:password},

@@ -55,7 +55,7 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         try {
             t.begin();
             TypedQuery<Article> query = em.createQuery(req,Article.class);
-                query.setMaxResults(33);
+                query.setMaxResults(24);
             articleList = query.getResultList();
             t.commit();
         } catch (Exception e) {
