@@ -16,10 +16,13 @@ var CommonFooter = require('../_common/commonFooter.js');
 
 var SearchActions = require('../../actions/searchActions.js');
 //var SearchStore = require('../../stores/searchStore.js');
+var AuthenticationActions = require('../../actions/authenticationActions.js');
+
 
 var Main = React.createClass({
-    //mixins: [Reflux.connect(SearchStore)],
+    //mixins: [Reflux.connect(AuthenticationStore)],
     getInitialState: function () {
+        AuthenticationActions.checkAuthentication();
         return {
             openHowItWorks:false,
             searchValue: ''

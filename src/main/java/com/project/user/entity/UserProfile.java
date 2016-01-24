@@ -29,6 +29,11 @@ public class UserProfile implements java.io.Serializable {
     @OneToMany(fetch = FetchType.EAGER, mappedBy="userProfile")
     //@JsonManagedReference
     private List<Article> articleList;
+    private String language;
+    private String country;
+    private Boolean eMailWhenLikeContent;
+    private Boolean eMailWhenFollow;
+    private Boolean eMailWhenNewMessage;
 
 
 
@@ -54,5 +59,21 @@ public class UserProfile implements java.io.Serializable {
 
     public List<Article> getArticleList() {return articleList;}
     public void setArticleList(List<Article> articleList) {this.articleList = articleList;}
+
+    public String getLanguage() {return language;}
+    public void setLanguage(String language) {this.language = language;}
+
+    public String getCountry() {return country;}
+    public void setCountry(String country) {this.country = country;}
+
+    public Boolean geteMailWhenLikeContent() {return eMailWhenLikeContent;}
+    public void seteMailWhenLikeContent(Boolean eMailWhenLikeContent) {this.eMailWhenLikeContent = eMailWhenLikeContent;}
+
+    public Boolean geteMailWhenFollow() {return eMailWhenFollow;}
+    public void seteMailWhenFollow(Boolean eMailWhenFollow) {this.eMailWhenFollow = eMailWhenFollow;}
+
+    public Boolean geteMailWhenNewMessage() {return eMailWhenNewMessage;}
+    public void seteMailWhenNewMessage(Boolean eMailWhenNewMessage) {this.eMailWhenNewMessage = eMailWhenNewMessage;}
+
 
 }

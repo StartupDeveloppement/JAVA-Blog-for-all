@@ -43,6 +43,11 @@ public class TestDao {
             userProfile.setUser(user1);
             userProfile.setProfileName("megan");
             userProfile.setProfilePicture("./images/test/profile-test.jpg");
+            userProfile.setLanguage("fr");
+            userProfile.setCountry("France");
+            userProfile.seteMailWhenFollow(true);
+            userProfile.seteMailWhenLikeContent(true);
+            userProfile.seteMailWhenNewMessage(true);
 
         UserProfileDao userProfileDao = new UserProfileDaoImpl();
         boolean userProfile1Ok = userProfileDao.create(userProfile);
@@ -73,7 +78,6 @@ public class TestDao {
             article1.setArticleDivider("resultDividerBlue");
             article1.setArticleTitle("Star wars the force awakens");
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            //article1.setIdUserProfile(1);
             article1.setUserProfile(userProfile);
             /*article1.getArticleKeyWordList().add(articleKeyWord1);
             article1.getArticleKeyWordList().add(articleKeyWord2);

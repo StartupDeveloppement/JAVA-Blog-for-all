@@ -6,7 +6,9 @@ var ActualitiesLeft = require('./actualitiesLeft.js');
 var ActualitiesRight = require('./actualitiesRight.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 
+
 var Actualities = React.createClass({
+
     render: function(){
         return (
             <div>

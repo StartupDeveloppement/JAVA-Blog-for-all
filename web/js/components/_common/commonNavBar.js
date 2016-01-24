@@ -6,15 +6,15 @@ var Input = require('react-bootstrap').Input;
 var Button = require('react-bootstrap').Button;
 
 var SearchActions = require('../../actions/searchActions.js');
-var SearchStore = require('../../stores/searchStore.js')
-
+var SearchStore = require('../../stores/searchStore.js');
 
 var CommonNavBar = React.createClass({
 
     mixins: [Reflux.connect(SearchStore)],
     getInitialState: function (){
         return {
-            searchValue: ''
+            searchValue: '',
+            profileName : "Megan"
         };
     },
     handleSearch:function(event){
@@ -55,7 +55,7 @@ var CommonNavBar = React.createClass({
 
                         <ul className="nav navbar-nav navbar-right">
                             <li className="dropdown">
-                                <a data-toggle="dropdown" className="dropdown-toggle" href="#">Claire<b className="caret"></b></a>
+                                <a data-toggle="dropdown" className="dropdown-toggle" href="#">{this.state.profileName}<b className="caret"></b></a>
                                 <ul role="menu" className="dropdown-menu">
                                     <li><a href={Router.link('profile')} >Profile</a></li>
                                     <li><a href={Router.link('parameters')}>Parameters</a></li>
