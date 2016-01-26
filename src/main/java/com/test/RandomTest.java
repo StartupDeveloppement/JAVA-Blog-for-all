@@ -22,10 +22,13 @@ public class RandomTest {
 
         ArticleDao articleDao = new ArticleDaoImpl();
 
-        Map<String,List<Article>> articleMap = articleDao.findSearchedArticles2(new ArrayList<String>());
+        /*Map<String,List<Article>> articleMap = articleDao.findSearchedArticles2(new ArrayList<String>());
 
         for(String key: articleMap.keySet())
-            System.out.println(key + " - " + articleMap.get(key));
+            System.out.println(key + " - " + articleMap.get(key));*/
+
+        Article article =articleDao.read(5);
+        System.out.println(article.getArticleTitle());
 
     }
 }

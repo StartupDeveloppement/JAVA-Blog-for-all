@@ -4,6 +4,14 @@ var ResultImage = require('./subCommon/resultImage.js');
 
 var ResultImageGroup = React.createClass({
     render: function(){
+
+        if ( !this.props.articles ) {
+            return (
+                <div>
+                    <img src="./images/homepage/loading.gif" alt="loading" />
+                </div>
+            )
+        }
         return (
             <div>
                 {this.props.articles.map(function (article){

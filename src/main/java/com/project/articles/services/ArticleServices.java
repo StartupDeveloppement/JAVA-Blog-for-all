@@ -2,6 +2,7 @@ package com.project.articles.services;
 
 import com.project.articles.dao.ArticleDao;
 import com.project.articles.dao.impl.ArticleDaoImpl;
+import com.project.articles.dto.ArticleResponseDto;
 import com.project.articles.dto.ArticlesResponseDto;
 import com.project.articles.entity.Article;
 import com.project.user.dao.UserProfileDao;
@@ -33,6 +34,17 @@ public class ArticleServices {
         return finalList;
     }
 
+    @Path("/readarticle")
+    @POST
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Article findArticle(@FormParam("idContent") Integer idContent){
+
+        // mapping goes here
+
+        return articleDao.read(5);
+    }
+
     @Path("/searchedarticles")
     @POST
     @Consumes("application/x-www-form-urlencoded")
@@ -46,7 +58,6 @@ public class ArticleServices {
             }
         }
         List<Article> searchedArticlesList = articleDao.findSearchedArticles(requestList);
-        //searchedArticlesList.size();
         List<ArticlesResponseDto> finalList = doArticlesMapping(searchedArticlesList);
         return finalList;
     }
@@ -55,7 +66,7 @@ public class ArticleServices {
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
-    public Map<String,List<ArticlesResponseDto>> findSearchedArticles2(@FormParam("search") String search){
+    public Map<String,List<Article>> findSearchedArticles2(@FormParam("search") String search){
         List<String> requestList = new ArrayList<String>();
         if (search !=null) {
             StringTokenizer st = new StringTokenizer(search);
@@ -65,9 +76,9 @@ public class ArticleServices {
         }
         Map<String, List<Article>> searchedArticlesMap = articleDao.findSearchedArticles2(requestList);
         //searchedArticlesList.size();
-        Map<String,List<ArticlesResponseDto>> mapArticle = null;
+        //Map<String,List<ArticlesResponseDto>> mapArticle = null;
         //List<ArticlesResponseDto> finalList = doArticlesMapping(searchedArticlesList);
-        return mapArticle;
+        return searchedArticlesMap;
     }
 
     private List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {

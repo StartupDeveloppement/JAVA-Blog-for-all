@@ -113,7 +113,6 @@ var Main = React.createClass({
                 </div>
                 <div className="row commonContainer">
                     <br />
-                    .
                     <br />
                     <div>
                         <div className="container col-sm-7 col-sm-offset-1">

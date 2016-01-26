@@ -17,6 +17,7 @@ var Login = require('./components/login/login.js');
 var ImportForm = require('./components/content/importForm.js');
 var CreateForm = require('./components/content/createForm.js');
 var CreateContent = require('./components/content/createContent.js');
+var Content = require('./components/content/content.js')
 
 
 function getCookie(cname) {
@@ -51,7 +52,8 @@ Router
     .addState('login', State('login', Login))
     .addState('importForm', State('importForm', ImportForm))
     .addState('createForm', State('createForm', CreateForm))
-    .addState('createContent', State('createContent', CreateContent));
+    .addState('createContent', State('createContent', CreateContent))
+    .addState('content',State('content/:id', Content));
 
 document.addEventListener("DOMContentLoaded", function(event) {
     if (getEmail()!="")
