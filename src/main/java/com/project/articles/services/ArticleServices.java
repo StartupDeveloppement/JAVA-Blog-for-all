@@ -38,7 +38,7 @@ public class ArticleServices {
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
-    public Article findArticle(@FormParam("idContent") Integer idContent){
+    public Article findArticle(@FormParam("idContent") String idContent){
 
         // mapping goes here
 
