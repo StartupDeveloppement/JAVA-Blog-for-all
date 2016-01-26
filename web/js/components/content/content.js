@@ -21,6 +21,8 @@ var Content = React.createClass({
             <div>
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
+                    <br />
+                    <br />
                     <div className="row">
                         <div className="container col-sm-7 col-sm-offset-1">
                             {
