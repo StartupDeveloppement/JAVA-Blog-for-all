@@ -8,12 +8,12 @@ var ResultImage = React.createClass({
 
         return (
             <div className="resultElement commonRadius">
-                <a href={Router.link('content',{id:5})}>
+                <a href={Router.link('content',{id:this.props.articleKey})}>
                     <h2 className="resultTitle" >{this.props.articleTitle}</h2>
                 </a>
                 <hr className={this.props.articleDivider}></hr>
                 <p className="resultText">
-                    {this.props.articleText}
+                    {this.props.articleDescription}
                 </p>
                 <div className="row">
                     <img className="col-sm-1 col-sm-offset-8 resultImage" src={this.props.profilePicture}
