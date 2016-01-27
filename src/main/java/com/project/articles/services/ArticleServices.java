@@ -49,10 +49,11 @@ public class ArticleServices {
             articleResponseDto.setArticleApprove(article.getArticleApprove());
             articleResponseDto.setProfileName(article.getUserProfile().getProfileName());
             articleResponseDto.setProfilePicture(article.getUserProfile().getProfilePicture());
+            articleResponseDto.setUserEmail(article.getUserProfile().getUser().getEmail());
         return articleResponseDto;
     }
 
-    @Path("/searchedarticles2")
+    @Path("/searchedarticles")
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
@@ -69,7 +70,7 @@ public class ArticleServices {
         return finalList;
     }
 
-    @Path("/searchedarticles")
+    @Path("/searchedarticles2")
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
@@ -90,6 +91,7 @@ public class ArticleServices {
         }
         return mapArticle;
     }
+
 
     private List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {
         List<ArticlesResponseDto> finalList = new ArrayList();

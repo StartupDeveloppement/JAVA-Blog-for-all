@@ -15,7 +15,7 @@ var ContentLeft = React.createClass({
                 </div>
                 <br />
                 <br />
-                <div className="container">
+                <div className="">
                     {this.props.articleText}
                 </div>
 

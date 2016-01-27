@@ -201,27 +201,30 @@ var Profile = React.createClass({
                             </div>
                         </div>
                         <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
-                            <div id="paypalProfile">
-                                <h3 className="titleProfile">Paypal info</h3>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="paypalProfile">Paypal account :</label>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="paypalProfile" placeholder=" paypal account" />
+                            <form>
+                                <div id="paypalProfile">
+                                    <h3 className="titleProfile">Paypal info</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="paypalProfile">Paypal account :</label>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="paypalProfile" placeholder=" paypal account" />
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-offset-3">
+                                        <p>copy and paste here the generated code to implement your profile</p>
+                                        <p> we hide your paypal generated code for confidential reason</p>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row">
+                                        <button type="submit" className="btn btn-primary btn-sm pull-right"> Save paypal info </button>
                                     </div>
                                 </div>
-                                <div className="col-sm-offset-3">
-                                    <p> we hide your paypal user id for confidential reason</p>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row">
-                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
