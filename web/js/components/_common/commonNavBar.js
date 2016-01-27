@@ -37,12 +37,18 @@ function getEmail() {
 var CommonNavBar = React.createClass({
 
     mixins: [Reflux.connect(SearchStore)],
+
     getInitialState: function (){
         return {
             searchValue: '',
             profileName : "Megan"
         };
     },
+
+    openModal:function(){
+        this.refs.modalAddContent.open()
+    },
+
     handleSearch:function(event){
         event.preventDefault();
         SearchActions.searchResults(this.state.searchValue);
@@ -74,14 +80,16 @@ var CommonNavBar = React.createClass({
                             <ul className="nav navbar-nav">
                                 <li className="navbar-left"><a href={Router.link('actualities')}>Actualities</a></li>
                                 <li className="navbar-left"><a href="#">Projects</a></li>
+                                <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
                             </ul>
                             :
-                            null
+                            <ul className="nav navbar-nav">
+                                <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
+                            </ul>
 
                             }
-                        <div className="nav navbar-nav">
-                            <ModalAddContent />
-                        </div>
+
+                            <ModalAddContent ref="modalAddContent" />
                         <form role="search" className="navbar-form navbar-right" onSubmit={this.handleSearch}>
                             <div className="form-group">
                                 <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" value={this.state.searchValue} onChange={this._onChangeSearchValue} />

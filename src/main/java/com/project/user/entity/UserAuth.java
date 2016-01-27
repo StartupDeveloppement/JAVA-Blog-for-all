@@ -18,9 +18,9 @@ public class UserAuth implements java.io.Serializable{
     private String email;
     private String password;
     private Boolean activate;
-    /*@ManyToMany(fetch = FetchType.EAGER)
+    /*@ManyToMany(fetch = FetchType.LAZY)
     private List<UserAuth> followingList;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<UserAuth> followerList;*/
 
     public String getPassword() {return password;}

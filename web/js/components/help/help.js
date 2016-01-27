@@ -12,6 +12,12 @@ var Help = React.createClass({
                <div className="commonContainerNavBar">
                     <div className="row">
                         <h2>Help page</h2>
+                        <p>learn more about our product</p>
+                        <p>learn more about our product</p>
+                        <p>learn more about our product</p>
+                        <p>learn more about our product</p>
+                        <p>learn more about our product</p>
+                        <p>learn more about our product</p>
                     </div>
                </div>
            </div>

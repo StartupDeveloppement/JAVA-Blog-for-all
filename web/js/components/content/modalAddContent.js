@@ -29,8 +29,6 @@ var ModalAddContent = React.createClass({
 
     render() {
         return (
-            <div>
-                <h5 className="fontModalAddContent" onClick={this.open}> add content </h5>
 
                 <Modal show={this.state.showModal} onHide={this.close} >
                     <Modal.Header closeButton>
@@ -54,12 +52,15 @@ var ModalAddContent = React.createClass({
                         <h5 className="footerModal" onClick=""> learn more </h5>
                     </Modal.Footer>
                 </Modal>
-            </div>
+
         );
     }
 });
 
 module.exports = ModalAddContent;
+
+/*<a className="fontModalAddContent" onClick={this.open}> <b>add content</b> </a>*/
+
 
 /*<Modal.Body>
  <div className="row">

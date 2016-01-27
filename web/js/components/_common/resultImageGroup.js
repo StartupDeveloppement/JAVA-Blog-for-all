@@ -23,6 +23,7 @@ var ResultImageGroup = React.createClass({
                             profilePicture={article.profilePicture}
                             profileName={article.profileName}
                             articleKey={article.articleKey}
+                            userEmail={article.userEmail}
                             key={article.articleKey} />
                     )
                 })

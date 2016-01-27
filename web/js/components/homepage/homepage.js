@@ -28,6 +28,15 @@ var Main = React.createClass({
             searchValue: ''
         }
     },
+
+    openModalAddContent:function(){
+        this.refs.modalAddContent.open()
+    },
+
+    openModalSignUp:function(){
+        this.refs.modalSignUp.open()
+    },
+
     handleClickHowItWorks:function (event) {
         event.preventDefault();
         this.setState({openHowItWorks:true});
@@ -82,14 +91,16 @@ var Main = React.createClass({
                         <div className="row homeTopRow">
                             <div className="col-sm-3 homeTopTitle"><h4 className="fontTopTitle">Blog Project</h4></div>
                             <div className="col-sm-1 col-sm-offset-5 homeTopTitle onHoverHomeTitle">
-                                <ModalAddContent />
+                                <a className="" onClick={this.openModalAddContent}><b>add content</b></a>
+                                <ModalAddContent ref="modalAddContent" />
                             </div>
                             <div className="col-sm-1 col-sm-offset-1 homeTopTitle onHoverHomeTitle">
-                                <ModalSignUp />
+                                <a className="fontTopTitle" onClick={this.openModalSignUp}> sign up </a>
+                                <ModalSignUp ref="modalSignUp" />
                             </div>
                             <div className="col-sm-1 homeTopTitle">
                                 <h5 className="fontTopTitle">
-                                    <a href={Router.link('login')}>login</a>
+                                    <a className="linkTitle" href={Router.link('login')}><b>login</b></a>
                                 </h5>
                             </div>
                         </div>

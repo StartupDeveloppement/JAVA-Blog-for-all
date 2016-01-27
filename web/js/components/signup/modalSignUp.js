@@ -38,9 +38,6 @@ var ModalSignUp = React.createClass({
 
     render() {
         return (
-            <div>
-                <h5 className="fontTopTitle" onClick={this.open}> sign up </h5>
-
                 <Modal show={this.state.showModal} onHide={this.close} bsSize="small">
                     <Modal.Header closeButton>
                         <Modal.Title>sign up</Modal.Title>
@@ -64,7 +61,7 @@ var ModalSignUp = React.createClass({
                         <h5 className="footerModal" onClick=""> already have an account ?  <b> just login</b></h5>
                     </Modal.Footer>
                 </Modal>
-            </div>
+
         );
     }
 });
