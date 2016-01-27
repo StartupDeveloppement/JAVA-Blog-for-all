@@ -11,10 +11,7 @@ import com.project.user.entity.UserProfile;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * Created by olivier on 19/12/2015.
@@ -38,14 +35,24 @@ public class ArticleServices {
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
-    public Article findArticle(@FormParam("idContent") Integer idContent){
-
-        // mapping goes here
-
-        return articleDao.read(5);
+    public ArticleResponseDto findArticle(@FormParam("idContent") Integer idContent){
+        Article article = articleDao.read(idContent);
+        ArticleResponseDto articleResponseDto = new ArticleResponseDto();
+            articleResponseDto.setArticleDate(article.getArticleDate());
+            //articlesResponseDto.setArticleKeyWordList(article.getArticleKeyWordList());
+            articleResponseDto.setArticleKey(article.getArticleKey());
+            articleResponseDto.setArticleDivider(article.getArticleDivider());
+            articleResponseDto.setArticleText(article.getArticleText());
+            articleResponseDto.setArticleTitle(article.getArticleTitle());
+            articleResponseDto.setArticlePicture(article.getArticlePicture());
+            articleResponseDto.setArticleDescription(article.getArticleDescription());
+            articleResponseDto.setArticleApprove(article.getArticleApprove());
+            articleResponseDto.setProfileName(article.getUserProfile().getProfileName());
+            articleResponseDto.setProfilePicture(article.getUserProfile().getProfilePicture());
+        return articleResponseDto;
     }
 
-    @Path("/searchedarticles")
+    @Path("/searchedarticles2")
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
@@ -62,11 +69,11 @@ public class ArticleServices {
         return finalList;
     }
 
-    @Path("/searchedarticles2")
+    @Path("/searchedarticles")
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
-    public Map<String,List<Article>> findSearchedArticles2(@FormParam("search") String search){
+    public Map<String,List<ArticlesResponseDto>> findSearchedArticles2(@FormParam("search") String search){
         List<String> requestList = new ArrayList<String>();
         if (search !=null) {
             StringTokenizer st = new StringTokenizer(search);
@@ -75,10 +82,13 @@ public class ArticleServices {
             }
         }
         Map<String, List<Article>> searchedArticlesMap = articleDao.findSearchedArticles2(requestList);
-        //searchedArticlesList.size();
-        //Map<String,List<ArticlesResponseDto>> mapArticle = null;
-        //List<ArticlesResponseDto> finalList = doArticlesMapping(searchedArticlesList);
-        return searchedArticlesMap;
+        Map<String,List<ArticlesResponseDto>> mapArticle = new HashMap<String, List<ArticlesResponseDto>>();
+        for (Map.Entry<String, List<Article>> entry : searchedArticlesMap.entrySet()) {
+            List<ArticlesResponseDto> finalList = new ArrayList<ArticlesResponseDto>();
+            finalList = doArticlesMapping(entry.getValue());
+            mapArticle.put(entry.getKey(),finalList);
+        }
+        return mapArticle;
     }
 
     private List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {
@@ -89,11 +99,11 @@ public class ArticleServices {
                 //articlesResponseDto.setArticleKeyWordList(article.getArticleKeyWordList());
                 articlesResponseDto.setArticleKey(article.getArticleKey());
                 articlesResponseDto.setArticleDivider(article.getArticleDivider());
-                articlesResponseDto.setArticleText(article.getArticleText());
+                //articlesResponseDto.setArticleText(article.getArticleText());
                 articlesResponseDto.setArticleTitle(article.getArticleTitle());
                 articlesResponseDto.setArticlePicture(article.getArticlePicture());
                 articlesResponseDto.setArticleDescription(article.getArticleDescription());
-                articlesResponseDto.setArticleApprove(article.getArticleApprove());
+                //articlesResponseDto.setArticleApprove(article.getArticleApprove());
                 articlesResponseDto.setProfileName(article.getUserProfile().getProfileName());
                 articlesResponseDto.setProfilePicture(article.getUserProfile().getProfilePicture());
             finalList.add(articlesResponseDto);

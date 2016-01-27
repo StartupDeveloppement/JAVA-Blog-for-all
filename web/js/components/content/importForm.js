@@ -44,7 +44,7 @@ var ImportForm = React.createClass({
                                 <div className="col-sm-12"><hr></hr></div>
                             </div>
                             <div className="row form-group">
-                                <label className="control-label col-sm-3" for="importTitle">Title : (mandatory)</label>
+                                <label className="control-label col-sm-3" htmlFor="importTitle">Title : (mandatory)</label>
                                 <div className="col-sm-6">
                                     <input type="text" className="form-control input-sm" id="importTitle" placeholder=" title" value={this.state.title} onChange={this._onChangeTitle} />
                                 </div>
@@ -62,7 +62,7 @@ var ImportForm = React.createClass({
                                 <div className="col-sm-12"><hr></hr></div>
                             </div>
                             <div className="row form-group">
-                                <label className="control-label col-sm-3" for="sectionImport">Choose a section :</label>
+                                <label className="control-label col-sm-3" htmlFor="sectionImport">Choose a section :</label>
                                 <div className="col-sm-6">
                                     <select className="form-control input-sm" id="sectionImport" value={this.state.section} onChange={this._onChangeSection} >
                                         <option>Main</option>
@@ -74,7 +74,7 @@ var ImportForm = React.createClass({
                                 <div className="col-sm-12"><hr></hr></div>
                             </div>
                             <div className="row form-group">
-                                <label className="control-label col-sm-3" for="importFrom">import from</label>
+                                <label className="control-label col-sm-3" htmlFor="importFrom">import from</label>
                                 <div className="col-sm-6">
                                     <input type="file" className="form-control input-sm" id="importFrom"  />
                                 </div>

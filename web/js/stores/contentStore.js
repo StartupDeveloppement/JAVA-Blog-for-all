@@ -5,6 +5,7 @@ var base64 = require('base-64');
 var utf8 = require('utf8');
 var ContentActions = require('../actions/contentActions.js');
 
+
 var content = {};
 
 var ContentStore = Reflux.createStore({
@@ -14,7 +15,7 @@ var ContentStore = Reflux.createStore({
             content : content
         }
     },
-    onSearchResults: function (idContent) {
+    onGetContent: function (idContent) {
         $.ajax({
             url: 'http://localhost:8080/rest/articles/readarticle',
             type: 'POST',
@@ -26,7 +27,7 @@ var ContentStore = Reflux.createStore({
                 if (data) {
                     console.log("Content OK");
                     content = data;
-                    this.trigger({searchResults: searchResults});
+                    this.trigger({content: content});
                     //Router.transitionTo('content/'+idContent);
                 }else{
                     console.log("Content KO");

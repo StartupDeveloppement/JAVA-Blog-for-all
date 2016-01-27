@@ -73,7 +73,7 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         EntityManager em = getEntityManager();
         EntityTransaction t = em.getTransaction();
 
-        final Integer maxCategoryResult = 7;
+        final Integer maxCategoryResult = 10;
         Map<String, List<Article>> articleMap = new HashMap<String, List<Article>>();
         List<Article> highRollersList = null;
         List<Article> onTheWayList = null;

@@ -14,7 +14,7 @@ var resultThumbnail = React.createClass({
             <Grid>
                 <Row>
                     <Col xs={6} md={4}>
-                        <a href={Router.link('content',{id:5})}>
+                        <a href={Router.link('content',{id:this.props.articleKey})}>
                             <Thumbnail className="resultThumbnail" src={this.props.articlePicture} alt="cool article">
                                 <h3>{this.props.articleTitle}</h3>
                                 <p>{this.props.articleDescription}</p>

@@ -29,8 +29,9 @@ public class Article implements java.io.Serializable{
     @Lob
     @Column(columnDefinition="TEXT")
     private String articleText;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    //@JsonIgnore
+    @JsonBackReference
     private UserProfile userProfile;
     /*@ManyToMany(fetch = FetchType.EAGER, mappedBy = "articleList")
     private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();*/

@@ -17,7 +17,7 @@ var Login = require('./components/login/login.js');
 var ImportForm = require('./components/content/importForm.js');
 var CreateForm = require('./components/content/createForm.js');
 var CreateContent = require('./components/content/createContent.js');
-var Content = require('./components/content/content.js')
+var Content = require('./components/content/content.js');
 
 
 function getCookie(cname) {

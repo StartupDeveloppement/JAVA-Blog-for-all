@@ -7,14 +7,15 @@ var ContentLeft = React.createClass({
 
     render: function () {
         return (
-            <div>
+            <div className="contentStyle commonRadius">
                 <h1>{this.props.articleTitle}</h1>
                 <div className="row">
-                    <img className="col-sm-1 col-sm-offset-1 resultImage" src={this.props.profilePicture} alt="profile picture"></img>
+                    <img className="col-sm-1 col-sm-offset-0.5 contentProfilePicture" src={this.props.profilePicture} alt="profile picture"></img>
                     <div className="col-sm-2"><b>{this.props.profileName}</b></div>
                 </div>
                 <br />
-                <div>
+                <br />
+                <div className="container">
                     {this.props.articleText}
                 </div>
 

@@ -56,7 +56,7 @@ var Parameters = React.createClass({
                                             <div className="col-sm-12"><hr></hr></div>
                                         </div>
                                         <div className="row form-group">
-                                            <label className="control-label col-sm-3" for="languageParameters">Language :</label>
+                                            <label className="control-label col-sm-3" htmlFor="languageParameters">Language :</label>
                                             <div className="col-sm-6">
                                                 <select className="form-control input-sm" id="languageParameters">
                                                     <option>English</option>
@@ -68,7 +68,7 @@ var Parameters = React.createClass({
                                             <div className="col-sm-12"><hr></hr></div>
                                         </div>
                                         <div className="row form-group">
-                                            <label className="control-label col-sm-3" for="countryParameters">Country :</label>
+                                            <label className="control-label col-sm-3" htmlFor="countryParameters">Country :</label>
                                             <div className="col-sm-6">
                                                 <select className="form-control input-sm" id="countryParameters">
                                                     <option>United Kingdom</option>
@@ -110,7 +110,7 @@ var Parameters = React.createClass({
                                             <div className="col-sm-12"><hr></hr></div>
                                         </div>
                                         <div className="row form-group">
-                                            <label className="control-label col-sm-3" for="oldPasswordParameters">Old password :</label>
+                                            <label className="control-label col-sm-3" htmlFor="oldPasswordParameters">Old password :</label>
                                             <div className="col-sm-6">
                                                 <input type="password" className="form-control input-sm" id="oldPasswordParameters" placeholder=" old password" />
                                             </div>
@@ -119,13 +119,13 @@ var Parameters = React.createClass({
                                             <div className="col-sm-12"><hr></hr></div>
                                         </div>
                                         <div className="row form-group">
-                                            <label className="control-label col-sm-3" for="newPasswordParameters">New password :</label>
+                                            <label className="control-label col-sm-3" htmlFor="newPasswordParameters">New password :</label>
                                             <div className="col-sm-6">
                                                 <input type="password" className="form-control input-sm" id="newPasswordParameters" placeholder=" new password" />
                                             </div>
                                         </div>
                                         <div className="row form-group">
-                                            <label className="control-label col-sm-3" for="newPasswordParameters2">New password :</label>
+                                            <label className="control-label col-sm-3" htmlFor="newPasswordParameters2">New password :</label>
                                             <div className="col-sm-6">
                                                 <input type="password" className="form-control input-sm" id="newPasswordParameters2" placeholder=" confirm new password" />
                                             </div>

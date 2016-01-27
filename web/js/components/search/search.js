@@ -125,7 +125,7 @@ var Search = React.createClass({
                         <br />
                         <div className="row marginResultThumbnail">
                             <div className="container col-sm-3 col-md-3">
-                                <ResultThumbnailGroup articles={this.state.store.searchResults} />
+                                <ResultThumbnailGroup articles={this.state.store.searchResults.highRollers} />
                             </div>
                             <div className="container col-sm-3 col-md-3">
                                 <ResultThumbnailGroup articles={articlesMedium} />

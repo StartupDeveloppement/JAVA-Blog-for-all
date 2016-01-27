@@ -1,0 +1,10 @@
+.contentStyle{
+    background-color:white;
+    padding:1rem;
+    margin-bottom:1rem
+}
+
+.contentProfilePicture{
+    max-width: 4rem;
+    min-width: 4rem;
+}

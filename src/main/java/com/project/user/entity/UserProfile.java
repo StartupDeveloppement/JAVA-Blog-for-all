@@ -26,8 +26,8 @@ public class UserProfile implements java.io.Serializable {
     private String profilePicture;
     /*@Temporal(TemporalType.DATE)
     private Date birthday;*/
-    @OneToMany(fetch = FetchType.EAGER, mappedBy="userProfile")
-    //@JsonManagedReference
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
+    @JsonManagedReference
     private List<Article> articleList;
     /*private String language;
     private String country;

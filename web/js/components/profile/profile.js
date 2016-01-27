@@ -40,7 +40,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-2" for="namesProfile">Name :</label>
+                                    <label className="control-label col-sm-2" htmlFor="namesProfile">Name :</label>
                                     <div className="form-group form-inline col-sm-9" id="namesProfile">
                                         <input className="col-sm-5 col-sm-offset-1 form-control input-sm" type="text" placeholder=" firstname"  />
                                         <input className="col-sm-5 form-control input-sm" type="text" placeholder=" lastname"  />
@@ -50,7 +50,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="usernameProfile">Username :</label>
+                                    <label className="control-label col-sm-3" htmlFor="usernameProfile">Username :</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="usernameProfile" placeholder=" username" />
                                     </div>
@@ -79,7 +79,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="aboutYouProfile">About you :</label>
+                                    <label className="control-label col-sm-3" htmlFor="aboutYouProfile">About you :</label>
                                     <div className="col-sm-6">
                                         <textarea className="form-control" rows="5" id="aboutYouProfile" placeholder="tell us more about you"/>
                                     </div>
@@ -99,7 +99,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="statusProfile">Status :</label>
+                                    <label className="control-label col-sm-3" htmlFor="statusProfile">Status :</label>
                                     <div className="col-sm-6">
                                         <select className="form-control input-sm" id="statusProfile">
                                             <option>Open to projects</option>
@@ -115,7 +115,7 @@ var Profile = React.createClass({
                                 <div className="row form-group">
                                     <div className="col-sm-3">
                                         <img className="col-sm-4 img-responsive center-block socialNetworkLogo" src="../images/profile/facebook-logo.jpg" alt="facebook" />
-                                        <label className="control-label col-sm-offset-1 col-sm-7" for="facebookProfile">Facebook page :</label>
+                                        <label className="control-label col-sm-offset-1 col-sm-7" htmlFor="facebookProfile">Facebook page :</label>
                                     </div>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="facebookProfile" placeholder=" facebook page" />
@@ -127,7 +127,7 @@ var Profile = React.createClass({
                                 <div className="row form-group">
                                     <div className="col-sm-3">
                                         <img className="col-sm-4 img-responsive center-block socialNetworkLogo" src="../../images/profile/twitter-logo.jpg" alt="twitter" />
-                                        <label className="control-label col-sm-offset-1 col-sm-7" for="twitterProfile">Twitter page :</label>
+                                        <label className="control-label col-sm-offset-1 col-sm-7" htmlFor="twitterProfile">Twitter page :</label>
                                     </div>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="twitterProfile" placeholder=" twitter page" />
@@ -139,7 +139,7 @@ var Profile = React.createClass({
                                 <div className="row form-group">
                                     <div className="col-sm-3">
                                         <img className="col-sm-4 img-responsive center-block socialNetworkLogo" src="../../../images/profile/pinterest-logo.jpg" alt="pinterest" />
-                                        <label className="control-label col-sm-offset-1 col-sm-7" for="pinterestProfile">Pinterest page :</label>
+                                        <label className="control-label col-sm-offset-1 col-sm-7" htmlFor="pinterestProfile">Pinterest page :</label>
                                     </div>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="pinterestProfile" placeholder=" pinterest page" />
@@ -160,7 +160,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="universityProfile">University :</label>
+                                    <label className="control-label col-sm-3" htmlFor="universityProfile">University :</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="universityProfile" placeholder=" last university attended or one you are proud of" />
                                     </div>
@@ -169,7 +169,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="universityCityProfile">University's city :</label>
+                                    <label className="control-label col-sm-3" htmlFor="universityCityProfile">University's city :</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="universityCityProfile" placeholder=" city of your university" />
                                     </div>
@@ -178,7 +178,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="workProfile">Work :</label>
+                                    <label className="control-label col-sm-3" htmlFor="workProfile">Work :</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="workProfile" placeholder=" last job or one you are proud of" />
                                     </div>
@@ -187,7 +187,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="workCityProfile">Work's city :</label>
+                                    <label className="control-label col-sm-3" htmlFor="workCityProfile">Work's city :</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="workCityProfile" placeholder=" city of your work" />
                                     </div>
@@ -207,7 +207,7 @@ var Profile = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="paypalProfile">Paypal account :</label>
+                                    <label className="control-label col-sm-3" htmlFor="paypalProfile">Paypal account :</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="paypalProfile" placeholder=" paypal account" />
                                     </div>

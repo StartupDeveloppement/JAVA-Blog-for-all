@@ -17,6 +17,11 @@ var Content = React.createClass({
         ContentActions.getContent(Router.current().params.id);
     },
     render: function () {
+        if ( !this.state.store ) {
+            // Note that you can return false it you want nothing to be put in the dom
+            // This is also your chance to render a spinner or something...
+            return <div><img src="./images/homepage/loading.gif" alt="loading" /></div>
+        }
         return (
             <div>
                 <CommonNavBar />

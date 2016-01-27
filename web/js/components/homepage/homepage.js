@@ -143,4 +143,7 @@ module.exports = {
 /*
  <h3 className="container homeResultsTitle">LAST SHARED CONTENT</h3>
  <Input type="text" placeholder="what are you looking for ?" buttonAfter={innerButton} value={this.state.searchValue} onChange={this._onChangeSearchValue} />
+
+
+
  */

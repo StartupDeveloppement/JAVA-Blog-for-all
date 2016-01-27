@@ -46,7 +46,7 @@ var CreateForm = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="contentTitle">Title : (mandatory)</label>
+                                    <label className="control-label col-sm-3" htmlFor="contentTitle">Title : (mandatory)</label>
                                     <div className="col-sm-6">
                                         <input type="text" className="form-control input-sm" id="contentTitle" placeholder=" title" value={this.state.title} onChange={this._onChangeTitle} />
                                     </div>
@@ -64,7 +64,7 @@ var CreateForm = React.createClass({
                                     <div className="col-sm-12"><hr></hr></div>
                                 </div>
                                 <div className="row form-group">
-                                    <label className="control-label col-sm-3" for="sectionContent">Choose a section :</label>
+                                    <label className="control-label col-sm-3" htmlFor="sectionContent">Choose a section :</label>
                                     <div className="col-sm-6">
                                         <select className="form-control input-sm" id="sectionContent" value={this.state.section} onChange={this._onChangeSection} >
                                             <option>Main</option>
