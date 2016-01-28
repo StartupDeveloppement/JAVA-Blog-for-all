@@ -6,6 +6,7 @@ import com.project.user.dao.UserProfileDao;
 import com.project.user.dao.impl.UserProfileDaoImpl;
 import com.project.user.dto.TokenUtilsDto;
 import com.project.user.dto.UserAuthenticationDto;
+import com.project.user.dto.UserProfileResponseDto;
 import com.project.user.entity.UserAuth;
 import com.project.user.entity.UserProfile;
 
@@ -75,5 +76,21 @@ public class UserServices {
         else
             userAuthenticationDto.setAuthenticate(true);
         return userAuthenticationDto;
+    }
+
+    @POST
+    @Path("/finduserprofile")
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces(MediaType.APPLICATION_JSON)
+    public UserProfileResponseDto findUserProfile(@FormParam("id") String email){
+        UserProfile userProfile = null;
+        userProfile = userProfileDao.findProfileUsingUserEmail(email);
+        UserProfileResponseDto userProfileResponseDto = new UserProfileResponseDto();
+            userProfileResponseDto.setProfileName(userProfile.getProfileName());
+            userProfileResponseDto.setProfilePicture(userProfile.getProfilePicture());
+            userProfileResponseDto.setStatus(userProfile.getStatus());
+            userProfileResponseDto.setUniversityName(userProfile.getUniversityName());
+            userProfileResponseDto.setUniversityCity(userProfile.getUniversityCity());
+        return userProfileResponseDto;
     }
 }

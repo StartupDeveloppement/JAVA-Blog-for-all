@@ -92,6 +92,7 @@ public class ArticleServices {
                 //articlesResponseDto.setArticleApprove(article.getArticleApprove());
                 articlesResponseDto.setProfileName(article.getUserProfile().getProfileName());
                 articlesResponseDto.setProfilePicture(article.getUserProfile().getProfilePicture());
+                articlesResponseDto.setUserEmail(article.getUserProfile().getUser().getEmail());
             finalList.add(articlesResponseDto);
         }
         return finalList;

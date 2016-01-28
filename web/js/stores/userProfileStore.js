@@ -6,7 +6,7 @@ var utf8 = require('utf8');
 var UserProfileActions = require('../actions/userProfileActions.js');
 
 
-var content = {};
+var userProfile = {};
 
 var UserProfileStore = Reflux.createStore({
     listenables: UserProfileActions,
@@ -15,12 +15,12 @@ var UserProfileStore = Reflux.createStore({
             userProfile : userProfile
         }
     },
-    onGetProfile: function (idProfile) {
+    onGetProfile: function (id) {
         $.ajax({
             url: 'http://localhost:8080/rest/user/finduserprofile',
             type: 'POST',
             contentType: 'application/x-www-form-urlencoded',
-            data: {idProfile:idProfile},
+            data: {id:id},
             dataType: "json",
             context:this,
             success: function(data) {

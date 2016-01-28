@@ -43,11 +43,9 @@ public class TestDao {
             userProfile.setUser(user1);
             userProfile.setProfileName("megan");
             userProfile.setProfilePicture("./images/test/profile-test.jpg");
-            /*userProfile.setLanguage("fr");
-            userProfile.setCountry("France");
-            userProfile.seteMailWhenFollow(true);
-            userProfile.seteMailWhenLikeContent(true);
-            userProfile.seteMailWhenNewMessage(true);*/
+            userProfile.setUniversityName("Harvard");
+            userProfile.setUniversityCity("Cambridge");
+            userProfile.setStatus("open to projects");
 
         UserProfileDao userProfileDao = new UserProfileDaoImpl();
         boolean userProfile1Ok = userProfileDao.create(userProfile);

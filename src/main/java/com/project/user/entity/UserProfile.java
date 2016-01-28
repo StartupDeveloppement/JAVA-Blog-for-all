@@ -24,16 +24,19 @@ public class UserProfile implements java.io.Serializable {
     private String lastname;*/
     private String profileName;
     private String profilePicture;
+    private String status;
+    private String facebook;
+    private String twitter;
+    private String pinterest;
+    private String universityName;
+    private String universityCity;
+    private String workName;
+    private String workCity;
     /*@Temporal(TemporalType.DATE)
     private Date birthday;*/
     @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
     @JsonManagedReference
     private List<Article> articleList;
-    /*private String language;
-    private String country;
-    private Boolean eMailWhenLikeContent;
-    private Boolean eMailWhenFollow;
-    private Boolean eMailWhenNewMessage;*/
 
 
 
@@ -42,38 +45,37 @@ public class UserProfile implements java.io.Serializable {
     public UserAuth getUser() {return user;}
     public void setUser(UserAuth user) {this.user = user;}
 
-    /*public String getFirstname() {return firstname;}
-    public void setFirstname(String firstname) {this.firstname = firstname;}
-
-    public String getLastname() {return lastname;}
-    public void setLastname(String lastname) {this.lastname = lastname;}*/
-
     public String getProfileName() {return profileName;}
     public void setProfileName(String profileName) {this.profileName = profileName;}
 
     public String getProfilePicture() {return profilePicture;}
     public void setProfilePicture(String profilePicture) {this.profilePicture = profilePicture;}
 
-   /* public Date getBirthday() {return birthday;}
-    public void setBirthday(Date birthday) {this.birthday = birthday;}*/
-
     public List<Article> getArticleList() {return articleList;}
     public void setArticleList(List<Article> articleList) {this.articleList = articleList;}
 
-    /*public String getLanguage() {return language;}
-    public void setLanguage(String language) {this.language = language;}
+    public String getStatus() {return status;}
+    public void setStatus(String status) {this.status = status;}
 
-    public String getCountry() {return country;}
-    public void setCountry(String country) {this.country = country;}
+    public String getFacebook() {return facebook;}
+    public void setFacebook(String facebook) {this.facebook = facebook;}
 
-    public Boolean geteMailWhenLikeContent() {return eMailWhenLikeContent;}
-    public void seteMailWhenLikeContent(Boolean eMailWhenLikeContent) {this.eMailWhenLikeContent = eMailWhenLikeContent;}
+    public String getTwitter() {return twitter;}
+    public void setTwitter(String twitter) {this.twitter = twitter;}
 
-    public Boolean geteMailWhenFollow() {return eMailWhenFollow;}
-    public void seteMailWhenFollow(Boolean eMailWhenFollow) {this.eMailWhenFollow = eMailWhenFollow;}
+    public String getPinterest() {return pinterest;}
+    public void setPinterest(String pinterest) {this.pinterest = pinterest;}
 
-    public Boolean geteMailWhenNewMessage() {return eMailWhenNewMessage;}
-    public void seteMailWhenNewMessage(Boolean eMailWhenNewMessage) {this.eMailWhenNewMessage = eMailWhenNewMessage;}*/
+    public String getUniversityName() {return universityName;}
+    public void setUniversityName(String universityName) {this.universityName = universityName;}
 
+    public String getUniversityCity() {return universityCity;}
+    public void setUniversityCity(String universityCity) {this.universityCity = universityCity;}
+
+    public String getWorkName() {return workName;}
+    public void setWorkName(String workName) {this.workName = workName;}
+
+    public String getWorkCity() {return workCity;}
+    public void setWorkCity(String workCity) {this.workCity = workCity;}
 
 }

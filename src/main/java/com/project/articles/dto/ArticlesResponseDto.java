@@ -23,6 +23,7 @@ public class ArticlesResponseDto {
     //private List<ArticleKeyWord> articleKeyWordList;
     private String profileName;
     private String profilePicture;
+    private String userEmail;
 
     public Integer getArticleKey() {return articleKey;}
     public void setArticleKey(Integer articleKey) {this.articleKey = articleKey;}
@@ -56,5 +57,8 @@ public class ArticlesResponseDto {
 
     public String getProfilePicture() {return profilePicture;}
     public void setProfilePicture(String profilePicture) {this.profilePicture = profilePicture;}
+
+    public String getUserEmail() {return userEmail;}
+    public void setUserEmail(String userEmail) {this.userEmail = userEmail;}
 
 }

@@ -12,7 +12,7 @@ var UserProfile = React.createClass({
     mixins: [Reflux.connect(UserProfileStore,"store")],
     getInitialState: function () {
         console.log(Router.current().params.id);
-        UserProfileActions.getUserProfile(Router.current().params.id);
+        UserProfileActions.getProfile(Router.current().params.id);
     },
     render: function () {
         if ( !this.state.store ) {
@@ -20,6 +20,7 @@ var UserProfile = React.createClass({
             // This is also your chance to render a spinner or something...
             return <div><img src="./images/homepage/loading.gif" alt="loading" /></div>
         }
+        console.log(this.state.store);
         return (
             <div>
                 <CommonNavBar />
