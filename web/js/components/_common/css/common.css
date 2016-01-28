@@ -42,12 +42,11 @@ table {
     border-spacing: 0;
 }
 
-
 .commonContainer{
-    background-color: #EFEFEF;
+    background-color: #F8F7FF; /*#F8F7FF #EFEFEF*/
 }
 .commonContainerNavBar{
-    background-color: #EFEFEF;
+    background-color: #F8F7FF; /*#F8F7FF #EFEFEF*/
     margin-top: 51px;
 }
 
