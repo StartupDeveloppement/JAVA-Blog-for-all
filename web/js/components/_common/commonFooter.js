@@ -7,16 +7,16 @@ var CommonFooter = React.createClass({
             <div className="commonFooterStyle">
                 <div className="row container">
                     <div className="col-sm-2">
-                        <a href="">About us</a>
+                        <a className="commonColorWhite resultOnHoover" href="">About us</a>
                     </div>
                     <div className="col-sm-2">
-                        <a href="">Legal mentions</a>
+                        <a className="commonColorWhite resultOnHoover" href="">Legal mentions</a>
                     </div>
                     <div className="col-sm-2">
-                        <a href="">Facebook</a>
+                        <a className="commonColorWhite resultOnHoover" href="https://www.facebook.com/ElizabethHurley/">Facebook</a>
                     </div>
                     <div className="col-sm-2">
-                        <a href="">Twitter</a>
+                        <a className="commonColorWhite resultOnHoover" href="https://twitter.com/elizabethhurley">Twitter</a>
                     </div>
                 </div>
                 <br />

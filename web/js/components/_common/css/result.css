@@ -14,6 +14,10 @@
     /*font-weight: bold;*/
 }
 
+.resultOnHoover{
+    text-decoration: none !important;
+}
+
 .resultDividerBlue {
     border: 0;
     width:25%;
@@ -41,8 +45,14 @@
 }
 
 .resultImage {
-    max-width: 5rem;
-    min-width: 5rem;
+    max-width: 4rem;
+    min-width: 4rem;
+}
+
+.resultArticlePicture{
+    max-width: 10rem;
+    min-width: 10rem;
+    padding-top: 1.5rem;
 }
 
 .resultThumbnail {

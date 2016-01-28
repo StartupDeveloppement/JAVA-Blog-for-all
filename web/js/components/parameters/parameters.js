@@ -41,9 +41,9 @@ var Parameters = React.createClass({
                                 </div>
                                 <br />
                                 <ul className="nav nav-pills nav-stacked">
-                                    <li><a href="#accountParameters">Account</a></li>
-                                    <li><a href="#passwordParameters">Password</a></li>
-                                    <li><a href="#notificationsParameters">Notifications</a></li>
+                                    <li><a className="commonColorWhite" href="#accountParameters">Account</a></li>
+                                    <li><a className="commonColorWhite" href="#passwordParameters">Password</a></li>
+                                    <li><a className="commonColorWhite" href="#notificationsParameters">Notifications</a></li>
                                 </ul>
                             </nav>
 

@@ -95,13 +95,11 @@ var Main = React.createClass({
                                 <ModalAddContent ref="modalAddContent" />
                             </div>
                             <div className="col-sm-1 col-sm-offset-1 homeTopTitle onHoverHomeTitle">
-                                <a className="fontTopTitle" onClick={this.openModalSignUp}> sign up </a>
+                                <a className="fontTopTitle" onClick={this.openModalSignUp}>sign up</a>
                                 <ModalSignUp ref="modalSignUp" />
                             </div>
                             <div className="col-sm-1 homeTopTitle">
-                                <h5 className="fontTopTitle">
-                                    <a className="linkTitle" href={Router.link('login')}><b>login</b></a>
-                                </h5>
+                                    <a className="fontTopTitle" href={Router.link('login')}><b>login</b></a>
                             </div>
                         </div>
                         <div className="container homeMainTitle">

@@ -19,7 +19,7 @@ public class RandomTest {
 
         ArticleDao articleDao = new ArticleDaoImpl();
 
-        Map<String,List<Article>> articleMap = articleDao.findSearchedArticles2(new ArrayList<String>());
+        Map<String,List<Article>> articleMap = articleDao.findSearchedArticles(new ArrayList<String>());
         Map<String,List<ArticlesResponseDto>> mapArticle = new HashMap<String, List<ArticlesResponseDto>>();
         for (Map.Entry<String, List<Article>> entry : articleMap.entrySet()) {
             System.out.println("Key : " + entry.getKey() + " Value : " + entry.getValue());

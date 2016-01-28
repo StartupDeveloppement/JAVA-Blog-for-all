@@ -13,7 +13,6 @@ import java.util.Map;
 public interface ArticleDao extends Dao<Article,Integer> {
 
     List<Article> findLastArticles();
-    List<Article> findSearchedArticles(List<String> listRequest);
-    Map<String, List<Article>> findSearchedArticles2(List<String> listRequest);
+    Map<String, List<Article>> findSearchedArticles(List<String> listRequest);
 
 }

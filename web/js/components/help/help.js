@@ -11,10 +11,7 @@ var Help = React.createClass({
                <CommonNavBar />
                <div className="commonContainerNavBar">
                     <div className="row">
-                        <h2>Help page</h2>
-                        <p>learn more about our product</p>
-                        <p>learn more about our product</p>
-                        <p>learn more about our product</p>
+                        <h1>Help page</h1>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>

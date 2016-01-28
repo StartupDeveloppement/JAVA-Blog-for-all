@@ -27,10 +27,10 @@ var Profile = React.createClass({
                             </div>
                             <br />
                             <ul className="nav nav-pills nav-stacked">
-                                <li><a href="#personalProfile">Personal</a></li>
-                                <li><a href="#statusProfile">Status</a></li>
-                                <li><a href="#universityProfile">University / Work</a></li>
-                                <li><a href="#paypalProfile">Paypal info</a></li>
+                                <li><a className="commonColorWhite" href="#personalProfile">Personal</a></li>
+                                <li><a className="commonColorWhite" href="#statusProfile">Status</a></li>
+                                <li><a className="commonColorWhite" href="#universityProfile">University / Work</a></li>
+                                <li><a className="commonColorWhite" href="#paypalProfile">Paypal info</a></li>
                             </ul>
                         </nav>
                         <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">

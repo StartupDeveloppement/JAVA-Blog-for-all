@@ -53,11 +53,12 @@ public class ArticleServices {
         return articleResponseDto;
     }
 
+
     @Path("/searchedarticles")
     @POST
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<ArticlesResponseDto> findSearchedArticles(@FormParam("search") String search){
+    public Map<String,List<ArticlesResponseDto>> findSearchedArticles(@FormParam("search") String search){
         List<String> requestList = new ArrayList<String>();
         if (search !=null) {
             StringTokenizer st = new StringTokenizer(search);
@@ -65,24 +66,7 @@ public class ArticleServices {
                 requestList.add(st.nextToken());
             }
         }
-        List<Article> searchedArticlesList = articleDao.findSearchedArticles(requestList);
-        List<ArticlesResponseDto> finalList = doArticlesMapping(searchedArticlesList);
-        return finalList;
-    }
-
-    @Path("/searchedarticles2")
-    @POST
-    @Consumes("application/x-www-form-urlencoded")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Map<String,List<ArticlesResponseDto>> findSearchedArticles2(@FormParam("search") String search){
-        List<String> requestList = new ArrayList<String>();
-        if (search !=null) {
-            StringTokenizer st = new StringTokenizer(search);
-            while (st.hasMoreTokens()) {
-                requestList.add(st.nextToken());
-            }
-        }
-        Map<String, List<Article>> searchedArticlesMap = articleDao.findSearchedArticles2(requestList);
+        Map<String, List<Article>> searchedArticlesMap = articleDao.findSearchedArticles(requestList);
         Map<String,List<ArticlesResponseDto>> mapArticle = new HashMap<String, List<ArticlesResponseDto>>();
         for (Map.Entry<String, List<Article>> entry : searchedArticlesMap.entrySet()) {
             List<ArticlesResponseDto> finalList = new ArrayList<ArticlesResponseDto>();

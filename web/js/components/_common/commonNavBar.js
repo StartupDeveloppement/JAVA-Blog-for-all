@@ -3,9 +3,7 @@ var Reflux = require('reflux');
 var Router = require('../../router.js');
 var base64 = require('base-64');
 var utf8 = require('utf8');
-var State = require('abyssa').State;
 var Input = require('react-bootstrap').Input;
-var Button = require('react-bootstrap').Button;
 
 var SearchActions = require('../../actions/searchActions.js');
 var SearchStore = require('../../stores/searchStore.js');
@@ -34,15 +32,39 @@ function getEmail() {
     return "";
 }
 
+function getName() {
+    var sp=getCookie("sp");
+    if (sp!="") {
+        var bytes = base64.decode(s);
+        var text = utf8.decode(bytes);
+        var name = text.split(":")[0];
+        return name;
+    }
+    return "";
+}
+
+function deleteAllCookies() {
+    var c = document.cookie.split("; ");
+    var i;
+    for (i in c)
+        document.cookie =/^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+}
+
 var CommonNavBar = React.createClass({
 
     mixins: [Reflux.connect(SearchStore)],
 
     getInitialState: function (){
+
         return {
             searchValue: '',
-            profileName : "Megan"
+            profileName : 'Megan'
         };
+    },
+
+    logout: function () {
+        deleteAllCookies();
+        Router.transitionTo('homepage');
     },
 
     openModal:function(){
@@ -54,6 +76,7 @@ var CommonNavBar = React.createClass({
         SearchActions.searchResults(this.state.searchValue);
         this.setState({searchValue: ''});
     },
+
     _onChangeSearchValue:function(e){
       this.setState({searchValue: e.target.value})
     },
@@ -104,7 +127,7 @@ var CommonNavBar = React.createClass({
                                         <li><a href={Router.link('profile')} >Profile</a></li>
                                         <li><a href={Router.link('parameters')}>Parameters</a></li>
                                         <li className="divider"></li>
-                                        <li><a href="#">Logout</a></li>
+                                        <li><a className="commonMousePointer" onClick={this.logout}>Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>

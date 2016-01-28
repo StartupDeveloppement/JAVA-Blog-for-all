@@ -42,34 +42,8 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         return articleList;
     }
 
-    public List<Article> findSearchedArticles(List<String> listRequest) {
-        EntityManager em = getEntityManager();
-        EntityTransaction t = em.getTransaction();
-        List<Article> articleList = null;
 
-        String req = "SELECT a FROM Article a WHERE 1=1";
-        for (String elem: listRequest){
-            req = req + " AND articleTitle LIKE '%"+elem+"%'";
-        }
-
-        try {
-            t.begin();
-            TypedQuery<Article> query = em.createQuery(req,Article.class);
-                query.setMaxResults(30);
-            articleList = query.getResultList();
-            t.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (t.isActive()) {
-                t.rollback();
-                em.close();
-            }
-        }
-        return articleList;
-    }
-
-    public Map<String, List<Article>> findSearchedArticles2(List<String> listRequest) {
+    public Map<String, List<Article>> findSearchedArticles(List<String> listRequest) {
         EntityManager em = getEntityManager();
         EntityTransaction t = em.getTransaction();
 

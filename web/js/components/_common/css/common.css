@@ -113,6 +113,13 @@ table {
     z-index: 1;
 }
 
+.commonMousePointer{
+    cursor: pointer; cursor: hand;
+}
+
+.commonColorWhite{
+    color:white;
+}
 
 
 

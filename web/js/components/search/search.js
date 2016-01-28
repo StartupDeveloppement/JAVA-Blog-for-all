@@ -18,69 +18,13 @@ var Search = React.createClass({
         },
 
         render: function () {
-            console.log(this.state.store);
 
-            var articlesMedium = [
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                    articleDescription:'Cum autem tur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'1',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/a/a1/The_Amazing_Adventures_of_Spider-Man_at_Universal_Studios_Japan_1.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                    articleDescription:'Cum autem tur, peregrinum invitari conveniet, et si digesto plene autem tur, peregrinum invitari conveniet, et si digesto pleneautem sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'2',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem autem tur, peregrinum invitari conveniet, et si digesto plene commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'3',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/a/a1/The_Amazing_Adventures_of_Spider-Man_at_Universal_Studios_Japan_1.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                    articleDescription:'Cum  longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'4',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                    articleDescription:'Cum commodis intervallata temporibus convivia autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'5',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis vel autem tur, peregrinum invitari conveniet, et si digesto pleneautem tur, peregrinum invitari conveniet, et si digesto pleneautem tur, peregrinum invitari conveniet, et si digesto plenedistributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'6',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/e/eb/Avengers_Age_of_Ultron_SDCC_2014_panel.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'7',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'}
-            ];
+            var strJSON = JSON.stringify(this.state.store.searchResults);
+            var t = JSON.parse(strJSON);
+            console.log(t[0]['highRollers']);
+            console.log(t[0]['onTheWay']);
+            console.log(t[0]['newbies']);
 
-            var articlesNewbies = [
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                    articleDescription:'Cum autem autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'1',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/e/eb/Avengers_Age_of_Ultron_SDCC_2014_panel.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                    articleDescription:'Cum autem autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'2',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum odis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'3',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/e/eb/Avengers_Age_of_Ultron_SDCC_2014_panel.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'4',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                    articleDescription:'Cum lata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'5',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis vel distributio sollemnium autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'6',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/e/eb/Avengers_Age_of_Ultron_SDCC_2014_panel.jpg'},
-                {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerGreen',
-                    articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                    profilePicture:'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg', profileName:'Claire', articleKey:'7',
-                    articlePicture:'https://upload.wikimedia.org/wikipedia/commons/b/b4/JPEG_example_JPG_RIP_100.jpg'}
-            ];
 
             if ( !this.state.store ) {
                 // Note that you can return false it you want nothing to be put in the dom
@@ -125,13 +69,13 @@ var Search = React.createClass({
                         <br />
                         <div className="row marginResultThumbnail">
                             <div className="container col-sm-3 col-md-3">
-                                <ResultThumbnailGroup articles={this.state.store.searchResults} />
+                                <ResultThumbnailGroup articles={t[0]['highRollers']} />
                             </div>
                             <div className="container col-sm-3 col-md-3">
-                                <ResultThumbnailGroup articles={articlesMedium} />
+                                <ResultThumbnailGroup articles={t[0]['onTheWay']} />
                             </div>
                             <div className="container col-sm-3 col-md-3">
-                                <ResultThumbnailGroup articles={articlesNewbies} />
+                                <ResultThumbnailGroup articles={t[0]['newbies']} />
                             </div>
                             <div className="container col-sm-3 col-md-3">
                                 <div className="rightElement commonRadius marginPromotion">
