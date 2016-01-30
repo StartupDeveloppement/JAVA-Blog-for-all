@@ -18,7 +18,6 @@ var ResultImageGroup = React.createClass({
                     return (
                         <ResultImage
                             articleTitle={article.articleTitle}
-                            articleDivider={article.articleDivider}
                             articleDescription={article.articleDescription}
                             profilePicture={article.profilePicture}
                             profileName={article.profileName}

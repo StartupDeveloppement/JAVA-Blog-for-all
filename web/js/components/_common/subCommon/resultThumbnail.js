@@ -24,7 +24,7 @@ var resultThumbnail = React.createClass({
                             </div>
                             <div className="row">
                                 <img className="col-sm-1 img-circle resultImage" src={this.props.profilePicture} alt="profile picture"></img>
-                                <a className="resultOnHoover" href="">
+                                <a className="resultOnHoover" href={Router.link('userProfile',{id:this.props.userEmail})}>
                                     <div className="col-sm-2">{this.props.profileName}</div>
                                 </a>
                             </div>

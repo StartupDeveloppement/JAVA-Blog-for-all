@@ -13,6 +13,7 @@ var ResultThumbnailGroup = React.createClass({
                             articleDescription={article.articleDescription}
                             profilePicture={article.profilePicture}
                             profileName={article.profileName}
+                            userEmail={article.userEmail}
                             articleKey={article.articleKey}
                             key={article.articleKey} />
                         )
