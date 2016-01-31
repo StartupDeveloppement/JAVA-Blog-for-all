@@ -7,7 +7,7 @@ var UserProfileActions = require('../actions/userProfileActions.js');
 
 
 var userProfile = {};
-var sectionContents = [];
+var sectionContents = {};
 
 var UserProfileStore = Reflux.createStore({
     listenables: UserProfileActions,
@@ -50,10 +50,10 @@ var UserProfileStore = Reflux.createStore({
             success: function(data) {
                 if (data) {
                     console.log("sectionContents OK");
-                    sectionContents = [];
-                    sectionContents = sectionContents.concat(data);
+                    //sectionContents = [];
+                    //sectionContents = sectionContents.concat(data);
+                    sectionContents = data;
                     this.trigger({sectionContents: sectionContents});
-                    //Router.transitionTo('userProfile/'+idProfile);
                 }else{
                     console.log("sectionContents KO");
                     console.log(data);
