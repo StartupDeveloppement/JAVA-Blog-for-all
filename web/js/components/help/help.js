@@ -13,14 +13,13 @@ var Help = React.createClass({
                     <div className="row">
                         <h1>Help page</h1>
                         <p>learn more about our product</p>
-                        <p>learn more about our product</p><p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
-                        <p>learn more about our product</p><p>learn more about our product</p>
+                        <p>learn more about our product</p>
                         <p>learn more about our product</p>
                     </div>
                </div>

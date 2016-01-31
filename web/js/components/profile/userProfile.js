@@ -80,17 +80,18 @@ var UserProfile = React.createClass({
                     <span className="col-md-1">my projects</span>
                 </div>
             )
+
         else if (count ==8)
             return (
                 <div className="userProfileSection">
-                    <a className="col-md-offset-2 col-md-1" href="">main</a>
-                    <a className="col-md-1" href="">cinema</a>
-                    <a className="col-md-1" href="">mangas</a>
-                    <a className="col-md-1" href="">video games</a>
-                    <a className="col-md-1" href="">fashion</a>
-                    <a className="col-md-1" href="">football</a>
-                    <a className="col-md-1" href="">comics</a>
-                    <a className="col-md-1" href="">my projects</a>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'mangas'})}>mangas</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'video games'})}>video games</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'fashion'})}>fashion</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'football'})}>football</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'comics'})}>comics</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
     },
@@ -102,9 +103,18 @@ var UserProfile = React.createClass({
             return (
                 <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)        }
 
+        /*if ( !this.state.store['userProfileResponseDto'] ) {
+         // Note that you can return false it you want nothing to be put in the dom
+         // This is also your chance to render a spinner or something....
+         return (
+            <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)
+        }*/
+
         console.log("userProfileInsideRender");
         console.log(this.state.store['userProfile']);
         var p = this.state.store['userProfile'];
+        /*console.log(this.state.store['userProfileResponseDto']);
+        var p = this.state.store['userProfileResponseDto'];*/
         return (
             <div>
                 <CommonNavBar />
