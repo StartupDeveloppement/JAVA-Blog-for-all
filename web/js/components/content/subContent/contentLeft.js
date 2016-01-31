@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 
+var Router = require('../../../router.js');
 
 var ContentLeft = React.createClass({
 
