@@ -16,11 +16,6 @@ var Help = React.createClass({
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
                         <p>learn more about our product</p>
-                        <p>learn more about our product</p>
-                        <p>learn more about our product</p>
-                        <p>learn more about our product</p>
-                        <p>learn more about our product</p>
-                        <p>learn more about our product</p>
                     </div>
                </div>
            </div>

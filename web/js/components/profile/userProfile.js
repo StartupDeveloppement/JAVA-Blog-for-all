@@ -26,58 +26,58 @@ var UserProfile = React.createClass({
         if (count ==2)
             return (
                 <div className="userProfileSection">
-                    <span className="col-md-offset-5 col-md-1">main</span>
-                    <span className="col-md-1">my projects</span>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
         else if (count ==3)
             return (
                 <div className="userProfileSection">
-                    <span className="col-md-offset-5 col-md-1">main</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">my projects</span>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
         else if (count ==4)
             return (
                 <div className="userProfileSection">
-                    <span className="col-md-offset-4 col-md-1">main</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">my projects</span>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'video games'})}>video games</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
         else if (count ==5)
             return (
                 <div className="userProfileSection">
-                    <span className="col-md-offset-4 col-md-1">main</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">mangas</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">my projects</span>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'mangas'})}>mangas</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'video games'})}>video games</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
         else if (count ==6)
             return (
                 <div className="userProfileSection">
-                    <span className="col-md-offset-3 col-md-1">main</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">mangas</span>
-                    <span className="col-md-1">video games</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">my projects</span>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'mangas'})}>mangas</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'video games'})}>video games</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'fashion'})}>fashion</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
         else if (count ==7)
             return (
                 <div className="userProfileSection">
-                    <span className="col-md-offset-3 col-md-1">main</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">video games</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">mangas</span>
-                    <span className="col-md-1">cinema</span>
-                    <span className="col-md-1">my projects</span>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'mangas'})}>mangas</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'video games'})}>video games</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'fashion'})}>fashion</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'football'})}>football</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
                 </div>
             )
 
@@ -103,18 +103,20 @@ var UserProfile = React.createClass({
             return (
                 <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)        }
 
-        /*if ( !this.state.store['userProfileResponseDto'] ) {
+       /* if ( !this.state.store['sectionContents'] ) {
          // Note that you can return false it you want nothing to be put in the dom
          // This is also your chance to render a spinner or something....
          return (
             <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)
         }*/
 
+
         console.log("userProfileInsideRender");
         console.log(this.state.store['userProfile']);
         var p = this.state.store['userProfile'];
-        /*console.log(this.state.store['userProfileResponseDto']);
-        var p = this.state.store['userProfileResponseDto'];*/
+        /*console.log(this.state.store['sectionContents']);
+        console.log(this.state.store['sectionContents']['userProfileResponseDto']);
+        var p = this.state.store['sectionContents']['userProfileResponseDto'];*/
         return (
             <div>
                 <CommonNavBar />
