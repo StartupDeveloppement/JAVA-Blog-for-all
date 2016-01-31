@@ -2,6 +2,7 @@ package com.project.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.project.articles.entity.Article;
+import com.project.articles.entity.ArticleSection;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -37,6 +38,9 @@ public class UserProfile implements java.io.Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
     @JsonManagedReference
     private List<Article> articleList;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
+    @JsonManagedReference
+    private List<ArticleSection> articleSectionList;
 
 
 
@@ -78,4 +82,8 @@ public class UserProfile implements java.io.Serializable {
     public String getWorkCity() {return workCity;}
     public void setWorkCity(String workCity) {this.workCity = workCity;}
 
+    public List<ArticleSection> getArticleSectionList() {return articleSectionList;}
+    public void setArticleSectionList(List<ArticleSection> articleSectionList) {
+        this.articleSectionList = articleSectionList;
+    }
 }

@@ -40,7 +40,6 @@ public class RandomTest {
             ArticlesResponseDto articlesResponseDto = new ArticlesResponseDto();
             articlesResponseDto.setArticleDate(article.getArticleDate());
             articlesResponseDto.setArticleKey(article.getArticleKey());
-            articlesResponseDto.setArticleDivider(article.getArticleDivider());
             //articlesResponseDto.setArticleText(article.getArticleText());
             articlesResponseDto.setArticleTitle(article.getArticleTitle());
             articlesResponseDto.setArticlePicture(article.getArticlePicture());

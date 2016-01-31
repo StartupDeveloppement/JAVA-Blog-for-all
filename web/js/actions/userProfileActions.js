@@ -1,7 +1,9 @@
 var Reflux = require('reflux');
 
 var UserProfileActions = Reflux.createActions([
-    'getProfile'
+    'getProfile',
+    'getSectionContents'
+
 ]);
 
 module.exports = UserProfileActions;

@@ -14,7 +14,6 @@ public class ArticleResponseDto {
 
     private Integer articleKey;
     private String articleTitle;
-    private String articleDivider;
     private Date articleDate;
     private String articlePicture;
     private String articleDescription;
@@ -30,9 +29,6 @@ public class ArticleResponseDto {
 
     public String getArticleTitle() {return articleTitle;}
     public void setArticleTitle(String articleTitle) {this.articleTitle = articleTitle;}
-
-    public String getArticleDivider() {return articleDivider;}
-    public void setArticleDivider(String articleDivider) {this.articleDivider = articleDivider;}
 
     public Date getArticleDate() {return articleDate;}
     public void setArticleDate(Date articleDate) {this.articleDate = articleDate;}

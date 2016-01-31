@@ -6,7 +6,11 @@
 
 .resultTitle {
     font-family: "Helvetica", serif;
+    color:#271E78;
     /*font-weight: bold;*/
+}
+.resultProfileName{
+    color:#271E78;
 }
 
 .resultTitle:hover {

@@ -1,9 +1,18 @@
 var React = require('react');
+var Reflux = require('reflux');
+var Router = require('../../router.js');
+
 var ResultImageGroup = require('../_common/resultImageGroup.js');
+
+/*var UserProfileActions = require('../../actions/userProfileActions.js');
+var UserProfileStore = require('../../stores/userProfileStore.js');*/
+
 
 var UserProfileLeft = React.createClass({
     render: function(){
-
+        console.log("userProfileContent");
+        console.log(Router.current().params.sectionName);
+        console.log(Router.current().params.id);
         var actualities = [
             {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
                 articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,

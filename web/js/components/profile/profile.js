@@ -33,173 +33,162 @@ var Profile = React.createClass({
                                 <li><a className="commonColorWhite" href="#paypalProfile">Paypal info</a></li>
                             </ul>
                         </nav>
-                        <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
-                            <div id="personalProfile">
-                                <h3 className="titleProfile">Profile</h3>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-2" htmlFor="namesProfile">Name :</label>
-                                    <div className="form-group form-inline col-sm-9" id="namesProfile">
-                                        <input className="col-sm-5 col-sm-offset-1 form-control input-sm" type="text" placeholder=" firstname"  />
-                                        <input className="col-sm-5 form-control input-sm" type="text" placeholder=" lastname"  />
+                        <form>
+                            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                                <div id="personalProfile">
+                                    <h3 className="titleProfile">Profile</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="usernameProfile">Username :</label>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="usernameProfile" placeholder=" username" />
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="usernameProfile">Username :</label>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="usernameProfile" placeholder=" username" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" >Gender :</label>
-                                    <div className="col-sm-6">
-                                        <label className="radio-inline"><input type="radio" name="genderProfile" />female</label>
-                                        <label className="radio-inline"><input type="radio" name="genderProfile" />male</label>
-                                        <label className="radio-inline"><input type="radio" name="genderProfile" />other</label>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="col-sm-3">profile picture</label>
-                                    <div className="col-sm-9">
-                                        <CommonImageCropper defaultImage={defaultPicture}/>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" >Gender :</label>
+                                        <div className="col-sm-6">
+                                            <label className="radio-inline"><input type="radio" name="genderProfile" />female</label>
+                                            <label className="radio-inline"><input type="radio" name="genderProfile" />male</label>
+                                            <label className="radio-inline"><input type="radio" name="genderProfile" />other</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="aboutYouProfile">About you :</label>
-                                    <div className="col-sm-6">
-                                        <textarea className="form-control" rows="5" id="aboutYouProfile" placeholder="tell us more about you"/>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row">
-                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <div className="row form-group">
+                                        <label className="col-sm-3">profile picture</label>
+                                        <div className="col-sm-9">
+                                            <CommonImageCropper defaultImage={defaultPicture}/>
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="aboutYouProfile">About you :</label>
+                                        <div className="col-sm-6">
+                                            <textarea className="form-control" rows="5" id="aboutYouProfile" placeholder="tell us more about you"/>
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row">
+                                        <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
-                            <div id="statusProfile">
-                                <h3 className="titleProfile">Status</h3>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="statusProfile">Status :</label>
-                                    <div className="col-sm-6">
-                                        <select className="form-control input-sm" id="statusProfile">
-                                            <option>Open to projects</option>
-                                            <option>Studying peacefully</option>
-                                            <option>Working on my own</option>
-                                            <option>Got cool project ideas</option>
-                                        </select>
+                            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                                <div id="statusProfile">
+                                    <h3 className="titleProfile">Status</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <div className="col-sm-3">
-                                        <img className="col-sm-4 img-responsive center-block socialNetworkLogo" src="../images/profile/facebook-logo.jpg" alt="facebook" />
-                                        <label className="control-label col-sm-offset-1 col-sm-7" htmlFor="facebookProfile">Facebook page :</label>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="statusProfile">Status :</label>
+                                        <div className="col-sm-6">
+                                            <select className="form-control input-sm" id="statusProfile">
+                                                <option>Open to projects</option>
+                                                <option>Studying peacefully</option>
+                                                <option>Working on my own</option>
+                                                <option>Got cool project ideas</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="facebookProfile" placeholder=" facebook page" />
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <div className="col-sm-3">
-                                        <img className="col-sm-4 img-responsive center-block socialNetworkLogo" src="../../images/profile/twitter-logo.jpg" alt="twitter" />
-                                        <label className="control-label col-sm-offset-1 col-sm-7" htmlFor="twitterProfile">Twitter page :</label>
+                                    <div className="row form-group">
+                                        <div className="col-sm-3">
+                                            <img className="socialNetworkLogo" src="../images/profile/facebook-logo.jpg" alt="facebook" />
+                                        </div>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="facebookProfile" placeholder=" facebook page" />
+                                        </div>
                                     </div>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="twitterProfile" placeholder=" twitter page" />
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <div className="col-sm-3">
-                                        <img className="col-sm-4 img-responsive center-block socialNetworkLogo" src="../../../images/profile/pinterest-logo.jpg" alt="pinterest" />
-                                        <label className="control-label col-sm-offset-1 col-sm-7" htmlFor="pinterestProfile">Pinterest page :</label>
+                                    <div className="row form-group">
+                                        <div className="col-sm-3">
+                                            <img className="socialNetworkLogo" src="../../images/profile/twitter-logo.jpg" alt="twitter" />
+                                        </div>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="twitterProfile" placeholder=" twitter page" />
+                                        </div>
                                     </div>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="pinterestProfile" placeholder=" pinterest page" />
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row">
-                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <div className="row form-group">
+                                        <div className="col-sm-3">
+                                            <img className="socialNetworkLogo" src="../../../images/profile/pinterest-logo.jpg" alt="pinterest" />
+                                        </div>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="pinterestProfile" placeholder=" pinterest page" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row">
+                                        <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
-                            <div id="univesityProfile">
-                                <h3 className="titleProfile">University / Work</h3>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="universityProfile">University :</label>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="universityProfile" placeholder=" last university attended or one you are proud of" />
+                            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
+                                <div id="univesityProfile">
+                                    <h3 className="titleProfile">University / Work</h3>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="universityCityProfile">University's city :</label>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="universityCityProfile" placeholder=" city of your university" />
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="universityProfile">University :</label>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="universityProfile" placeholder=" last university attended or one you are proud of" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="workProfile">Work :</label>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="workProfile" placeholder=" last job or one you are proud of" />
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row form-group">
-                                    <label className="control-label col-sm-3" htmlFor="workCityProfile">Work's city :</label>
-                                    <div className="col-sm-6">
-                                        <input type="text" className="form-control input-sm" id="workCityProfile" placeholder=" city of your work" />
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="universityCityProfile">University's city :</label>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="universityCityProfile" placeholder=" city of your university" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="row divider">
-                                    <div className="col-sm-12"><hr></hr></div>
-                                </div>
-                                <div className="row">
-                                    <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="workProfile">Work :</label>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="workProfile" placeholder=" last job or one you are proud of" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row form-group">
+                                        <label className="control-label col-sm-3" htmlFor="workCityProfile">Work's city :</label>
+                                        <div className="col-sm-6">
+                                            <input type="text" className="form-control input-sm" id="workCityProfile" placeholder=" city of your work" />
+                                        </div>
+                                    </div>
+                                    <div className="row divider">
+                                        <div className="col-sm-12"><hr></hr></div>
+                                    </div>
+                                    <div className="row">
+                                        <button type="submit" className="btn btn-primary btn-sm pull-right"> Save all changes </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                         <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile">
                             <form>
                                 <div id="paypalProfile">
@@ -234,7 +223,6 @@ var Profile = React.createClass({
             </div>
         );
     }
-
 });
 
 

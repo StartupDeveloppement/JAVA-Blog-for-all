@@ -101,5 +101,28 @@ public class ArticleDaoImpl extends AbstractDao<Article,Integer> implements Arti
         return articleMap;
     }
 
+    public List<Article> findSectionArticles(String sectionName) {
+        EntityManager em = getEntityManager();
+        EntityTransaction t = em.getTransaction();
+        List<Article> articleList = null;
+
+        try {
+            t.begin();
+            TypedQuery<Article> typedQuery = em.createQuery("Select a from Article a Where articleSection =:sectionName Order by a.articleDate DESC",Article.class);
+            typedQuery.setMaxResults(30);
+            typedQuery.setParameter("sectionName",sectionName);
+            articleList = typedQuery.getResultList();
+            t.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (t.isActive()) {
+                t.rollback();
+                em.close();
+            }
+        }
+        return articleList;
+    }
+
 
 }

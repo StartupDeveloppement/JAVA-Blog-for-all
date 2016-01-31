@@ -21,7 +21,6 @@ public class Article implements java.io.Serializable{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer articleKey;
     private String articleTitle;
-    private String articleDivider;
     private Date articleDate;
     private String articlePicture;
     private String articleDescription;
@@ -33,6 +32,7 @@ public class Article implements java.io.Serializable{
     //@JsonIgnore
     @JsonBackReference
     private UserProfile userProfile;
+    private String articleSection;
     /*@ManyToMany(fetch = FetchType.EAGER, mappedBy = "articleList")
     private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();*/
 
@@ -41,9 +41,6 @@ public class Article implements java.io.Serializable{
 
     public String getArticleTitle() {return articleTitle;}
     public void setArticleTitle(String articleTitle) {this.articleTitle = articleTitle;}
-
-    public String getArticleDivider() {return articleDivider;}
-    public void setArticleDivider(String articleDivider) {this.articleDivider = articleDivider;}
 
     public String getArticlePicture() {return articlePicture;}
     public void setArticlePicture(String articlePicture) {this.articlePicture = articlePicture;}
@@ -65,5 +62,8 @@ public class Article implements java.io.Serializable{
 
     public UserProfile getUserProfile() {return userProfile;}
     public void setUserProfile(UserProfile userProfile) {this.userProfile = userProfile;}
+
+    public String getArticleSection() {return articleSection;}
+    public void setArticleSection(String articleSection) {this.articleSection = articleSection;}
 
 }

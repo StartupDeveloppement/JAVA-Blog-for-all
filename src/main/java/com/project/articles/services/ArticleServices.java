@@ -4,10 +4,13 @@ import com.project.articles.dao.ArticleDao;
 import com.project.articles.dao.impl.ArticleDaoImpl;
 import com.project.articles.dto.ArticleResponseDto;
 import com.project.articles.dto.ArticlesResponseDto;
+import com.project.articles.dto.ArticlesSectionResponseDto;
 import com.project.articles.entity.Article;
 import com.project.user.dao.UserProfileDao;
 import com.project.user.dao.impl.UserProfileDaoImpl;
+import com.project.user.dto.UserProfileResponseDto;
 import com.project.user.entity.UserProfile;
+import com.project.user.services.UserServices;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -41,7 +44,6 @@ public class ArticleServices {
             articleResponseDto.setArticleDate(article.getArticleDate());
             //articlesResponseDto.setArticleKeyWordList(article.getArticleKeyWordList());
             articleResponseDto.setArticleKey(article.getArticleKey());
-            articleResponseDto.setArticleDivider(article.getArticleDivider());
             articleResponseDto.setArticleText(article.getArticleText());
             articleResponseDto.setArticleTitle(article.getArticleTitle());
             articleResponseDto.setArticlePicture(article.getArticlePicture());
@@ -76,6 +78,27 @@ public class ArticleServices {
         return mapArticle;
     }
 
+    @Path("/findsectionarticles")
+    @POST
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ArticlesSectionResponseDto findSectionArticles(@FormParam("sectionName") String sectionName, @FormParam("id") String email){
+        List<Article> lastArticlesList = articleDao.findSectionArticles(sectionName);
+        List<ArticlesResponseDto> finalList = doArticlesMapping(lastArticlesList);
+        UserProfile userProfile = null;
+        userProfile = userProfileDao.findProfileUsingUserEmail(email);
+        UserProfileResponseDto userProfileResponseDto = new UserProfileResponseDto();
+            userProfileResponseDto.setProfileName(userProfile.getProfileName());
+            userProfileResponseDto.setProfilePicture(userProfile.getProfilePicture());
+            userProfileResponseDto.setStatus(userProfile.getStatus());
+            userProfileResponseDto.setUniversityName(userProfile.getUniversityName());
+            userProfileResponseDto.setUniversityCity(userProfile.getUniversityCity());
+        ArticlesSectionResponseDto articlesSectionResponseDto = new ArticlesSectionResponseDto();
+            articlesSectionResponseDto.setArticlesResponseDto(finalList);
+            articlesSectionResponseDto.setUserProfileResponseDto(userProfileResponseDto);
+        return articlesSectionResponseDto;
+    }
+
 
     private List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {
         List<ArticlesResponseDto> finalList = new ArrayList();
@@ -84,7 +107,6 @@ public class ArticleServices {
                 articlesResponseDto.setArticleDate(article.getArticleDate());
                 //articlesResponseDto.setArticleKeyWordList(article.getArticleKeyWordList());
                 articlesResponseDto.setArticleKey(article.getArticleKey());
-                articlesResponseDto.setArticleDivider(article.getArticleDivider());
                 //articlesResponseDto.setArticleText(article.getArticleText());
                 articlesResponseDto.setArticleTitle(article.getArticleTitle());
                 articlesResponseDto.setArticlePicture(article.getArticlePicture());

@@ -71,8 +71,8 @@
 }
 
 .socialNetworkLogo {
-    height:20px;
-    width:20px;
+    min-width:3rem;
+    max-width:3rem;
 }
 
 .titleProfile{

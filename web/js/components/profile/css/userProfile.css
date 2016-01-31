@@ -9,9 +9,22 @@
     max-width: 8rem;
     min-width: 8rem;
     display: inline-block;
+    border: 0.15rem solid white;
 }
 
 .userProfileInfo{
     display: inline-block;
     padding-left: 1rem;
+}
+
+.userProfileSectionTitle{
+    display: inline-block;
+    font-weight: bold;
+    padding-left: 20%;
+    font-size: 3rem;
+    color:white;
+}
+
+.userProfileSection a{
+    color:white;
 }

@@ -83,6 +83,7 @@ public class UserServices {
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
     public UserProfileResponseDto findUserProfile(@FormParam("id") String email){
+
         UserProfile userProfile = null;
         userProfile = userProfileDao.findProfileUsingUserEmail(email);
         UserProfileResponseDto userProfileResponseDto = new UserProfileResponseDto();

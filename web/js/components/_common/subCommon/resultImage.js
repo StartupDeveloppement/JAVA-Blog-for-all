@@ -10,11 +10,9 @@ var ResultImage = React.createClass({
             <div className="resultElement commonRadius">
                 <div className="row">
                     <div className="col-md-8">
-                        <h3 className="resultTitle" >
-                            <a className="resultTitle resultOnHoover" href={Router.link('content',{id:this.props.articleKey})}>
-                                {this.props.articleTitle}
-                            </a>
-                        </h3>
+                        <a className="resultTitle resultOnHoover" href={Router.link('content',{id:this.props.articleKey})}>
+                            <h3 className="resultTitle" >{this.props.articleTitle}</h3>
+                        </a>
                         <p className="resultText">
                             {this.props.articleDescription}
                         </p>
@@ -22,7 +20,8 @@ var ResultImage = React.createClass({
                             <img className="col-sm-1 resultImage" src={this.props.profilePicture}
                                  alt="profile picture"></img>
                             <div className="col-sm-2">
-                                <a className="resultOnHoover" href={Router.link('userProfile',{id:this.props.userEmail})}>{this.props.profileName}</a>
+                                <a className="resultOnHoover" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>
+                                    <span className="resultProfileName">{this.props.profileName}</span></a>
                             </div>
                         </div>
                     </div>

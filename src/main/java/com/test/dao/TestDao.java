@@ -73,7 +73,7 @@ public class TestDao {
 
 
         Article article1 = new Article();
-            article1.setArticleDivider("resultDividerBlue");
+            article1.setArticleSection("main");
             article1.setArticleTitle("Star wars the force awakens");
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             article1.setUserProfile(userProfile);
@@ -90,7 +90,7 @@ public class TestDao {
             article1.setArticleApprove(5);
 
         Article article2 = new Article();
-            article2.setArticleDivider("resultDividerRed");
+            article2.setArticleSection("main");
             article2.setArticleTitle("Fatal fury");
             article2.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article2.setIdUserProfile(1);
@@ -108,9 +108,9 @@ public class TestDao {
             article2.setArticleApprove(1);
 
         Article article3 = new Article();
-            article3.setArticleDivider("resultDividerBlue");
+            article3.setArticleSection("main");
             article3.setArticleTitle("The Flash 2014");
-            article3.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
+            article3.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article3.setIdUserProfile(1);
             article3.setUserProfile(userProfile);
                 calendar.set(Calendar.MONTH, 6);
@@ -123,7 +123,7 @@ public class TestDao {
             article3.setArticleApprove(145);
 
         Article article4 = new Article();
-            article4.setArticleDivider("resultDividerRed");
+            article4.setArticleSection("main");
             article4.setArticleTitle("Comment Air France compte revenir à la croissance");
             article4.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article4.setIdUserProfile(1);
@@ -138,7 +138,7 @@ public class TestDao {
             article4.setArticleApprove(155);
 
         Article article5 = new Article();
-            article5.setArticleDivider("resultDividerBlue");
+            article5.setArticleSection("main");
             article5.setArticleTitle("Dragon Ball Super: nouvel episode");
             article5.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article5.setIdUserProfile(1);
@@ -153,7 +153,7 @@ public class TestDao {
             article5.setArticleApprove(15);
 
         Article article6 = new Article();
-            article6.setArticleDivider("resultDividerRed");
+            article6.setArticleSection("main");
             article6.setArticleTitle("Les dernières tendances du secteur High-Tech");
             article6.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article6.setIdUserProfile(1);
@@ -168,7 +168,7 @@ public class TestDao {
             article6.setArticleApprove(65);
 
         Article article7 = new Article();
-            article7.setArticleDivider("resultDividerRed");
+            article7.setArticleSection("main");
             article7.setArticleTitle("Les français à la CES");
             article7.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article7.setIdUserProfile(1);
@@ -183,7 +183,7 @@ public class TestDao {
             article7.setArticleApprove(15);
 
         Article article8 = new Article();
-            article8.setArticleDivider("resultDividerBlue");
+            article8.setArticleSection("main");
             article8.setArticleTitle("15 nouveautés pour courir au chaud cet hiver");
             article8.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article8.setIdUserProfile(1);
@@ -198,7 +198,7 @@ public class TestDao {
             article8.setArticleApprove(5);
 
         Article article9 = new Article();
-            article9.setArticleDivider("resultDividerRed");
+            article9.setArticleSection("main");
             article9.setArticleTitle("Facebook, Twitter, Google, Pinterest: How to stay wired in");
             article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
             //article9.setIdUserProfile(1);
@@ -213,7 +213,7 @@ public class TestDao {
             article9.setArticleApprove(145);
 
         Article article10 = new Article();
-        article10.setArticleDivider("resultDividerBlue");
+        article10.setArticleSection("main");
         article10.setArticleTitle("Star wars revenge of the sith");
         article10.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article10.setUserProfile(userProfile);
@@ -230,7 +230,7 @@ public class TestDao {
         article10.setArticleApprove(52);
 
         Article article11 = new Article();
-        article11.setArticleDivider("resultDividerRed");
+        article11.setArticleSection("my projects");
         article11.setArticleTitle("The king of fighter");
         article11.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article11.setUserProfile(userProfile);
@@ -247,7 +247,7 @@ public class TestDao {
         article11.setArticleApprove(1200);
 
         Article article12 = new Article();
-        article12.setArticleDivider("resultDividerBlue");
+        article12.setArticleSection("my projects");
         article12.setArticleTitle("Supergirl");
         article12.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article12.setUserProfile(userProfile);
@@ -261,7 +261,7 @@ public class TestDao {
         article12.setArticleApprove(125);
 
         Article article13 = new Article();
-        article13.setArticleDivider("resultDividerRed");
+        article13.setArticleSection("my projects");
         article13.setArticleTitle("Pinterest une compagnie du futur ?");
         article13.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article13.setUserProfile(userProfile);
@@ -275,7 +275,7 @@ public class TestDao {
         article13.setArticleApprove(180);
 
         Article article14 = new Article();
-        article14.setArticleDivider("resultDividerBlue");
+        article14.setArticleSection("my projects");
         article14.setArticleTitle("Dragon Ball Z: retour de Broly");
         article14.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article14.setUserProfile(userProfile);
@@ -289,7 +289,7 @@ public class TestDao {
         article14.setArticleApprove(150);
 
         Article article15 = new Article();
-        article15.setArticleDivider("resultDividerRed");
+        article15.setArticleSection("my projects");
         article15.setArticleTitle("Le secteur de la téléphonie en plein boom");
         article15.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article15.setUserProfile(userProfile);
@@ -303,7 +303,7 @@ public class TestDao {
         article15.setArticleApprove(650);
 
         Article article16 = new Article();
-        article16.setArticleDivider("resultDividerRed");
+        article16.setArticleSection("my projects");
         article16.setArticleTitle("Las Vegas et la CES");
         article16.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article16.setUserProfile(userProfile);
@@ -317,7 +317,7 @@ public class TestDao {
         article16.setArticleApprove(105);
 
         Article article17 = new Article();
-        article17.setArticleDivider("resultDividerBlue");
+        article17.setArticleSection("my projects");
         article17.setArticleTitle("10 façons d'être plus heureux");
         article17.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article17.setUserProfile(userProfile);
@@ -331,7 +331,7 @@ public class TestDao {
         article17.setArticleApprove(50);
 
         Article article18 = new Article();
-        article18.setArticleDivider("resultDividerRed");
+        article18.setArticleSection("cinema");
         article18.setArticleTitle("Facebook: le succès innégalé");
         article18.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article18.setUserProfile(userProfile);
@@ -345,7 +345,7 @@ public class TestDao {
         article18.setArticleApprove(145);
 
         Article article19 = new Article();
-        article19.setArticleDivider("resultDividerRed");
+        article19.setArticleSection("cinema");
         article19.setArticleTitle("Sony vs Sega: le duel oublié");
         article19.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article19.setUserProfile(userProfile);
@@ -359,7 +359,7 @@ public class TestDao {
         article19.setArticleApprove(145);
 
         Article article20 = new Article();
-        article20.setArticleDivider("resultDividerBlue");
+        article20.setArticleSection("cinema");
         article20.setArticleTitle("Star wars the phantom menace");
         article20.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article20.setUserProfile(userProfile);
@@ -376,7 +376,7 @@ public class TestDao {
         article20.setArticleApprove(20);
 
         Article article21 = new Article();
-        article21.setArticleDivider("resultDividerRed");
+        article21.setArticleSection("cinema");
         article21.setArticleTitle("Terry Bogard vs Andy Bogard");
         article21.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article21.setUserProfile(userProfile);
@@ -393,7 +393,7 @@ public class TestDao {
         article21.setArticleApprove(100);
 
         Article article22 = new Article();
-        article22.setArticleDivider("resultDividerBlue");
+        article22.setArticleSection("cinema");
         article22.setArticleTitle("Daredevil");
         article22.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article22.setUserProfile(userProfile);
@@ -407,7 +407,7 @@ public class TestDao {
         article22.setArticleApprove(245);
 
         Article article23 = new Article();
-        article23.setArticleDivider("resultDividerRed");
+        article23.setArticleSection("cinema");
         article23.setArticleTitle("Sudoku: un jeu d'esprit");
         article23.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article23.setUserProfile(userProfile);
@@ -421,7 +421,7 @@ public class TestDao {
         article23.setArticleApprove(185);
 
         Article article24 = new Article();
-        article24.setArticleDivider("resultDividerBlue");
+        article24.setArticleSection("cinema");
         article24.setArticleTitle("Dragon Ball GT: great touring");
         article24.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article24.setUserProfile(userProfile);
@@ -435,7 +435,7 @@ public class TestDao {
         article24.setArticleApprove(278);
 
         Article article25 = new Article();
-        article25.setArticleDivider("resultDividerRed");
+        article25.setArticleSection("cinema");
         article25.setArticleTitle("Tech Crunch et la CES");
         article25.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article25.setUserProfile(userProfile);
@@ -449,7 +449,7 @@ public class TestDao {
         article25.setArticleApprove(90);
 
         Article article26 = new Article();
-        article26.setArticleDivider("resultDividerRed");
+        article26.setArticleSection("cinema");
         article26.setArticleTitle("L'intelligence artificielle et les français");
         article26.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article26.setUserProfile(userProfile);
@@ -463,7 +463,7 @@ public class TestDao {
         article26.setArticleApprove(122);
 
         Article article27 = new Article();
-        article27.setArticleDivider("resultDividerBlue");
+        article27.setArticleSection("cinema");
         article27.setArticleTitle("Les 10 destinations préférés des français");
         article27.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article27.setUserProfile(userProfile);
@@ -477,7 +477,7 @@ public class TestDao {
         article27.setArticleApprove(8);
 
         Article article28 = new Article();
-        article28.setArticleDivider("resultDividerRed");
+        article28.setArticleSection("cinema");
         article28.setArticleTitle("Steve Jobs, Bill Gates, Elon Musk, Mark Zuckerberg : les nouveaux héros");
         article28.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article28.setUserProfile(userProfile);
@@ -491,7 +491,7 @@ public class TestDao {
         article28.setArticleApprove(148);
 
         Article article29 = new Article();
-        article29.setArticleDivider("resultDividerBlue");
+        article29.setArticleSection("cinema");
         article29.setArticleTitle("Star wars empire strike back");
         article29.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article29.setUserProfile(userProfile);
@@ -508,7 +508,7 @@ public class TestDao {
         article29.setArticleApprove(352);
 
         Article article30 = new Article();
-        article30.setArticleDivider("resultDividerRed");
+        article30.setArticleSection("mangas");
         article30.setArticleTitle("Marvel vs Capcom");
         article30.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article30.setUserProfile(userProfile);
@@ -525,7 +525,7 @@ public class TestDao {
         article30.setArticleApprove(1240);
 
         Article article31 = new Article();
-        article31.setArticleDivider("resultDividerBlue");
+        article31.setArticleSection("mangas");
         article31.setArticleTitle("Superman");
         article31.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article31.setUserProfile(userProfile);
@@ -539,7 +539,7 @@ public class TestDao {
         article31.setArticleApprove(142);
 
         Article article32 = new Article();
-        article32.setArticleDivider("resultDividerRed");
+        article32.setArticleSection("mangas");
         article32.setArticleTitle("Le CEO de Pinterest s'exprime");
         article32.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article32.setUserProfile(userProfile);
@@ -553,7 +553,7 @@ public class TestDao {
         article32.setArticleApprove(220);
 
         Article article33 = new Article();
-        article33.setArticleDivider("resultDividerBlue");
+        article33.setArticleSection("mangas");
         article33.setArticleTitle("Dragon Ball : Piccolo Daimao");
         article33.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article33.setUserProfile(userProfile);
@@ -567,7 +567,7 @@ public class TestDao {
         article33.setArticleApprove(10);
 
         Article article34 = new Article();
-        article34.setArticleDivider("resultDividerRed");
+        article34.setArticleSection("mangas");
         article34.setArticleTitle("Le secteur de la japanimation en plein expansion");
         article34.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article34.setUserProfile(userProfile);
@@ -581,7 +581,7 @@ public class TestDao {
         article34.setArticleApprove(64);
 
         Article article35 = new Article();
-        article35.setArticleDivider("resultDividerRed");
+        article35.setArticleSection("mangas");
         article35.setArticleTitle("Los Angeles ou San Francisco");
         article35.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article35.setUserProfile(userProfile);
@@ -595,7 +595,7 @@ public class TestDao {
         article35.setArticleApprove(80);
 
         Article article36 = new Article();
-        article36.setArticleDivider("resultDividerBlue");
+        article36.setArticleSection("mangas");
         article36.setArticleTitle("Les 10 femmes les plus sexys de 2015");
         article36.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article36.setUserProfile(userProfile);
@@ -609,7 +609,7 @@ public class TestDao {
         article36.setArticleApprove(340);
 
         Article article37 = new Article();
-        article37.setArticleDivider("resultDividerRed");
+        article37.setArticleSection("mangas");
         article37.setArticleTitle("Leechi: le succès français");
         article37.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article37.setUserProfile(userProfile);
@@ -623,7 +623,7 @@ public class TestDao {
         article37.setArticleApprove(145);
 
         Article article38 = new Article();
-        article38.setArticleDivider("resultDividerRed");
+        article38.setArticleSection("mangas");
         article38.setArticleTitle("Nintendo : la wii");
         article38.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article38.setUserProfile(userProfile);
@@ -637,7 +637,7 @@ public class TestDao {
         article38.setArticleApprove(1120);
 
         Article article39 = new Article();
-        article39.setArticleDivider("resultDividerBlue");
+        article39.setArticleSection("mangas");
         article39.setArticleTitle("Fairy Tail: Acnologia");
         article39.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article39.setUserProfile(userProfile);
@@ -651,7 +651,7 @@ public class TestDao {
         article39.setArticleApprove(750);
 
         Article article40 = new Article();
-        article40.setArticleDivider("resultDividerRed");
+        article40.setArticleSection("comics");
         article40.setArticleTitle("TF1 et France2: record d'audience");
         article40.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article40.setUserProfile(userProfile);
@@ -665,7 +665,7 @@ public class TestDao {
         article40.setArticleApprove(98);
 
         Article article41 = new Article();
-        article41.setArticleDivider("resultDividerRed");
+        article41.setArticleSection("comics");
         article41.setArticleTitle("James Bond : Golden Eye");
         article41.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article41.setUserProfile(userProfile);
@@ -679,7 +679,7 @@ public class TestDao {
         article41.setArticleApprove(1007);
 
         Article article42 = new Article();
-        article42.setArticleDivider("resultDividerBlue");
+        article42.setArticleSection("comics");
         article42.setArticleTitle("5 bonnes résolutions pour 2016");
         article42.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
         article42.setUserProfile(userProfile);
@@ -693,7 +693,7 @@ public class TestDao {
         article42.setArticleApprove(46);
 
         Article article43 = new Article();
-        article43.setArticleDivider("resultDividerRed");
+        article43.setArticleSection("comics");
         article43.setArticleTitle("La success story de Facebook");
         article43.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article43.setUserProfile(userProfile);
@@ -707,7 +707,7 @@ public class TestDao {
         article43.setArticleApprove(168);
 
         Article article44 = new Article();
-        article44.setArticleDivider("resultDividerRed");
+        article44.setArticleSection("comics");
         article44.setArticleTitle("Microsoft vs Apple: Gates vs Jobs");
         article44.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article44.setUserProfile(userProfile);
@@ -721,7 +721,7 @@ public class TestDao {
         article44.setArticleApprove(14);
 
         Article article45 = new Article();
-        article45.setArticleDivider("resultDividerRed");
+        article45.setArticleSection("comics");
         article45.setArticleTitle("Amplificateur opérationel : où en sommes-nous ?");
         article45.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
         article45.setUserProfile(userProfile);

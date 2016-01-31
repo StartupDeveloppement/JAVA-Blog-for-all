@@ -6,7 +6,6 @@ var State = require('abyssa').State;
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
-
 var Homepage = require('./components/homepage/homepage.js');
 var Actualities = require('./components/actualities/actualities.js');
 var Profile = require('./components/profile/profile.js');
@@ -55,7 +54,7 @@ Router
     .addState('createForm', State('createForm', CreateForm))
     .addState('createContent', State('createContent', CreateContent))
     .addState('content',State('content/:id', Content))
-    .addState('userProfile',State('userProfile/:id', UserProfile));
+    .addState('userProfile',State('userProfile/:id/:sectionName', UserProfile));
 
 document.addEventListener("DOMContentLoaded", function(event) {
     if (getEmail()!="")
