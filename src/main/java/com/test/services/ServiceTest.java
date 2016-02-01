@@ -12,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 @Path("/test")
 public class ServiceTest {
 
+
     @GET
     @Path("/cal")
     @Produces(MediaType.TEXT_HTML)

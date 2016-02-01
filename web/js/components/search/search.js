@@ -56,28 +56,28 @@ var Search = React.createClass({
                     <div className="commonContainerNavBar">
                         <br />
                         <div className="row thumbnailCategory">
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
                             </div>
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <h4 className="textThumbnailCategory">ON THE WAYS</h4>
                             </div>
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <h4 className="textThumbnailCategory">NEWBIES</h4>
                             </div>
                         </div>
                         <br />
                         <div className="row marginResultThumbnail">
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <ResultThumbnailGroup articles={t[0]['highRollers']} />
                             </div>
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <ResultThumbnailGroup articles={t[0]['onTheWay']} />
                             </div>
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <ResultThumbnailGroup articles={t[0]['newbies']} />
                             </div>
-                            <div className="container col-sm-3 col-md-3">
+                            <div className="col-sm-3 col-md-3">
                                 <div className="rightElement commonRadius marginPromotion">
                                     <form>
                                         <div className="form-group">

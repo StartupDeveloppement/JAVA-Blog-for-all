@@ -58,7 +58,7 @@ var CreateContent = React.createClass({
                     <br />
                     <form onSubmit={this.handleClick}>
                         <div>
-                            <div className="editable commonForm container col-sm-7 col-sm-offset-1">
+                            <div className="editable commonForm container col-sm-7 col-sm-offset-1 commonRadius">
                                 <p>Start writing here...</p>
                                 <p>By simply underlining text, you will have access to styling...</p>
                                 <p>Going to a next line allow you to import picture or add video link...</p>
