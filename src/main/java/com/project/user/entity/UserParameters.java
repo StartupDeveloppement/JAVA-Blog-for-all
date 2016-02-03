@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-public class UserParameters {
+public class UserParameters implements java.io.Serializable{
 
     @Id
     @GeneratedValue

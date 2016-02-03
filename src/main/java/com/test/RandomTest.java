@@ -1,9 +1,12 @@
 package com.test;
 
 import com.project.articles.dao.ArticleDao;
+import com.project.articles.dao.ArticleSharedDao;
 import com.project.articles.dao.impl.ArticleDaoImpl;
+import com.project.articles.dao.impl.ArticleSharedDaoImpl;
 import com.project.articles.dto.ArticlesResponseDto;
 import com.project.articles.entity.Article;
+import com.project.articles.entity.ArticleShared;
 import com.project.user.dao.UserProfileDao;
 import com.project.user.dao.impl.UserProfileDaoImpl;
 import com.project.user.entity.UserProfile;
@@ -17,7 +20,7 @@ public class RandomTest {
 
     public static void main (String[] args){
 
-        ArticleDao articleDao = new ArticleDaoImpl();
+        /*ArticleDao articleDao = new ArticleDaoImpl();
 
         Map<String,List<Article>> articleMap = articleDao.findSearchedArticles(new ArrayList<String>());
         Map<String,List<ArticlesResponseDto>> mapArticle = new HashMap<String, List<ArticlesResponseDto>>();
@@ -31,7 +34,41 @@ public class RandomTest {
             System.out.println(key + " - " + articleMap.get(key));
 
         Article article =articleDao.read(5);
-        System.out.println(article.getArticleTitle());
+        System.out.println(article.getArticleTitle());*/
+
+        UserProfileDao userProfileDao = new UserProfileDaoImpl();
+        ArticleSharedDao articleSharedDao = new ArticleSharedDaoImpl();
+        ArticleDao articleDao = new ArticleDaoImpl();
+
+        UserProfile userProfile = new UserProfile();
+            userProfile.setProfileName("hellllo");
+        ArticleShared articleShared = new ArticleShared();
+        Article article = new Article();
+            article.setArticleTitle("hellllllo");
+        boolean articleOK = articleDao.create(article);
+        boolean userProfileOK = userProfileDao.create(userProfile);
+
+        articleShared.setUserProfile(userProfile);
+        articleShared.setArticle(article);
+        articleShared.setIdUserProfile(userProfile.getIdUserProfile());
+        articleShared.setIdArticle(article.getArticleKey());
+        articleShared.setSection("main");
+
+
+
+        article.getUserProfileList().add(articleShared);
+        // Also add the association object to the employee.
+        userProfile.getArticleListFromShared().add(articleShared);
+
+
+
+        boolean articleSharedOK = articleSharedDao.create(articleShared);
+
+
+
+        System.out.println(articleOK);
+        System.out.println(userProfileOK);
+        System.out.println(articleSharedOK);
 
     }
     public static List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {
@@ -51,4 +88,6 @@ public class RandomTest {
         }
         return finalList;
     }
+
+
 }

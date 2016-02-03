@@ -33,8 +33,23 @@ public class Article implements java.io.Serializable{
     @JsonBackReference
     private UserProfile userProfile;
     private String articleSection;
+    @OneToMany(mappedBy="article")
+    private List<ArticleShared> userProfileList = new ArrayList<ArticleShared>();
     /*@ManyToMany(fetch = FetchType.EAGER, mappedBy = "articleList")
     private List<ArticleKeyWord> articleKeyWordList = new ArrayList<ArticleKeyWord>();*/
+
+    public void addUserProfile(UserProfile userProfile, String section) {
+        ArticleShared articleShared = new ArticleShared();
+        articleShared.setUserProfile(userProfile);
+        articleShared.setArticle(this);
+        articleShared.setIdUserProfile(userProfile.getIdUserProfile());
+        articleShared.setIdArticle(this.getArticleKey());
+        articleShared.setSection(section);
+
+        this.userProfileList.add(articleShared);
+        // Also add the association object to the employee.
+        userProfile.getArticleListFromShared().add(articleShared);
+    }
 
 
     public Integer getArticleKey() {return articleKey;}
@@ -66,4 +81,8 @@ public class Article implements java.io.Serializable{
     public String getArticleSection() {return articleSection;}
     public void setArticleSection(String articleSection) {this.articleSection = articleSection;}
 
+    public List<ArticleShared> getUserProfileList() {return userProfileList;}
+    public void setUserProfileList(List<ArticleShared> userProfileList) {
+        this.userProfileList = userProfileList;
+    }
 }

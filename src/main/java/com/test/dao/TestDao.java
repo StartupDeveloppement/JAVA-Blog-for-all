@@ -25,30 +25,59 @@ public class TestDao {
 
     public static void main (String[] args){
 
-        UserAuth user1 = new UserAuth();
-            user1.setEmail("hello@hello.com");
-            user1.setPassword("world");
-        UserAuth user2 = new UserAuth();
-            user2.setEmail("world@world.com");
-            user2.setPassword("hello");
+        UserAuth megan = new UserAuth();
+            megan.setEmail("megan@megan.com");
+            megan.setPassword("hello");
+        UserAuth helen = new UserAuth();
+            helen.setEmail("helen@helen.com");
+            helen.setPassword("hello");
+        UserAuth carole = new UserAuth();
+            carole.setEmail("carole@carole.com");
+            carole.setPassword("hello");
 
         UserAuthDao userAuthDao = new UserAuthDaoImpl();
-        boolean user1Ok = userAuthDao.create(user1);
-        boolean user2Ok = userAuthDao.create(user2);
+        boolean meganOk = userAuthDao.create(megan);
+        boolean helenOk = userAuthDao.create(helen);
+        boolean caroleOk = userAuthDao.create(carole);
 
-        UserProfile userProfile = new UserProfile();
+        UserProfile meganProfile = new UserProfile();
             /*userProfile.setBirthday(new Date());
             userProfile.setFirstname("hellofirstname");
             userProfile.setLastname("hellolastname");*/
-            userProfile.setUser(user1);
-            userProfile.setProfileName("megan");
-            userProfile.setProfilePicture("./images/test/profile-test.jpg");
-            userProfile.setUniversityName("Harvard");
-            userProfile.setUniversityCity("Cambridge");
-            userProfile.setStatus("open to projects");
+            meganProfile.setUser(megan);
+            meganProfile.setProfileName("megan");
+            meganProfile.setProfilePicture("./images/test/profile-test.jpg");
+            meganProfile.setUniversityName("Harvard");
+            meganProfile.setUniversityCity("Cambridge");
+            meganProfile.setStatus("open to projects");
+
+        UserProfile helenProfile = new UserProfile();
+            /*userProfile.setBirthday(new Date());
+            userProfile.setFirstname("hellofirstname");
+            userProfile.setLastname("hellolastname");*/
+        helenProfile.setUser(helen);
+        helenProfile.setProfileName("Helen");
+        helenProfile.setProfilePicture("./images/test/profile-chinese.jpg");
+        helenProfile.setUniversityName("Stanford");
+        helenProfile.setUniversityCity("San Francisco");
+        helenProfile.setStatus("work peacefully");
+
+        UserProfile caroleProfile = new UserProfile();
+            /*userProfile.setBirthday(new Date());
+            userProfile.setFirstname("hellofirstname");
+            userProfile.setLastname("hellolastname");*/
+        caroleProfile.setUser(carole);
+        caroleProfile.setProfileName("Carole");
+        caroleProfile.setProfilePicture("./images/test/profile-martinique.jpg");
+        caroleProfile.setUniversityName("Centrale Paris");
+        caroleProfile.setUniversityCity("Paris");
+        caroleProfile.setStatus("open to projects");
+
 
         UserProfileDao userProfileDao = new UserProfileDaoImpl();
-        boolean userProfile1Ok = userProfileDao.create(userProfile);
+        boolean meganProfileOk = userProfileDao.create(meganProfile);
+        boolean helenProfileOk = userProfileDao.create(helenProfile);
+        boolean caroleProfileOk = userProfileDao.create(caroleProfile);
 
 
         ArticleKeyWord articleKeyWord1 = new ArticleKeyWord();
@@ -76,7 +105,7 @@ public class TestDao {
             article1.setArticleSection("main");
             article1.setArticleTitle("Star wars the force awakens");
             article1.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-            article1.setUserProfile(userProfile);
+            article1.setUserProfile(meganProfile);
             /*article1.getArticleKeyWordList().add(articleKeyWord1);
             article1.getArticleKeyWordList().add(articleKeyWord2);
             article1.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -94,7 +123,7 @@ public class TestDao {
             article2.setArticleTitle("Fatal fury");
             article2.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article2.setIdUserProfile(1);
-            article2.setUserProfile(userProfile);
+            article2.setUserProfile(meganProfile);
             /*article2.getArticleKeyWordList().add(articleKeyWord1);
             article2.getArticleKeyWordList().add(articleKeyWord2);
             article2.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -112,7 +141,7 @@ public class TestDao {
             article3.setArticleTitle("The Flash 2014");
             article3.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri. Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article3.setIdUserProfile(1);
-            article3.setUserProfile(userProfile);
+            article3.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 14);
                 calendar.set(Calendar.YEAR, 2015);
@@ -127,7 +156,7 @@ public class TestDao {
             article4.setArticleTitle("Comment Air France compte revenir à la croissance");
             article4.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article4.setIdUserProfile(1);
-            article4.setUserProfile(userProfile);
+            article4.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 10);
                 calendar.set(Calendar.YEAR, 2015);
@@ -142,7 +171,7 @@ public class TestDao {
             article5.setArticleTitle("Dragon Ball Super: nouvel episode");
             article5.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article5.setIdUserProfile(1);
-            article5.setUserProfile(userProfile);
+            article5.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 8);
                 calendar.set(Calendar.DATE, 5);
                 calendar.set(Calendar.YEAR, 2015);
@@ -157,7 +186,7 @@ public class TestDao {
             article6.setArticleTitle("Les dernières tendances du secteur High-Tech");
             article6.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article6.setIdUserProfile(1);
-            article6.setUserProfile(userProfile);
+            article6.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 3);
                 calendar.set(Calendar.DATE, 21);
                 calendar.set(Calendar.YEAR, 2015);
@@ -172,7 +201,7 @@ public class TestDao {
             article7.setArticleTitle("Les français à la CES");
             article7.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article7.setIdUserProfile(1);
-            article7.setUserProfile(userProfile);
+            article7.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 2);
                 calendar.set(Calendar.YEAR, 2015);
@@ -187,7 +216,7 @@ public class TestDao {
             article8.setArticleTitle("15 nouveautés pour courir au chaud cet hiver");
             article8.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
             //article8.setIdUserProfile(1);
-            article8.setUserProfile(userProfile);
+            article8.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 1);
                 calendar.set(Calendar.DATE, 5);
                 calendar.set(Calendar.YEAR, 2015);
@@ -202,7 +231,7 @@ public class TestDao {
             article9.setArticleTitle("Facebook, Twitter, Google, Pinterest: How to stay wired in");
             article9.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
             //article9.setIdUserProfile(1);
-            article9.setUserProfile(userProfile);
+            article9.setUserProfile(meganProfile);
                 calendar.set(Calendar.MONTH, 6);
                 calendar.set(Calendar.DATE, 6);
                 calendar.set(Calendar.YEAR, 2015);
@@ -216,7 +245,7 @@ public class TestDao {
         article10.setArticleSection("main");
         article10.setArticleTitle("Star wars revenge of the sith");
         article10.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article10.setUserProfile(userProfile);
+        article10.setUserProfile(meganProfile);
         /*article10.getArticleKeyWordList().add(articleKeyWord1);
         article10.getArticleKeyWordList().add(articleKeyWord2);
         article10.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -233,7 +262,7 @@ public class TestDao {
         article11.setArticleSection("my projects");
         article11.setArticleTitle("The king of fighter");
         article11.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article11.setUserProfile(userProfile);
+        article11.setUserProfile(meganProfile);
         /*article11.getArticleKeyWordList().add(articleKeyWord1);
         article11.getArticleKeyWordList().add(articleKeyWord2);
         article11.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -250,7 +279,7 @@ public class TestDao {
         article12.setArticleSection("my projects");
         article12.setArticleTitle("Supergirl");
         article12.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article12.setUserProfile(userProfile);
+        article12.setUserProfile(meganProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 14);
             calendar.set(Calendar.YEAR, 2015);
@@ -264,7 +293,7 @@ public class TestDao {
         article13.setArticleSection("my projects");
         article13.setArticleTitle("Pinterest une compagnie du futur ?");
         article13.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article13.setUserProfile(userProfile);
+        article13.setUserProfile(meganProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 10);
             calendar.set(Calendar.YEAR, 2015);
@@ -278,7 +307,7 @@ public class TestDao {
         article14.setArticleSection("my projects");
         article14.setArticleTitle("Dragon Ball Z: retour de Broly");
         article14.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article14.setUserProfile(userProfile);
+        article14.setUserProfile(meganProfile);
             calendar.set(Calendar.MONTH, 8);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -292,7 +321,7 @@ public class TestDao {
         article15.setArticleSection("my projects");
         article15.setArticleTitle("Le secteur de la téléphonie en plein boom");
         article15.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article15.setUserProfile(userProfile);
+        article15.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 3);
             calendar.set(Calendar.DATE, 21);
             calendar.set(Calendar.YEAR, 2015);
@@ -306,7 +335,7 @@ public class TestDao {
         article16.setArticleSection("my projects");
         article16.setArticleTitle("Las Vegas et la CES");
         article16.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article16.setUserProfile(userProfile);
+        article16.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 2);
             calendar.set(Calendar.YEAR, 2015);
@@ -320,7 +349,7 @@ public class TestDao {
         article17.setArticleSection("my projects");
         article17.setArticleTitle("10 façons d'être plus heureux");
         article17.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article17.setUserProfile(userProfile);
+        article17.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 1);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -334,7 +363,7 @@ public class TestDao {
         article18.setArticleSection("cinema");
         article18.setArticleTitle("Facebook: le succès innégalé");
         article18.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article18.setUserProfile(userProfile);
+        article18.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -348,7 +377,7 @@ public class TestDao {
         article19.setArticleSection("cinema");
         article19.setArticleTitle("Sony vs Sega: le duel oublié");
         article19.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article19.setUserProfile(userProfile);
+        article19.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -362,7 +391,7 @@ public class TestDao {
         article20.setArticleSection("cinema");
         article20.setArticleTitle("Star wars the phantom menace");
         article20.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article20.setUserProfile(userProfile);
+        article20.setUserProfile(helenProfile);
         /*article20.getArticleKeyWordList().add(articleKeyWord1);
         article20.getArticleKeyWordList().add(articleKeyWord2);
         article20.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -379,7 +408,7 @@ public class TestDao {
         article21.setArticleSection("cinema");
         article21.setArticleTitle("Terry Bogard vs Andy Bogard");
         article21.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article21.setUserProfile(userProfile);
+        article21.setUserProfile(helenProfile);
         /*article21.getArticleKeyWordList().add(articleKeyWord1);
         article21.getArticleKeyWordList().add(articleKeyWord2);
         article21.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -396,7 +425,7 @@ public class TestDao {
         article22.setArticleSection("cinema");
         article22.setArticleTitle("Daredevil");
         article22.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article22.setUserProfile(userProfile);
+        article22.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 14);
             calendar.set(Calendar.YEAR, 2015);
@@ -410,7 +439,7 @@ public class TestDao {
         article23.setArticleSection("cinema");
         article23.setArticleTitle("Sudoku: un jeu d'esprit");
         article23.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article23.setUserProfile(userProfile);
+        article23.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 10);
             calendar.set(Calendar.YEAR, 2015);
@@ -424,7 +453,7 @@ public class TestDao {
         article24.setArticleSection("cinema");
         article24.setArticleTitle("Dragon Ball GT: great touring");
         article24.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article24.setUserProfile(userProfile);
+        article24.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 8);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -438,7 +467,7 @@ public class TestDao {
         article25.setArticleSection("cinema");
         article25.setArticleTitle("Tech Crunch et la CES");
         article25.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article25.setUserProfile(userProfile);
+        article25.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 3);
             calendar.set(Calendar.DATE, 21);
             calendar.set(Calendar.YEAR, 2015);
@@ -452,7 +481,7 @@ public class TestDao {
         article26.setArticleSection("cinema");
         article26.setArticleTitle("L'intelligence artificielle et les français");
         article26.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article26.setUserProfile(userProfile);
+        article26.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 2);
             calendar.set(Calendar.YEAR, 2015);
@@ -466,7 +495,7 @@ public class TestDao {
         article27.setArticleSection("cinema");
         article27.setArticleTitle("Les 10 destinations préférés des français");
         article27.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article27.setUserProfile(userProfile);
+        article27.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 1);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -480,7 +509,7 @@ public class TestDao {
         article28.setArticleSection("cinema");
         article28.setArticleTitle("Steve Jobs, Bill Gates, Elon Musk, Mark Zuckerberg : les nouveaux héros");
         article28.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article28.setUserProfile(userProfile);
+        article28.setUserProfile(helenProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -494,7 +523,7 @@ public class TestDao {
         article29.setArticleSection("cinema");
         article29.setArticleTitle("Star wars empire strike back");
         article29.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article29.setUserProfile(userProfile);
+        article29.setUserProfile(helenProfile);
         /*article29.getArticleKeyWordList().add(articleKeyWord1);
         article29.getArticleKeyWordList().add(articleKeyWord2);
         article29.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -511,7 +540,7 @@ public class TestDao {
         article30.setArticleSection("mangas");
         article30.setArticleTitle("Marvel vs Capcom");
         article30.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article30.setUserProfile(userProfile);
+        article30.setUserProfile(caroleProfile);
         /*article30.getArticleKeyWordList().add(articleKeyWord1);
         article30.getArticleKeyWordList().add(articleKeyWord2);
         article30.getArticleKeyWordList().add(articleKeyWord3);*/
@@ -528,7 +557,7 @@ public class TestDao {
         article31.setArticleSection("mangas");
         article31.setArticleTitle("Superman");
         article31.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article31.setUserProfile(userProfile);
+        article31.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 14);
             calendar.set(Calendar.YEAR, 2015);
@@ -542,7 +571,7 @@ public class TestDao {
         article32.setArticleSection("mangas");
         article32.setArticleTitle("Le CEO de Pinterest s'exprime");
         article32.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article32.setUserProfile(userProfile);
+        article32.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 10);
             calendar.set(Calendar.YEAR, 2015);
@@ -556,7 +585,7 @@ public class TestDao {
         article33.setArticleSection("mangas");
         article33.setArticleTitle("Dragon Ball : Piccolo Daimao");
         article33.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article33.setUserProfile(userProfile);
+        article33.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 8);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -570,7 +599,7 @@ public class TestDao {
         article34.setArticleSection("mangas");
         article34.setArticleTitle("Le secteur de la japanimation en plein expansion");
         article34.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article34.setUserProfile(userProfile);
+        article34.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 3);
             calendar.set(Calendar.DATE, 21);
             calendar.set(Calendar.YEAR, 2015);
@@ -584,7 +613,7 @@ public class TestDao {
         article35.setArticleSection("mangas");
         article35.setArticleTitle("Los Angeles ou San Francisco");
         article35.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article35.setUserProfile(userProfile);
+        article35.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 2);
             calendar.set(Calendar.YEAR, 2015);
@@ -598,7 +627,7 @@ public class TestDao {
         article36.setArticleSection("mangas");
         article36.setArticleTitle("Les 10 femmes les plus sexys de 2015");
         article36.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article36.setUserProfile(userProfile);
+        article36.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 1);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -612,7 +641,7 @@ public class TestDao {
         article37.setArticleSection("mangas");
         article37.setArticleTitle("Leechi: le succès français");
         article37.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article37.setUserProfile(userProfile);
+        article37.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -626,7 +655,7 @@ public class TestDao {
         article38.setArticleSection("mangas");
         article38.setArticleTitle("Nintendo : la wii");
         article38.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article38.setUserProfile(userProfile);
+        article38.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -640,7 +669,7 @@ public class TestDao {
         article39.setArticleSection("mangas");
         article39.setArticleTitle("Fairy Tail: Acnologia");
         article39.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article39.setUserProfile(userProfile);
+        article39.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 8);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -654,7 +683,7 @@ public class TestDao {
         article40.setArticleSection("comics");
         article40.setArticleTitle("TF1 et France2: record d'audience");
         article40.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article40.setUserProfile(userProfile);
+        article40.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 3);
             calendar.set(Calendar.DATE, 21);
             calendar.set(Calendar.YEAR, 2015);
@@ -668,7 +697,7 @@ public class TestDao {
         article41.setArticleSection("comics");
         article41.setArticleTitle("James Bond : Golden Eye");
         article41.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article41.setUserProfile(userProfile);
+        article41.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 2);
             calendar.set(Calendar.YEAR, 2015);
@@ -682,7 +711,7 @@ public class TestDao {
         article42.setArticleSection("comics");
         article42.setArticleTitle("5 bonnes résolutions pour 2016");
         article42.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.");
-        article42.setUserProfile(userProfile);
+        article42.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 1);
             calendar.set(Calendar.DATE, 5);
             calendar.set(Calendar.YEAR, 2015);
@@ -696,7 +725,7 @@ public class TestDao {
         article43.setArticleSection("comics");
         article43.setArticleTitle("La success story de Facebook");
         article43.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article43.setUserProfile(userProfile);
+        article43.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -710,7 +739,7 @@ public class TestDao {
         article44.setArticleSection("comics");
         article44.setArticleTitle("Microsoft vs Apple: Gates vs Jobs");
         article44.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article44.setUserProfile(userProfile);
+        article44.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -724,7 +753,7 @@ public class TestDao {
         article45.setArticleSection("comics");
         article45.setArticleTitle("Amplificateur opérationel : où en sommes-nous ?");
         article45.setArticleText("Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, placuerit fieri.");
-        article45.setUserProfile(userProfile);
+        article45.setUserProfile(caroleProfile);
             calendar.set(Calendar.MONTH, 6);
             calendar.set(Calendar.DATE, 6);
             calendar.set(Calendar.YEAR, 2015);
@@ -781,9 +810,12 @@ public class TestDao {
         boolean article44Ok = articleDao.create(article44);
         boolean article45Ok = articleDao.create(article45);
 
-        System.out.println("User1: " + user1Ok);
-        System.out.println("User2: " + user2Ok);
-        System.out.println("UserProfile1: " + userProfile1Ok);
+        System.out.println("Megan: " + meganOk);
+        System.out.println("Helen: " + helenOk);
+        System.out.println("Carole: " + caroleOk);
+        System.out.println("MeganProfile: " + meganProfileOk);
+        System.out.println("HelenProfile: " + helenProfileOk);
+        System.out.println("CaroleProfile: " + caroleProfileOk);
         System.out.println("Article1: " + article1Ok);
         System.out.println("Article2: " + article2Ok);
         System.out.println("Article3: " + article3Ok);

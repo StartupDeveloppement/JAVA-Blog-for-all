@@ -3,9 +3,11 @@ package com.project.user.entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.project.articles.entity.Article;
 import com.project.articles.entity.ArticleSection;
+import com.project.articles.entity.ArticleShared;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -40,7 +42,11 @@ public class UserProfile implements java.io.Serializable {
     private List<Article> articleList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
     @JsonManagedReference
-    private List<ArticleSection> articleSectionList;
+    private List<ArticleSection> articleSectionList = new ArrayList<ArticleSection>();
+    @OneToMany(mappedBy="userProfile")
+    private List<ArticleShared> articleListFromShared = new ArrayList<ArticleShared>();
+
+
 
 
 
@@ -85,5 +91,10 @@ public class UserProfile implements java.io.Serializable {
     public List<ArticleSection> getArticleSectionList() {return articleSectionList;}
     public void setArticleSectionList(List<ArticleSection> articleSectionList) {
         this.articleSectionList = articleSectionList;
+    }
+
+    public List<ArticleShared> getArticleListFromShared() {return articleListFromShared;}
+    public void setArticleListFromShared(List<ArticleShared> articleListFromShared) {
+        this.articleListFromShared = articleListFromShared;
     }
 }

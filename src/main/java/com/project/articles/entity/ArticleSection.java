@@ -9,7 +9,7 @@ import javax.persistence.*;
  * Created by olivier on 31/01/2016.
  */
 @Entity
-public class ArticleSection {
+public class ArticleSection implements java.io.Serializable{
 
     @Id
     @GeneratedValue
