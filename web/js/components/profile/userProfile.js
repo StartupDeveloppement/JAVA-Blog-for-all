@@ -17,8 +17,8 @@ var UserProfile = React.createClass({
         console.log("userProfile");
         console.log(Router.current().params.id);
         console.log(Router.current().params.sectionName);
-        UserProfileActions.getProfile(Router.current().params.id);
-        /*UserProfileActions.getSectionContents(Router.current().params.id,Router.current().params.sectionName);*/
+        /*UserProfileActions.getProfile(Router.current().params.id);*/
+        UserProfileActions.getSectionContents(Router.current().params.id,Router.current().params.sectionName);
 
     },
     displaySections: function () {
@@ -97,44 +97,63 @@ var UserProfile = React.createClass({
     },
     render: function () {
 
-        if ( !this.state.store['userProfile'] ) {
+        /*if ( !this.state.store['userProfile'] ) {
             // Note that you can return false it you want nothing to be put in the dom
             // This is also your chance to render a spinner or something....
             return (
-                <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)        }
+                <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)        }*/
 
-       /* if ( !this.state.store['sectionContents'] ) {
+       if ( this.state.store['sectionContents']==[] ) {
          // Note that you can return false it you want nothing to be put in the dom
          // This is also your chance to render a spinner or something....
          return (
             <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)
-        }*/
-
+        }
 
         console.log("userProfileInsideRender");
-        console.log(this.state.store['userProfile']);
-        var p = this.state.store['userProfile'];
-        /*console.log(this.state.store['sectionContents']);
+        /*console.log(this.state.store['userProfile']);
+        var p = this.state.store['userProfile'];*/
+        console.log(this.state.store['sectionContents']);
         console.log(this.state.store['sectionContents']['userProfileResponseDto']);
-        var p = this.state.store['sectionContents']['userProfileResponseDto'];*/
+        console.log(this.state.store['sectionContents']['articlesResponseDto']);
+        var p = this.state.store['sectionContents']['userProfileResponseDto'];
+        var a = this.state.store['sectionContents']['articlesResponseDto'];
+
+        var actualities = [
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
+                articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'1',
+                articlePicture:'./images/test/starwars.jpg'},
+            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
+                articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
+                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'2',
+                articlePicture:'./images/test/starwars.jpg'}
+        ];
+
+
         return (
             <div>
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
-                    <div className="row userProfileBanner">
-                        <img className="userProfilePicture img-circle" src={p['profilePicture']} />
-                        <div className="userProfileInfo">
-                            <h3 className="commonColorWhite">{p['profileName']}</h3>
-                            <p className="commonColorWhite">{p['status']}</p>
-                            <p className="commonColorWhite">{p['universityName']}</p>
-                        </div>
-                        <h1 className="userProfileSectionTitle">{Router.current().params.sectionName}</h1>
-                        {this.displaySections()}
-                    </div>
+                    {
+                        p ?
+                            <div className="row userProfileBanner">
+                                <img className="userProfilePicture img-circle" src={p['profilePicture']}/>
+                                <div className="userProfileInfo">
+                                    <h3 className="commonColorWhite">{p['profileName']}</h3>
+                                    <p className="commonColorWhite">{p['status']}</p>
+                                    <p className="commonColorWhite">{p['universityName']}</p>
+                                </div>
+
+                                <h1 className="userProfileSectionTitle">{Router.current().params.sectionName}</h1>
+                                {this.displaySections()}
+                            </div>
+                        : null
+                    }
                     <div className="row">
                         <br />
                         <div className="container col-sm-7 col-sm-offset-2">
-                            <UserProfileContent />
+                            <ResultImageGroup articles={a} ></ResultImageGroup>
                         </div>
                     </div>
                 </div>
