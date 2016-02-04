@@ -19,10 +19,22 @@ var UserProfile = React.createClass({
         console.log(Router.current().params.sectionName);
         /*UserProfileActions.getProfile(Router.current().params.id);*/
         UserProfileActions.getSectionContents(Router.current().params.id,Router.current().params.sectionName);
+        return {
+            idCurrentProfile: Router.current().params.id,
+            sectionNameCurrentProfile: Router.current().params.sectionName
+        }
+    },
 
+    changePage : function (sectionName) {
+        UserProfileActions.getSectionContents(this.state.idCurrentProfile,sectionName);
     },
     displaySections: function () {
-        var count =6;
+        var sectionName = ['main','fashion','mangas','video games','cinema','my projects'];
+        var count = sectionName.length;
+        console.log(count);
+        console.log("current ID");
+        console.log(Router.current().params.id);
+        console.log(this.state.idCurrentProfile);
         if (count ==2)
             return (
                 <div className="userProfileSection">
@@ -60,12 +72,12 @@ var UserProfile = React.createClass({
         else if (count ==6)
             return (
                 <div className="userProfileSection">
-                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.props.userEmail,sectionName:'main'})}>main</a>
-                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'cinema'})}>cinema</a>
-                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'mangas'})}>mangas</a>
-                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'video games'})}>video games</a>
-                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'fashion'})}>fashion</a>
-                    <a className="col-md-1" href={Router.link('userProfile',{id:Router.current().params.id,sectionName:'my projects'})}>my projects</a>
+                    <a className="col-md-offset-2 col-md-1" href={Router.link('userProfile',{id:this.state.idCurrentProfile,sectionName:'main'})}>{sectionName[0]}</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:this.state.idCurrentProfile,sectionName:'cinema'})}>{sectionName[1]}</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:this.state.idCurrentProfile,sectionName:'mangas'})}>{sectionName[2]}</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:this.state.idCurrentProfile,sectionName:'video games'})}>{sectionName[3]}</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:this.state.idCurrentProfile,sectionName:'fashion'})}>{sectionName[4]}</a>
+                    <a className="col-md-1" href={Router.link('userProfile',{id:this.state.idCurrentProfile,sectionName:'my projects'})}>{sectionName[5]}</a>
                 </div>
             )
         else if (count ==7)
@@ -97,12 +109,6 @@ var UserProfile = React.createClass({
     },
     render: function () {
 
-        /*if ( !this.state.store['userProfile'] ) {
-            // Note that you can return false it you want nothing to be put in the dom
-            // This is also your chance to render a spinner or something....
-            return (
-                <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)        }*/
-
        if ( this.state.store['sectionContents']==[] ) {
          // Note that you can return false it you want nothing to be put in the dom
          // This is also your chance to render a spinner or something....
@@ -111,24 +117,11 @@ var UserProfile = React.createClass({
         }
 
         console.log("userProfileInsideRender");
-        /*console.log(this.state.store['userProfile']);
-        var p = this.state.store['userProfile'];*/
         console.log(this.state.store['sectionContents']);
         console.log(this.state.store['sectionContents']['userProfileResponseDto']);
         console.log(this.state.store['sectionContents']['articlesResponseDto']);
         var p = this.state.store['sectionContents']['userProfileResponseDto'];
         var a = this.state.store['sectionContents']['articlesResponseDto'];
-
-        var actualities = [
-            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerBlue',
-                articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'1',
-                articlePicture:'./images/test/starwars.jpg'},
-            {articleTitle:'Profitetur aut secretiora quaedam se nosse confingit', articleDivider:'resultDividerRed',
-                articleDescription:'Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari vel distributio sollemnium  sportularum, anxia deliberatione tractatur an exceptis his quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit fieri.' ,
-                profilePicture:'./images/test/profile-test.jpg', profileName:'Claire', articleKey:'2',
-                articlePicture:'./images/test/starwars.jpg'}
-        ];
 
 
         return (

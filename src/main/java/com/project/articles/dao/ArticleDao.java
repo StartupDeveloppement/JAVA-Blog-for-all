@@ -14,7 +14,7 @@ public interface ArticleDao extends Dao<Article,Integer> {
 
     List<Article> findLastArticles();
     Map<String, List<Article>> findSearchedArticles(List<String> listRequest);
-    List<Article> findSectionArticles(String sectionName);
+    List<Article> findSectionArticles(String sectionName, Integer idUserProfile);
 
 
 }
