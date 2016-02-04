@@ -39,7 +39,7 @@ public class UserProfile implements java.io.Serializable {
     private Date birthday;*/
     @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
     @JsonManagedReference
-    private List<Article> articleList;
+    private List<Article> articleList = new ArrayList<Article>();
     @OneToMany(fetch = FetchType.LAZY, mappedBy="userProfile")
     @JsonManagedReference
     private List<ArticleSection> articleSectionList = new ArrayList<ArticleSection>();

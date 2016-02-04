@@ -1,11 +1,14 @@
 package com.test.dao;
 
 import com.project.articles.dao.ArticleDao;
+import com.project.articles.dao.ArticleSharedDao;
 import com.project.articles.dao.impl.ArticleDaoImpl;
 import com.project.articles.dao.ArticleKeyWordDao;
 import com.project.articles.dao.impl.ArticleKeyWordDaoImpl;
+import com.project.articles.dao.impl.ArticleSharedDaoImpl;
 import com.project.articles.entity.Article;
 import com.project.articles.entity.ArticleKeyWord;
+import com.project.articles.entity.ArticleShared;
 import com.project.user.dao.UserAuthDao;
 import com.project.user.dao.impl.UserAuthDaoImpl;
 import com.project.user.dao.UserProfileDao;
@@ -810,6 +813,33 @@ public class TestDao {
         boolean article44Ok = articleDao.create(article44);
         boolean article45Ok = articleDao.create(article45);
 
+
+        ArticleShared articleShared = new ArticleShared();
+            articleShared.setUserProfile(meganProfile);
+            articleShared.setArticle(article40);
+            articleShared.setIdUserProfile(meganProfile.getIdUserProfile());
+            articleShared.setIdArticle(article40.getArticleKey());
+            articleShared.setSection("main");
+        article40.getUserProfileList().add(articleShared);
+        // Also add the association object to the employee.
+        meganProfile.getArticleListFromShared().add(articleShared);
+
+        ArticleShared articleShared1 = new ArticleShared();
+            articleShared1.setUserProfile(meganProfile);
+            articleShared1.setArticle(article28);
+            articleShared1.setIdUserProfile(meganProfile.getIdUserProfile());
+            articleShared1.setIdArticle(article28.getArticleKey());
+            articleShared1.setSection("main");
+        article28.getUserProfileList().add(articleShared1);
+        // Also add the association object to the employee.
+        meganProfile.getArticleListFromShared().add(articleShared1);
+
+
+        ArticleSharedDao articleSharedDao = new ArticleSharedDaoImpl();
+        boolean articleSharedOK = articleSharedDao.create(articleShared);
+        boolean articleShared1OK = articleSharedDao.create(articleShared1);
+
+
         System.out.println("Megan: " + meganOk);
         System.out.println("Helen: " + helenOk);
         System.out.println("Carole: " + caroleOk);
@@ -861,6 +891,8 @@ public class TestDao {
         System.out.println("Article43: " + article43Ok);
         System.out.println("Article44: " + article44Ok);
         System.out.println("Article45: " + article45Ok);
+        System.out.println("ArticleShared: " + articleSharedOK);
+        System.out.println("ArticleShared1: " + articleShared1OK);
 
         for (Article article : articleDao.findLastArticles()){
             System.out.println("-----------------");

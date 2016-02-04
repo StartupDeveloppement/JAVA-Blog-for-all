@@ -42,17 +42,18 @@ public class RandomTest {
 
         UserProfile userProfile = new UserProfile();
             userProfile.setProfileName("hellllo");
-        ArticleShared articleShared = new ArticleShared();
+
         Article article = new Article();
             article.setArticleTitle("hellllllo");
         boolean articleOK = articleDao.create(article);
         boolean userProfileOK = userProfileDao.create(userProfile);
 
+        ArticleShared articleShared = new ArticleShared();
         articleShared.setUserProfile(userProfile);
         articleShared.setArticle(article);
         articleShared.setIdUserProfile(userProfile.getIdUserProfile());
         articleShared.setIdArticle(article.getArticleKey());
-        articleShared.setSection("main");
+        articleShared.setSection("my projects");
 
 
 

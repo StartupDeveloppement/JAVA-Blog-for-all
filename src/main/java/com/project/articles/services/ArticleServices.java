@@ -1,11 +1,14 @@
 package com.project.articles.services;
 
 import com.project.articles.dao.ArticleDao;
+import com.project.articles.dao.ArticleSharedDao;
 import com.project.articles.dao.impl.ArticleDaoImpl;
+import com.project.articles.dao.impl.ArticleSharedDaoImpl;
 import com.project.articles.dto.ArticleResponseDto;
 import com.project.articles.dto.ArticlesResponseDto;
 import com.project.articles.dto.ArticlesSectionResponseDto;
 import com.project.articles.entity.Article;
+import com.project.articles.entity.ArticleShared;
 import com.project.user.dao.UserProfileDao;
 import com.project.user.dao.impl.UserProfileDaoImpl;
 import com.project.user.dto.UserProfileResponseDto;
@@ -23,6 +26,7 @@ import java.util.*;
 public class ArticleServices {
 
     private ArticleDao articleDao = new ArticleDaoImpl();
+    private ArticleSharedDao articleSharedDao = new ArticleSharedDaoImpl();
     private UserProfileDao userProfileDao = new UserProfileDaoImpl();
 
     @Path("/lastarticles")
@@ -87,6 +91,10 @@ public class ArticleServices {
         List<ArticlesResponseDto> finalList = doArticlesMapping(lastArticlesList);
         UserProfile userProfile = null;
         userProfile = userProfileDao.findProfileUsingUserEmail(email);
+        List<Article> articleSharedList = articleSharedDao.findAllSharedArticleForGivenSection(userProfile.getIdUserProfile(),sectionName);
+        List<ArticlesResponseDto> articleSharedListDto = doArticlesMapping(articleSharedList);
+        finalList.addAll(articleSharedListDto);
+
         UserProfileResponseDto userProfileResponseDto = new UserProfileResponseDto();
             userProfileResponseDto.setProfileName(userProfile.getProfileName());
             userProfileResponseDto.setProfilePicture(userProfile.getProfilePicture());
@@ -98,6 +106,18 @@ public class ArticleServices {
             articlesSectionResponseDto.setUserProfileResponseDto(userProfileResponseDto);
         return articlesSectionResponseDto;
     }
+
+    @Path("/addsharedarticle")
+    @POST
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Boolean addSharedArticle(@FormParam("id") String email,
+                                    @FormParam("idArticle") Integer idArticle,
+                                    @FormParam("sectionName") String sectionName){
+
+        return false;
+    }
+
 
 
     private List<ArticlesResponseDto> doArticlesMapping(List<Article> lastArticlesList) {
