@@ -94,6 +94,7 @@ public class ArticleServices {
         List<Article> articleSharedList = articleSharedDao.findAllSharedArticleForGivenSection(userProfile.getIdUserProfile(),sectionName);
         List<ArticlesResponseDto> articleSharedListDto = doArticlesMapping(articleSharedList);
         finalList.addAll(articleSharedListDto);
+        Collections.sort(finalList);
 
         UserProfileResponseDto userProfileResponseDto = new UserProfileResponseDto();
             userProfileResponseDto.setProfileName(userProfile.getProfileName());

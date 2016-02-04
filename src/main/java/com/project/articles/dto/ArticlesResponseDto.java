@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 @XmlRootElement
-public class ArticlesResponseDto {
+public class ArticlesResponseDto implements Comparable<ArticlesResponseDto>{
 
     private Integer articleKey;
     private String articleTitle;
@@ -57,4 +57,9 @@ public class ArticlesResponseDto {
     public String getUserEmail() {return userEmail;}
     public void setUserEmail(String userEmail) {this.userEmail = userEmail;}
 
+    public int compareTo(ArticlesResponseDto o) {
+        Date oDate = o.getArticleDate();
+        return oDate.compareTo(this.articleDate);
+
+    }
 }
