@@ -35,7 +35,7 @@ function getEmail() {
 function getName() {
     var sp=getCookie("sp");
     if (sp!="") {
-        var bytes = base64.decode(s);
+        var bytes = base64.decode(sp);
         var text = utf8.decode(bytes);
         var name = text.split(":")[0];
         return name;
@@ -58,8 +58,12 @@ var CommonNavBar = React.createClass({
 
         return {
             searchValue: '',
-            profileName : 'Megan'
+            profileName : getName()
         };
+    },
+
+    getProfileName: function (){
+        getName()
     },
 
     logout: function () {

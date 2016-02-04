@@ -87,10 +87,12 @@ public class ArticleServices {
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.APPLICATION_JSON)
     public ArticlesSectionResponseDto findSectionArticles(@FormParam("sectionName") String sectionName, @FormParam("id") String email){
+
         List<Article> lastArticlesList = articleDao.findSectionArticles(sectionName);
         List<ArticlesResponseDto> finalList = doArticlesMapping(lastArticlesList);
         UserProfile userProfile = null;
         userProfile = userProfileDao.findProfileUsingUserEmail(email);
+
         List<Article> articleSharedList = articleSharedDao.findAllSharedArticleForGivenSection(userProfile.getIdUserProfile(),sectionName);
         List<ArticlesResponseDto> articleSharedListDto = doArticlesMapping(articleSharedList);
         finalList.addAll(articleSharedListDto);

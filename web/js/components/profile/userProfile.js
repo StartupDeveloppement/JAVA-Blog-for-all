@@ -19,10 +19,10 @@ var UserProfile = React.createClass({
         console.log(Router.current().params.sectionName);
         UserProfileActions.getProfile(Router.current().params.id);
         /*UserProfileActions.getSectionContents(Router.current().params.id,Router.current().params.sectionName);*/
+
     },
     displaySections: function () {
-        var count =8;
-
+        var count =6;
         if (count ==2)
             return (
                 <div className="userProfileSection">

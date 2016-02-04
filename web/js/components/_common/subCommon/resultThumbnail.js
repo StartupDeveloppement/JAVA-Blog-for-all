@@ -7,7 +7,7 @@ var resultThumbnail = React.createClass({
     render: function () {
         return (
 
-                <Thumbnail src={this.props.articlePicture} alt="cool article">
+                <Thumbnail className="resultThumbnail" src={this.props.articlePicture} alt="cool article">
                     <a className="resultOnHoover" href={Router.link('content',{id:this.props.articleKey})}>
                         <h3 className="resultTitle">{this.props.articleTitle}</h3>
                     </a>
