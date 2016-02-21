@@ -23,20 +23,21 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "base-64": "^0.1.0",
     "bootstrap": "^3.3.5",
     "flux": "^2.1.1",
     "gulp": "^3.9.0",
+    "history": "^2.0.0",
     "jquery": "^2.1.4",
+    "keymirror": "^0.1.1",
     "link": "^0.1.5",
     "object-assign": "^4.0.1",
     "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "react-router": "^0.13.5",
-    "reflux": "^0.3.0",
-    "base-64": "^0.1.0",
-    "keymirror": "^0.1.1",
     "react-avatar-cropper": "^0.1.1",
     "react-bootstrap": "^0.28.1",
+    "react-dom": "^0.14.2",
+    "react-router": "^2.0.0",
+    "reflux": "^0.3.0",
     "utf8": "^2.1.1"
   }
 }
