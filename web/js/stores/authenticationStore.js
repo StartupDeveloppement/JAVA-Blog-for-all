@@ -6,7 +6,7 @@ var base64 = require('base-64');
 var utf8 = require('utf8');
 var AuthenticationActions = require('../actions/authenticationActions.js');
 import { Link } from 'react-router';
-import { Navigation } from 'react-router';
+//import { Navigation } from 'react-router';
 
 
 function getCookie(cname) {

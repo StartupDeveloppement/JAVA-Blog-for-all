@@ -5,6 +5,7 @@ var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var ResultImageGroup = require('../_common/resultImageGroup.js');
 var UserProfileContent = require('./userProfileContent.js');
+import { Link } from 'react-router';
 
 var UserProfileActions = require('../../actions/userProfileActions.js');
 var UserProfileStore = require('../../stores/userProfileStore.js');
@@ -179,10 +180,10 @@ var UserProfile = React.createClass({
         console.log(this.props.params.id);
         console.log(this.props.params.sectionName);
         //UserProfileActions.getProfile(Router.current().params.id);
-        UserProfileActions.getSectionContents(Router.current().params.id,Router.current().params.sectionName);
+        UserProfileActions.getSectionContents(this.props.params.id,this.props.params.sectionName);
         return {
-            idCurrentProfile: Router.current().params.id,
-            sectionNameCurrentProfile: Router.current().params.sectionName
+            idCurrentProfile: this.props.params.id,
+            sectionNameCurrentProfile: this.props.params.sectionName
         }
     },
 

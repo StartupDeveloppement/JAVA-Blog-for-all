@@ -5,6 +5,7 @@ var base64 = require('base-64');
 var utf8 = require('utf8');
 var Input = require('react-bootstrap').Input;
 
+import { Link } from 'react-router';
 import { Navigation } from 'react-router';
 
 var SearchActions = require('../../actions/searchActions.js');

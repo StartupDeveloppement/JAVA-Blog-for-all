@@ -3,6 +3,7 @@ var ReactDom = require('react-dom');
 var Reflux = require('reflux');
 var Router = require('../../router.js');
 var CommonFooter = require('../_common/commonFooter.js');
+import { Link } from 'react-router';
 
 var AuthenticationActions = require('../../actions/authenticationActions.js');
 var AuthenticationStore = require('../../stores/authenticationStore.js');

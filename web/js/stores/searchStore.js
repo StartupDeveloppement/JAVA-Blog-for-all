@@ -6,7 +6,7 @@ var base64 = require('base-64');
 var utf8 = require('utf8');
 var SearchActions = require('../actions/searchActions.js');
 
-import { Navigation } from 'react-router';
+//import { Navigation } from 'react-router';
 import { Link } from 'react-router';
 
 var searchResults = [];
