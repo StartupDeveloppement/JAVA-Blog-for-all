@@ -225,6 +225,7 @@ var Profile = React.createClass({
     }
 });
 
+//module.exports = Profile;
 
 module.exports = {
     enter: function() {

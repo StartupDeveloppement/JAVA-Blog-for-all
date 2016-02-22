@@ -6,6 +6,11 @@ var State = require('abyssa').State;
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
+import { useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
+// useRouterHistory creates a composable higher-order function
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+
 var Homepage = require('./components/homepage/homepage.js');
 var Actualities = require('./components/actualities/actualities.js');
 var Profile = require('./components/profile/profile.js');
@@ -57,8 +62,40 @@ Router
     .addState('userProfile',State('userProfile/:id/:sectionName', UserProfile));
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    if (getEmail()!="")
+    if (getEmail()!="") {
         Router.init('actualities');
-    else
+        /*ReactDom.render((
+            <Router history={appHistory}>
+                <Route path="/" component={Actualities} />
+                <Route path="/profile" component={Profile}/>
+                <Route path="/parameters" component={Parameters}/>
+                <Route path="/help" component={Help}/>
+                <Route path="/search" component={Search}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/importForm" component={ImportForm}/>
+                <Route path="/createForm" component={CreateForm}/>
+                <Route path="/createContent" component={CreateContent}/>
+                <Route path="/content/:id" component={Content}/>
+                <Route path="/userProfile/:id/:sectionName" component={UserProfile}/>
+            </Router>
+        ), document.getElementById('app'));*/
+
+    }else {
         Router.init('homepage');
+        /*ReactDom.render((
+            <Router history={appHistory}>
+                <Route path="/" component={Homepage} />
+                <Route path="/profile" component={Profile}/>
+                <Route path="/parameters" component={Parameters}/>
+                <Route path="/help" component={Help}/>
+                <Route path="/search" component={Search}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/importForm" component={ImportForm}/>
+                <Route path="/createForm" component={CreateForm}/>
+                <Route path="/createContent" component={CreateContent}/>
+                <Route path="/content/:id" component={Content}/>
+                <Route path="/userProfile/:id/:sectionName" component={UserProfile}/>
+            </Router>
+        ), document.getElementById('app'));*/
+    }
 });

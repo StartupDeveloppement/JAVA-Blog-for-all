@@ -94,6 +94,8 @@ var ImportForm = React.createClass({
     }
 });
 
+//module.exports = ImportForm;
+
 module.exports = {
     enter: function() {
         ReactDom.render(<ImportForm />, document.getElementById('app'));

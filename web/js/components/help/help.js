@@ -27,6 +27,10 @@ var Help = React.createClass({
    }
 });
 
+
+//module.exports = Help;
+
+
 module.exports = {
     enter: function() {
         ReactDom.render(<Help />, document.getElementById('app'));

@@ -13,6 +13,10 @@ var ContentStore = require('../../stores/contentStore.js');
 var Content = React.createClass({
     mixins: [Reflux.connect(ContentStore,"store")],
     getInitialState: function () {
+        /*
+         console.log(this.props.params.id);
+         ContentActions.getContent(this.props.params.id);
+        */
         console.log(Router.current().params.id);
         ContentActions.getContent(Router.current().params.id);
     },
@@ -56,6 +60,10 @@ var Content = React.createClass({
     }
 
 });
+
+
+//module.exports = Content;
+
 
 module.exports = {
     enter: function() {

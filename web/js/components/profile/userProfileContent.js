@@ -11,6 +11,8 @@ var UserProfileStore = require('../../stores/userProfileStore.js');*/
 var UserProfileLeft = React.createClass({
     render: function(){
         console.log("userProfileContent");
+        //console.log(this.props.params.sectionName);
+        //console.log(this.props.params.id);
         console.log(Router.current().params.sectionName);
         console.log(Router.current().params.id);
         var actualities = [

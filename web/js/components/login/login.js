@@ -68,6 +68,8 @@ var Login = React.createClass({
     }
 });
 
+//module.exports = Login;
+
 module.exports = {
     enter: function() {
         ReactDom.render(<Login />, document.getElementById('app'));
@@ -77,3 +79,40 @@ module.exports = {
         console.log('login exited');
     }
 };
+
+/*
+<div>
+    <div className="navbar navbar-default navbar-fixed-top commonBoxShadowNavbar">
+        <div className="container">
+
+            <div className="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" className="navbar-toggle" >
+                    <span className="sr-only">Toggle navigation</span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                <a className="navbar-brand"><Link to='/homepage'>Blog Project</Link></a>
+            </div>
+        </div>
+    </div>
+    <div className="commonContainerNavBar commonHeight">
+        <div className="">
+            <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile loginMargin">
+                <h3>login</h3>
+                <form onSubmit={this.handleClick}>
+                    <div className="form-group">
+                        <input id="signupEmail" className="form-control" type="email" placeholder="e-mail" value={this.state.email} onChange={this._onChangeEmail}  />
+                    </div>
+                    <div className="form-group">
+                        <input id="signupPassword" className="form-control" type="password" placeholder="password" value={this.state.password} onChange={this._onChangePassword} />
+                    </div>
+                    <button type="submit" className="btn btn-default">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <CommonFooter />
+</div>
+
+*/

@@ -78,6 +78,9 @@ var CreateContent = React.createClass({
     }
 });
 
+//module.exports = CreateContent;
+
+
 module.exports = {
     enter: function() {
         ReactDom.render(<CreateContent />, document.getElementById('app'));

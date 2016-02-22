@@ -108,6 +108,9 @@ var Search = React.createClass({
         }
 });
 
+
+//module.exports = Search;
+
 module.exports = {
     enter: function() {
         ReactDom.render(<Search />, document.getElementById('app'));

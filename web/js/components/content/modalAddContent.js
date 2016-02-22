@@ -5,6 +5,8 @@ var Router = require('../../router.js');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
+import { Navigation } from 'react-router';
+
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -30,6 +32,13 @@ function getEmail() {
 
 
 var ModalAddContent = React.createClass({
+
+    mixins: [ Navigation ],
+
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
+
     getInitialState() {
         return {
             showModal: false
@@ -45,18 +54,26 @@ var ModalAddContent = React.createClass({
 
     goToImportFormPage:function(event){
         event.preventDefault();
-        if (getEmail()!="")
+        //const { router } = this.context;
+        if (getEmail()!="") {
             Router.transitionTo('importForm');
-        else
+            //router.push('/importForm');
+        }else {
             Router.transitionTo('login');
+            //router.push('/login');
+        }
     },
 
-    goToCreateFormPage:function(event){
+    goToCreateFormPage:function(event) {
         event.preventDefault();
-        if (getEmail()!="")
+        //const { router } = this.context;
+        if (getEmail() != ""){
             Router.transitionTo('createForm');
-        else
+            //router.push('/createtForm');
+        }else{
             Router.transitionTo('login');
+            //router.push('/login');
+        }
     },
 
     render() {

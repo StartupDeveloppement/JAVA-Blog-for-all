@@ -34,6 +34,8 @@ var Actualities = React.createClass({
     }
 });
 
+//module.exports = Actualities;
+
 module.exports = {
  enter: function() {
          ReactDom.render(<Actualities />, document.getElementById('app'));

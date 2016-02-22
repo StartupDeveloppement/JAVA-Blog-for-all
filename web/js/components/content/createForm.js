@@ -6,8 +6,18 @@ var CommonNavBar = require('../_common/commonNavBar.js');
 var CommonImageCropper = require('../_common/commonImageCropper.js');
 var CommonFooter = require('../_common/commonFooter.js');
 
+import { Navigation } from 'react-router';
+
+
 
 var CreateForm = React.createClass({
+
+    mixins: [Navigation],
+
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
+
 
     getInitialState() {
         return {
@@ -19,6 +29,10 @@ var CreateForm = React.createClass({
     handleClick:function(event){
         event.preventDefault();
         //AuthenticationActions.authenticate(this.state.email,this.state.password);
+        /*
+         const { router } = this.context;
+         router.push('/createContent');
+         */
         Router.transitionTo('createContent');
     },
     _onChangeTitle:function(e){
@@ -88,6 +102,9 @@ var CreateForm = React.createClass({
         )
     }
 });
+
+
+//module.exports = CreateForm;
 
 module.exports = {
     enter: function() {

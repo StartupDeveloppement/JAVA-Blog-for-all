@@ -5,6 +5,8 @@ var base64 = require('base-64');
 var utf8 = require('utf8');
 var Input = require('react-bootstrap').Input;
 
+import { Navigation } from 'react-router';
+
 var SearchActions = require('../../actions/searchActions.js');
 var SearchStore = require('../../stores/searchStore.js');
 var ModalAddContent = require('../content/modalAddContent.js');
@@ -52,7 +54,11 @@ function deleteAllCookies() {
 
 var CommonNavBar = React.createClass({
 
-    mixins: [Reflux.connect(SearchStore)],
+    mixins: [Reflux.connect(SearchStore),Navigation],
+
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
 
     getInitialState: function (){
 
@@ -68,6 +74,8 @@ var CommonNavBar = React.createClass({
 
     logout: function () {
         deleteAllCookies();
+        //const { router } = this.context;
+        //router.push('/homepage');
         Router.transitionTo('homepage');
     },
 
@@ -148,6 +156,66 @@ var CommonNavBar = React.createClass({
 });
 
 module.exports = CommonNavBar;
+
+/*
+
+<div className="navbar navbar-default navbar-fixed-top commonBoxShadowNavbar">
+    <div className="container">
+
+        <div className="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" className="navbar-toggle" >
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+            </button>
+                <a className="navbar-brand"><Link to='/homepage' >Blog Project </Link></a>
+        </div>
+
+        <div id="navbarCollapse" className="collapse navbar-collapse">
+            {getEmail()!=""
+                ?
+                <ul className="nav navbar-nav">
+                    <li className="navbar-left"><a><Link to='/homepage'>Actualities</Link></a></li>
+                    <li className="navbar-left"><a href="#">Projects</a></li>
+                    <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
+                </ul>
+                :
+                <ul className="nav navbar-nav">
+                    <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
+                </ul>
+
+            }
+
+            <ModalAddContent ref="modalAddContent" />
+            <form role="search" className="navbar-form navbar-right" onSubmit={this.handleSearch}>
+                <div className="form-group">
+                    <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" value={this.state.searchValue} onChange={this._onChangeSearchValue} />
+                </div>
+            </form>
+            {getEmail()!=""
+                ?
+                <ul className="nav navbar-nav navbar-right">
+                    <li className="dropdown">
+                        <a data-toggle="dropdown" className="dropdown-toggle" href="#">{this.state.profileName}<b className="caret"></b></a>
+                        <ul role="menu" className="dropdown-menu">
+                            <li><a><Link to='/profile'>Profile</Link></a></li>
+                            <li><a><Link to='/parameters'>Parameters</Link></a></li>
+                            <li className="divider"></li>
+                            <li><a className="commonMousePointer" onClick={this.logout}>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                :
+                null
+            }
+
+        </div>
+    </div>
+
+</div>
+
+*/
 
 /*
  <div className="row commonUnderlineNavbar">

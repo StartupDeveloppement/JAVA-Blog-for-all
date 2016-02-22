@@ -181,6 +181,8 @@ var Parameters = React.createClass({
 });
 
 
+//module.exports = Parameters;
+
 module.exports = {
     enter: function() {
         ReactDom.render(<Parameters />, document.getElementById('app'));

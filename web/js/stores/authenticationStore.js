@@ -1,9 +1,13 @@
 var Reflux = require('reflux');
+var React = require('react');
 var Router = require('../router.js');
 var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 var AuthenticationActions = require('../actions/authenticationActions.js');
+import { Link } from 'react-router';
+import { Navigation } from 'react-router';
+
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -29,8 +33,14 @@ function getEmail() {
 
 var AuthenticationStore = Reflux.createStore({
     listenables: AuthenticationActions,
+    //mixins: [ Navigation ],
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     onCheckAuthentication: function(){
         if (getEmail()!="")
+            /*const { router } = this.context;
+            router.push('/actualities');*/
             Router.transitionTo('actualities');
             /*$.ajax({
                 url: 'http://localhost:8080/rest/user/checkauthentication',
@@ -72,6 +82,8 @@ var AuthenticationStore = Reflux.createStore({
                     document.cookie = t['s'];
                     document.cookie = t['sp'];
                     Router.transitionTo('actualities');
+                    /*const { router } = this.context;
+                     router.push('/actualities');*/
                 }else{
                     console.log("User Authentication KO");
                     console.log(data);
