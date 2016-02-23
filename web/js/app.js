@@ -6,6 +6,7 @@ var State = require('abyssa').State;
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
+//import { Router, Route} from 'react-router';
 import { useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 // useRouterHistory creates a composable higher-order function
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         /*ReactDom.render((
             <Router history={appHistory}>
                 <Route path="/" component={Actualities} />
+                <Route path="/actualities" component={Actualities} />
                 <Route path="/profile" component={Profile}/>
                 <Route path="/parameters" component={Parameters}/>
                 <Route path="/help" component={Help}/>
@@ -85,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         /*ReactDom.render((
             <Router history={appHistory}>
                 <Route path="/" component={Homepage} />
+                <Route path="/actualities" component={Actualities} />
                 <Route path="/profile" component={Profile}/>
                 <Route path="/parameters" component={Parameters}/>
                 <Route path="/help" component={Help}/>
