@@ -131,9 +131,12 @@ var UserProfile = React.createClass({
             };
 
             /*const styles = {
-                styleBackground: {backgroundImage: 'url("./images/homepage/homepage-background1.jpg")'}
+                styleBackground: {background: 'filter(url('+imgBlur+'), blur(5px))'}
             };*/
 
+            /*
+             <div className="commonOverlay userProfileOverlayBanner"></div>
+             */
 
             return (
             <div>
@@ -141,8 +144,8 @@ var UserProfile = React.createClass({
                 <div className="commonContainerNavBar">
                     {
                         p ?
-                            <div className="row userProfileBanner" style={styles.styleBackground}>
-                                <div className="commonOverlay userProfileOverlayBanner"></div>
+                            <div className="row userProfileBanner" >
+                                <div className="commonOverlay userProfileBlur" style={styles.styleBackground}></div>
                                 <img className="userProfilePicture img-circle" src={p['profilePicture']}/>
                                 <div className="userProfileInfo">
                                     <h3 className="commonColorWhite">{p['profileName']}</h3>

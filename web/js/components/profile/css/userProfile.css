@@ -4,6 +4,7 @@
     padding-top: 7rem;
     padding-left: 8rem;
     position: relative;
+    /*filter: blur(20%);*/
     /*position: fixed;*/
     /*left: 0;
     right: 0;
@@ -21,10 +22,14 @@
     /*transform: scale(1.6);*/
 }
 
-.userProfileOverlayBanner{
+.userProfileBlur{
     /*position:absolute;*/
-    background-color: black;
-    opacity: 0.2;
+    /*background-color: black;
+    opacity: 0.2;*/
+    -webkit-filter: blur(80px) grayscale(10%) contrast(50%) brightness(150%);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
 
 
