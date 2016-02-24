@@ -1,5 +1,4 @@
 var Reflux = require('reflux');
-var Router = require('../router.js');
 var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
@@ -31,7 +30,6 @@ var UserProfileStore = Reflux.createStore({
                     //userProfile = [];
                     userProfile = data;
                     this.trigger({userProfile: userProfile});
-                    //Router.transitionTo('userProfile/'+idProfile);
                 }else{
                     console.log("userProfile KO");
                     console.log(data);

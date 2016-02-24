@@ -1,7 +1,4 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-
 
 var ContentRight = React.createClass({
     render: function () {

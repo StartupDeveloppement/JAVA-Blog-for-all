@@ -1,12 +1,8 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 
 
 var Parameters = React.createClass({
-
 
     handleAccount: function (){
         alert('account clicked');
@@ -181,14 +177,4 @@ var Parameters = React.createClass({
 });
 
 
-//module.exports = Parameters;
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<Parameters />, document.getElementById('app'));
-        console.log('parameters entered');
-    },
-    exit: function() {
-        console.log('parameters exited');
-    }
-};
+module.exports = Parameters;

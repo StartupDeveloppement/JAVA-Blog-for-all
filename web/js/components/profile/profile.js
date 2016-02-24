@@ -1,7 +1,4 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var CommonImageCropper = require('../_common/commonImageCropper.js');
 
@@ -225,14 +222,4 @@ var Profile = React.createClass({
     }
 });
 
-//module.exports = Profile;
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<Profile />, document.getElementById('app'));
-        console.log('profile entered');
-    },
-    exit: function() {
-        console.log('profile exited');
-    }
-};
+module.exports = Profile;

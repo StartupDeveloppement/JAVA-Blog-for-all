@@ -1,7 +1,6 @@
 var React = require('react');
 var Reflux = require('reflux');
 var Modal = require('react-bootstrap').Modal;
-var Router = require('../../router.js');
 
 var AuthenticationActions = require('../../actions/authenticationActions.js');
 var AuthenticationStore = require('../../stores/authenticationStore.js');

@@ -1,7 +1,4 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var CommonFooter = require('../_common/commonFooter.js');
 var CommonImageCropper = require('../_common/commonImageCropper.js');
@@ -94,14 +91,4 @@ var ImportForm = React.createClass({
     }
 });
 
-//module.exports = ImportForm;
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<ImportForm />, document.getElementById('app'));
-        console.log('Import Form entered');
-    },
-    exit: function() {
-        console.log('Import Form exited');
-    }
-};
+module.exports = ImportForm;

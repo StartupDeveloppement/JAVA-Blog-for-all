@@ -1,5 +1,4 @@
 var Reflux = require('reflux');
-var Router = require('../router.js');
 var $ = require('jquery');
 var ResultsActions = require('../actions/resultsActions.js');
 

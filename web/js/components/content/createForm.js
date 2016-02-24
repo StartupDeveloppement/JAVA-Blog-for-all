@@ -1,7 +1,4 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var CommonImageCropper = require('../_common/commonImageCropper.js');
 var CommonFooter = require('../_common/commonFooter.js');
@@ -29,11 +26,8 @@ var CreateForm = React.createClass({
     handleClick:function(event){
         event.preventDefault();
         //AuthenticationActions.authenticate(this.state.email,this.state.password);
-        /*
          const { router } = this.context;
          router.push('/createContent');
-         */
-        Router.transitionTo('createContent');
     },
     _onChangeTitle:function(e){
         this.setState({title: e.target.value});
@@ -104,14 +98,4 @@ var CreateForm = React.createClass({
 });
 
 
-//module.exports = CreateForm;
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<CreateForm />, document.getElementById('app'));
-        console.log('Create Form entered');
-    },
-    exit: function() {
-        console.log('Create Form exited');
-    }
-};
+module.exports = CreateForm;

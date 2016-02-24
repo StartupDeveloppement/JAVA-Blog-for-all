@@ -1,7 +1,5 @@
 var React = require('react');
-var ReactDom = require('react-dom');
 var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var ResultThumbnailGroup = require('../_common/resultThumbnailGroup.js');
 
@@ -109,14 +107,4 @@ var Search = React.createClass({
 });
 
 
-//module.exports = Search;
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<Search />, document.getElementById('app'));
-        console.log('search entered');
-    },
-    exit: function() {
-        console.log('search exited');
-    }
-};
+module.exports = Search;

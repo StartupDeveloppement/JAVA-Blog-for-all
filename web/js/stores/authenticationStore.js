@@ -1,12 +1,16 @@
 var Reflux = require('reflux');
 var React = require('react');
-var Router = require('../router.js');
 var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 var AuthenticationActions = require('../actions/authenticationActions.js');
 import { Link } from 'react-router';
 //import { Navigation } from 'react-router';
+
+import { useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
+// useRouterHistory creates a composable higher-order function
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 
 function getCookie(cname) {
@@ -39,9 +43,8 @@ var AuthenticationStore = Reflux.createStore({
     },
     onCheckAuthentication: function(){
         if (getEmail()!="")
-            /*const { router } = this.context;
-            router.push('/actualities');*/
-            Router.transitionTo('actualities');
+            appHistory.push('/actualities');
+
             /*$.ajax({
                 url: 'http://localhost:8080/rest/user/checkauthentication',
                 type: 'POST',
@@ -54,7 +57,7 @@ var AuthenticationStore = Reflux.createStore({
                     var t = JSON.parse(strJSON);
                     if (t['authenticate']==true)
                         //alert(getEmail()+ " is authenticated YESSS");
-                        Router.transitionTo('actualities');
+                        appHistory.push('/actualities');
                 }
             })*/
     },
@@ -81,14 +84,11 @@ var AuthenticationStore = Reflux.createStore({
                     }
                     document.cookie = t['s'];
                     document.cookie = t['sp'];
-                    Router.transitionTo('actualities');
-                    /*const { router } = this.context;
-                     router.push('/actualities');*/
+                    appHistory.push('/actualities');
                 }else{
                     console.log("User Authentication KO");
                     console.log(data);
                 }
-
             }
         });
     }

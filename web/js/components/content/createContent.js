@@ -1,12 +1,8 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 
 
 var CreateContent = React.createClass({
-
 
     componentDidMount:function(){
         var editor = new MediumEditor('.editable', {
@@ -78,15 +74,4 @@ var CreateContent = React.createClass({
     }
 });
 
-//module.exports = CreateContent;
-
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<CreateContent />, document.getElementById('app'));
-        console.log('create content entered');
-    },
-    exit: function() {
-        console.log('create content exited');
-    }
-};
+module.exports = CreateContent;

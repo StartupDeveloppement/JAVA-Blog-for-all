@@ -1,7 +1,5 @@
 var React = require('react');
-var ReactDom = require('react-dom');
 var Reflux = require('reflux');
-var Router = require('../../router.js');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var ContentLeft = require('./subContent/contentLeft.js');
 var ContentRight = require('./subContent/contentRight.js');
@@ -13,12 +11,12 @@ var ContentStore = require('../../stores/contentStore.js');
 var Content = React.createClass({
     mixins: [Reflux.connect(ContentStore,"store")],
     getInitialState: function () {
-        /*
+
          console.log(this.props.params.id);
          ContentActions.getContent(this.props.params.id);
-        */
-        console.log(Router.current().params.id);
-        ContentActions.getContent(Router.current().params.id);
+    },
+    componentWillReceiveProps: function(nextProps) {
+        ContentActions.getContent(nextProps.params.id);
     },
     render: function () {
         if ( !this.state.store ) {
@@ -62,15 +60,4 @@ var Content = React.createClass({
 });
 
 
-//module.exports = Content;
-
-
-module.exports = {
-    enter: function() {
-        ReactDom.render(<Content />, document.getElementById('app'));
-        console.log('Content entered');
-    },
-    exit: function() {
-        console.log('Content exited');
-    }
-};
+module.exports = Content;

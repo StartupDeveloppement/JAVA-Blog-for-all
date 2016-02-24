@@ -1,7 +1,5 @@
 var React = require('react');
-var Reflux = require('reflux');
 var Modal = require('react-bootstrap').Modal;
-var Router = require('../../router.js');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
@@ -54,25 +52,21 @@ var ModalAddContent = React.createClass({
 
     goToImportFormPage:function(event){
         event.preventDefault();
-        //const { router } = this.context;
+        const { router } = this.context;
         if (getEmail()!="") {
-            Router.transitionTo('importForm');
-            //router.push('/importForm');
+            router.push('/importForm');
         }else {
-            Router.transitionTo('login');
-            //router.push('/login');
+            router.push('/login');
         }
     },
 
     goToCreateFormPage:function(event) {
         event.preventDefault();
-        //const { router } = this.context;
+        const { router } = this.context;
         if (getEmail() != ""){
-            Router.transitionTo('createForm');
-            //router.push('/createtForm');
+            router.push('/createForm');
         }else{
-            Router.transitionTo('login');
-            //router.push('/login');
+            router.push('/login');
         }
     },
 

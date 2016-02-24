@@ -1,5 +1,4 @@
 var Reflux = require('reflux');
-var Router = require('../router.js');
 var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
@@ -28,7 +27,6 @@ var ContentStore = Reflux.createStore({
                     console.log("Content OK");
                     content = data;
                     this.trigger({content: content});
-                    //Router.transitionTo('content/'+idContent);
                 }else{
                     console.log("Content KO");
                     console.log(data);

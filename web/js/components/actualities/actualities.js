@@ -1,7 +1,4 @@
 var React = require('react');
-var ReactDom = require('react-dom');
-var Router = require('../../router.js');
-var State = require('abyssa').State;
 
 var ActualitiesLeft = require('./actualitiesLeft.js');
 var ActualitiesRight = require('./actualitiesRight.js');
@@ -34,14 +31,5 @@ var Actualities = React.createClass({
     }
 });
 
-//module.exports = Actualities;
+module.exports = Actualities;
 
-module.exports = {
- enter: function() {
-         ReactDom.render(<Actualities />, document.getElementById('app'));
-         console.log('actualities entered');
-     },
- exit: function() {
-        console.log('actualities exited');
-     }
- };

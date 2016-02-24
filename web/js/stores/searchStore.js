@@ -1,10 +1,14 @@
 var Reflux = require('reflux');
 var React = require('react');
-var Router = require('../router.js');
 var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 var SearchActions = require('../actions/searchActions.js');
+
+import { useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
+// useRouterHistory creates a composable higher-order function
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 //import { Navigation } from 'react-router';
 import { Link } from 'react-router';
@@ -36,9 +40,7 @@ var SearchStore = Reflux.createStore({
                     console.log("Result OK");
                     searchResults = searchResults.concat(data);
                     this.trigger({searchResults: searchResults});
-                    Router.transitionTo('search');
-                     /*const { router } = this.context;
-                     router.push('/search');*/
+                    appHistory.push('/search');
 
                 }else{
                     console.log("Search Result KO");

@@ -1,12 +1,9 @@
 var React = require('react');
 var ReactDom = require('react-dom');
-var Reflux = require('reflux');
-var Router = require('./router.js');
-var State = require('abyssa').State;
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
-//import { Router, Route} from 'react-router';
+import { Router, Route} from 'react-router';
 import { useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 // useRouterHistory creates a composable higher-order function
@@ -48,26 +45,12 @@ function getEmail() {
     return "";
 }
 
-Router
-    .addState('homepage', State('', Homepage))
-    .addState('actualities', State('actualities', Actualities))
-    .addState('profile', State('profile', Profile))
-    .addState('parameters', State('parameters', Parameters))
-    .addState('help', State('help', Help))
-    .addState('search', State('search', Search))
-    .addState('login', State('login', Login))
-    .addState('importForm', State('importForm', ImportForm))
-    .addState('createForm', State('createForm', CreateForm))
-    .addState('createContent', State('createContent', CreateContent))
-    .addState('content',State('content/:id', Content))
-    .addState('userProfile',State('userProfile/:id/:sectionName', UserProfile));
-
 document.addEventListener("DOMContentLoaded", function(event) {
     if (getEmail()!="") {
-        Router.init('actualities');
-        /*ReactDom.render((
+        ReactDom.render((
             <Router history={appHistory}>
                 <Route path="/" component={Actualities} />
+                <Route path="/homepage" component={Homepage} />
                 <Route path="/actualities" component={Actualities} />
                 <Route path="/profile" component={Profile}/>
                 <Route path="/parameters" component={Parameters}/>
@@ -80,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <Route path="/content/:id" component={Content}/>
                 <Route path="/userProfile/:id/:sectionName" component={UserProfile}/>
             </Router>
-        ), document.getElementById('app'));*/
+        ), document.getElementById('app'));
 
     }else {
-        Router.init('homepage');
-        /*ReactDom.render((
+        ReactDom.render((
             <Router history={appHistory}>
                 <Route path="/" component={Homepage} />
+                <Route path="/homepage" component={Homepage} />
                 <Route path="/actualities" component={Actualities} />
                 <Route path="/profile" component={Profile}/>
                 <Route path="/parameters" component={Parameters}/>
@@ -99,6 +82,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <Route path="/content/:id" component={Content}/>
                 <Route path="/userProfile/:id/:sectionName" component={UserProfile}/>
             </Router>
-        ), document.getElementById('app'));*/
+        ), document.getElementById('app'));
     }
 });

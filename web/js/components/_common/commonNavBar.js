@@ -1,6 +1,5 @@
 var React = require('react');
 var Reflux = require('reflux');
-var Router = require('../../router.js');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 var Input = require('react-bootstrap').Input;
@@ -75,9 +74,9 @@ var CommonNavBar = React.createClass({
 
     logout: function () {
         deleteAllCookies();
-        //const { router } = this.context;
-        //router.push('/homepage');
-        Router.transitionTo('homepage');
+        const { router } = this.context;
+        router.push('/homepage');
+        //Router.transitionTo('homepage');
     },
 
     openModal:function(){
@@ -107,14 +106,14 @@ var CommonNavBar = React.createClass({
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a href={Router.link('homepage')} className="navbar-brand">Blog Project</a>
+                        <Link className="navbar-brand" to={"/homepage"} >Blog Project </Link>
                     </div>
 
                     <div id="navbarCollapse" className="collapse navbar-collapse">
                         {getEmail()!=""
                             ?
                             <ul className="nav navbar-nav">
-                                <li className="navbar-left"><a href={Router.link('actualities')}>Actualities</a></li>
+                                <li className="navbar-left"><Link to="/actualities">Actualities</Link></li>
                                 <li className="navbar-left"><a href="#">Projects</a></li>
                                 <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
                             </ul>
@@ -123,9 +122,9 @@ var CommonNavBar = React.createClass({
                                 <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
                             </ul>
 
-                            }
+                        }
 
-                            <ModalAddContent ref="modalAddContent" />
+                        <ModalAddContent ref="modalAddContent" />
                         <form role="search" className="navbar-form navbar-right" onSubmit={this.handleSearch}>
                             <div className="form-group">
                                 <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" value={this.state.searchValue} onChange={this._onChangeSearchValue} />
@@ -137,8 +136,8 @@ var CommonNavBar = React.createClass({
                                 <li className="dropdown">
                                     <a data-toggle="dropdown" className="dropdown-toggle" href="#">{this.state.profileName}<b className="caret"></b></a>
                                     <ul role="menu" className="dropdown-menu">
-                                        <li><a href={Router.link('profile')} >Profile</a></li>
-                                        <li><a href={Router.link('parameters')}>Parameters</a></li>
+                                        <li><Link to='/profile'>Profile</Link></li>
+                                        <li><Link to='/parameters'>Parameters</Link></li>
                                         <li className="divider"></li>
                                         <li><a className="commonMousePointer" onClick={this.logout}>Logout</a></li>
                                     </ul>
@@ -158,65 +157,6 @@ var CommonNavBar = React.createClass({
 
 module.exports = CommonNavBar;
 
-/*
-
-<div className="navbar navbar-default navbar-fixed-top commonBoxShadowNavbar">
-    <div className="container">
-
-        <div className="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" className="navbar-toggle" >
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-            </button>
-                <a className="navbar-brand"><Link to='/homepage' >Blog Project </Link></a>
-        </div>
-
-        <div id="navbarCollapse" className="collapse navbar-collapse">
-            {getEmail()!=""
-                ?
-                <ul className="nav navbar-nav">
-                    <li className="navbar-left"><a><Link to='/homepage'>Actualities</Link></a></li>
-                    <li className="navbar-left"><a href="#">Projects</a></li>
-                    <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
-                </ul>
-                :
-                <ul className="nav navbar-nav">
-                    <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
-                </ul>
-
-            }
-
-            <ModalAddContent ref="modalAddContent" />
-            <form role="search" className="navbar-form navbar-right" onSubmit={this.handleSearch}>
-                <div className="form-group">
-                    <Input type="text" bsSize="small" buttonAfter={innerButton} placeholder="Search" value={this.state.searchValue} onChange={this._onChangeSearchValue} />
-                </div>
-            </form>
-            {getEmail()!=""
-                ?
-                <ul className="nav navbar-nav navbar-right">
-                    <li className="dropdown">
-                        <a data-toggle="dropdown" className="dropdown-toggle" href="#">{this.state.profileName}<b className="caret"></b></a>
-                        <ul role="menu" className="dropdown-menu">
-                            <li><a><Link to='/profile'>Profile</Link></a></li>
-                            <li><a><Link to='/parameters'>Parameters</Link></a></li>
-                            <li className="divider"></li>
-                            <li><a className="commonMousePointer" onClick={this.logout}>Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                :
-                null
-            }
-
-        </div>
-    </div>
-
-</div>
-
-*/
 
 /*
  <div className="row commonUnderlineNavbar">

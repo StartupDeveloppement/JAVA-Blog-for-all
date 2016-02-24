@@ -48,8 +48,6 @@ var HomepageRight = React.createClass({
             </div>
             );
     }
-
 });
-
 
 module.exports = HomepageRight;
