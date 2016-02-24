@@ -17,10 +17,7 @@ var searchResults = [];
 
 var SearchStore = Reflux.createStore({
     listenables: SearchActions,
-    //mixins: [ Navigation ],
-    contextTypes: {
-        router: React.PropTypes.object.isRequired
-    },
+
     getInitialState : function () {
             return{
                 searchResults : searchResults
@@ -40,7 +37,7 @@ var SearchStore = Reflux.createStore({
                     console.log("Result OK");
                     searchResults = searchResults.concat(data);
                     this.trigger({searchResults: searchResults});
-                    appHistory.push('/search');
+                    appHistory.push('/search/'+searchRequest);
 
                 }else{
                     console.log("Search Result KO");

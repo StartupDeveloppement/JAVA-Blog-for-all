@@ -40,6 +40,7 @@ var Content = React.createClass({
                                         profilePicture={this.state.store.content.profilePicture}
                                         profileName={this.state.store.content.profileName}
                                         articleText={this.state.store.content.articleText}
+                                        userEmail={this.state.store.content.userEmail}
                                     />
                                     :
                                     <div>

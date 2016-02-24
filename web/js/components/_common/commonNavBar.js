@@ -86,6 +86,8 @@ var CommonNavBar = React.createClass({
     handleSearch:function(event){
         event.preventDefault();
         SearchActions.searchResults(this.state.searchValue);
+        /*const { router } = this.context;
+        router.push('/search/'+this.state.searchValue);*/
         this.setState({searchValue: ''});
     },
 

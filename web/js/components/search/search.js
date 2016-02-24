@@ -10,43 +10,46 @@ var SearchResultsStore = require('../../stores/searchStore.js');
 var Search = React.createClass({
         mixins: [Reflux.connect(SearchResultsStore, "store")],
         getInitialState: function (){
-            return {
+            return ({}
                 /*res: SearchResultsStore.searchResults*/
-            };
+                //SearchResultsAction.searchResults(this.props.params.searchRequest)
+            );
         },
-
+        componentWillReceiveProps: function(nextProps) {
+            console.log(nextProps.params.searchRequest);
+            SearchResultsAction.searchResults(nextProps.params.searchRequest);
+        },
         render: function () {
-
             var strJSON = JSON.stringify(this.state.store.searchResults);
             var t = JSON.parse(strJSON);
-            console.log(t[0]['highRollers']);
+            /*console.log(t[0]['highRollers']);
             console.log(t[0]['onTheWay']);
-            console.log(t[0]['newbies']);
+            console.log(t[0]['newbies']);*/
 
-
-            if ( !this.state.store ) {
+            //if ( !this.state.store ) {
+                if (this.state.store['searchResults']==[]){
                 // Note that you can return false it you want nothing to be put in the dom
                 // This is also your chance to render a spinner or something...
-                return (<div>
-                    <CommonNavBar />
-                    <div className="commonContainerNavBar">
-                        <br />
-                        <div className="row thumbnailCategory">
-                            <div className="container col-sm-3 col-md-3">
-                                <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
+                    return (<div>
+                        <CommonNavBar />
+                        <div className="commonContainerNavBar">
+                            <br />
+                            <div className="row thumbnailCategory">
+                                <div className="container col-sm-3 col-md-3">
+                                    <h4 className="textThumbnailCategory">HIGH ROLLERS</h4>
+                                </div>
+                                <div className="container col-sm-3 col-md-3">
+                                    <h4 className="textThumbnailCategory">ON THE WAYS</h4>
+                                </div>
+                                <div className="container col-sm-3 col-md-3">
+                                    <h4 className="textThumbnailCategory">NEWBIES</h4>
+                                </div>
                             </div>
-                            <div className="container col-sm-3 col-md-3">
-                                <h4 className="textThumbnailCategory">ON THE WAYS</h4>
-                            </div>
-                            <div className="container col-sm-3 col-md-3">
-                                <h4 className="textThumbnailCategory">NEWBIES</h4>
-                            </div>
+                            <br />
+                            <img src="./images/homepage/loading.gif" alt="loading" />
                         </div>
-                        <br />
-                        <img src="./images/homepage/loading.gif" alt="loading" />
-                    </div>
-                    </div>)
-            }
+                        </div>)
+                }
 
             return (
                 <div>

@@ -38,83 +38,85 @@ var UserProfile = React.createClass({
         if (count ==2)
             return (
                 <div className="userProfileSection">
-                    <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
+                    <Link className="col-md-offset-5 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
                     <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
                 </div>
         )
         else if (count ==3)
-        return (
-        <div className="userProfileSection">
-            <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
-        </div>
-        )
+            return (
+                <div className="userProfileSection">
+                    <Link className="col-md-offset-5 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link>
+                </div>
+            )
         else if (count ==4)
-        return (
-        <div className="userProfileSection">
-            <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
-        </div>
-        )
+            return (
+                <div className="userProfileSection">
+                    <Link className="col-md-offset-4 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link>
+                </div>
+            )
         else if (count ==5)
-        return (
-        <div className="userProfileSection">
-            <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
-        </div>
-        )
+            return (
+                <div className="userProfileSection">
+                    <Link className="col-md-offset-4 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link>
+                </div>
+            )
         else if (count ==6)
-        return (
-        <div className="userProfileSection">
-            <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/fashion'}>fashion</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
-        </div>
-        )
+            return (
+                <div className="userProfileSection">
+                    <Link className="col-md-offset-3 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/fashion'}>fashion</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link>
+                </div>
+            )
         else if (count ==7)
-        return (
-        <div className="userProfileSection">
-            <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/fashion'}>fashion</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/football'}>football</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
-        </div>
-        )
-
+            return (
+                <div className="userProfileSection">
+                    <Link className="col-md-offset-3 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/fashion'}>fashion</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/football'}>football</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link>
+                </div>
+            )
         else if (count ==8)
-        return (
-        <div className="userProfileSection">
-            <div className="col-md-offset-2 col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/main'}>main</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/fashion'}>fashion</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/football'}>football</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/comics'}>comics</Link></div>
-            <div className="col-md-1"><Link to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link></div>
-        </div>
-        )
+            return (
+                <div className="userProfileSection">
+                    <Link className="col-md-offset-2 col-md-1" to={'/userProfile/'+this.props.params.id+'/main'}>main</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/cinema'}>cinema</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/videos games'}>videos games</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/mangas'}>mangas</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/fashion'}>fashion</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/football'}>football</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/comics'}>comics</Link>
+                    <Link className="col-md-1" to={'/userProfile/'+this.props.params.id+'/my projects'}>my projects</Link>
+                </div>
+            )
         },
         render: function () {
 
+
             if ( this.state.store['sectionContents']==[] ) {
-            // Note that you can return false it you want nothing to be put in the dom
-            // This is also your chance to render a spinner or something....
-            return (
-            <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)
-        }
+                // Note that you can return false it you want nothing to be put in the dom
+                // This is also your chance to render a spinner or something....
+                return (
+                <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)
+            }
+
+
 
             console.log("userProfileInsideRender");
             console.log(this.state.store['sectionContents']);
@@ -123,6 +125,15 @@ var UserProfile = React.createClass({
             var p = this.state.store['sectionContents']['userProfileResponseDto'];
             var a = this.state.store['sectionContents']['articlesResponseDto'];
 
+            var imgBlur = "http://ecx.images-amazon.com/images/I/51NKIM5LzzL.jpg"; //p["profilePicture"];
+            const styles = {
+                styleBackground: {backgroundImage: 'url('+imgBlur+')'}
+            };
+
+            /*const styles = {
+                styleBackground: {backgroundImage: 'url("./images/homepage/homepage-background1.jpg")'}
+            };*/
+
 
             return (
             <div>
@@ -130,7 +141,8 @@ var UserProfile = React.createClass({
                 <div className="commonContainerNavBar">
                     {
                         p ?
-                            <div className="row userProfileBanner">
+                            <div className="row userProfileBanner" style={styles.styleBackground}>
+                                <div className="commonOverlay userProfileOverlayBanner"></div>
                                 <img className="userProfilePicture img-circle" src={p['profilePicture']}/>
                                 <div className="userProfileInfo">
                                     <h3 className="commonColorWhite">{p['profileName']}</h3>

@@ -16,6 +16,10 @@ var AuthenticationActions = require('../../actions/authenticationActions.js');
 
 var Main = React.createClass({
     //mixins: [Reflux.connect(AuthenticationStore)],
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
+
     getInitialState: function () {
         AuthenticationActions.checkAuthentication();
         return {
@@ -45,6 +49,8 @@ var Main = React.createClass({
     handleSearch:function(event){
         event.preventDefault();
         SearchActions.searchResults(this.state.searchValue);
+        /*const { router } = this.context;
+        router.push('/search/'+this.state.searchValue);*/
         this.setState({searchValue: ''});
     },
 

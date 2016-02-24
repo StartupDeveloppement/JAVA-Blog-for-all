@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <Route path="/parameters" component={Parameters}/>
                 <Route path="/help" component={Help}/>
                 <Route path="/search" component={Search}/>
+                <Route path="/search/:searchRequest" component={Search}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/importForm" component={ImportForm}/>
                 <Route path="/createForm" component={CreateForm}/>
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <Route path="/parameters" component={Parameters}/>
                 <Route path="/help" component={Help}/>
                 <Route path="/search" component={Search}/>
+                <Route path="/search/:searchRequest" component={Search}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/importForm" component={ImportForm}/>
                 <Route path="/createForm" component={CreateForm}/>
