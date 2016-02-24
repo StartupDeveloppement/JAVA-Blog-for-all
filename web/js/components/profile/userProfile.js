@@ -129,7 +129,7 @@ var UserProfile = React.createClass({
             var imgBlur;
             var styles;
             if (p!=null && p!= undefined) {
-                imgBlur = p['profilePicture']; //"http://ecx.images-amazon.com/images/I/51NKIM5LzzL.jpg";
+                imgBlur = p['profilePicture'];
                 styles = {
                     styleBackground: {backgroundImage: 'url('+imgBlur+')'}
                 };
