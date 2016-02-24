@@ -12,6 +12,7 @@ const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 var Homepage = require('./components/homepage/homepage.js');
 var Actualities = require('./components/actualities/actualities.js');
 var Profile = require('./components/profile/profile.js');
+var EditProfile = require('./components/profile/editProfile.js');
 var Parameters = require('./components/parameters/parameters.js');
 var Help = require('./components/help/help.js');
 var Search = require('./components/search/search.js');
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <Route path="/homepage" component={Homepage} />
                 <Route path="/actualities" component={Actualities} />
                 <Route path="/profile" component={Profile}/>
+                <Route path="/editprofile" component={EditProfile}/>
                 <Route path="/parameters" component={Parameters}/>
                 <Route path="/help" component={Help}/>
                 <Route path="/search" component={Search}/>
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <Route path="/homepage" component={Homepage} />
                 <Route path="/actualities" component={Actualities} />
                 <Route path="/profile" component={Profile}/>
+                <Route path="/editprofile" component={EditProfile}/>
                 <Route path="/parameters" component={Parameters}/>
                 <Route path="/help" component={Help}/>
                 <Route path="/search" component={Search}/>

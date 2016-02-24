@@ -18,6 +18,13 @@
     background-position: center;
 }
 
+.userProfileEdit{
+    position: relative;
+    /*display: inline-block;*/
+    margin-right: 10%;
+    padding-left: 1rem;
+    z-index:1;
+}
 
 .userProfilePicture{
     max-width: 8rem;
@@ -35,7 +42,6 @@
     padding-left: 1rem;
     z-index:1;
 }
-
 
 .userProfileSectionTitle{
     position: relative;

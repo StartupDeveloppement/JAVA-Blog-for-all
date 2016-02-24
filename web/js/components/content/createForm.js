@@ -6,7 +6,6 @@ var CommonFooter = require('../_common/commonFooter.js');
 import { Navigation } from 'react-router';
 
 
-
 var CreateForm = React.createClass({
 
     mixins: [Navigation],

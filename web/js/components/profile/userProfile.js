@@ -3,14 +3,40 @@ var Reflux = require('reflux');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var ResultImageGroup = require('../_common/resultImageGroup.js');
 import { Link } from 'react-router';
+var base64 = require('base-64');
+var utf8 = require('utf8');
 
 var UserProfileActions = require('../../actions/userProfileActions.js');
 var UserProfileStore = require('../../stores/userProfileStore.js');
 
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+function getEmail() {
+    var s=getCookie("s");
+    if (s!="") {
+        var bytes = base64.decode(s);
+        var text = utf8.decode(bytes);
+        var email = text.split(":")[0];
+        return email;
+    }
+    return "";
+}
+
 var UserProfile = React.createClass({
     mixins: [Reflux.connect(UserProfileStore,"store")],
-
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     getInitialState: function () {
         console.log("userProfile");
         console.log(this.props.params.id);
@@ -27,6 +53,10 @@ var UserProfile = React.createClass({
     },
     changePage : function (sectionName) {
         UserProfileActions.getSectionContents(this.state.idCurrentProfile,sectionName);
+    },
+    handleClick : function () {
+        const { router } = this.context;
+        router.push('/editprofile');
     },
     displaySections: function () {
         var sectionName = ['main','fashion','mangas','video games','cinema','my projects'];
@@ -116,8 +146,6 @@ var UserProfile = React.createClass({
                 <div><img src="./images/homepage/loading.gif" alt="loading" /></div>)
             }
 
-
-
             console.log("userProfileInsideRender");
             console.log(this.state.store['sectionContents']);
             console.log(this.state.store['sectionContents']['userProfileResponseDto']);
@@ -125,23 +153,20 @@ var UserProfile = React.createClass({
             var p = this.state.store['sectionContents']['userProfileResponseDto'];
             var a = this.state.store['sectionContents']['articlesResponseDto'];
 
-
             var imgBlur;
+            var imgBanner;
             var styles;
+            var styles2;
             if (p!=null && p!= undefined) {
                 imgBlur = p['profilePicture'];
                 styles = {
                     styleBackground: {backgroundImage: 'url('+imgBlur+')'}
                 };
+                imgBanner = "https://upload.wikimedia.org/wikipedia/commons/9/90/Spiderman.JPG?uselang=fr" ; //p['bannerPicture'];
+                styles2 = {
+                    styleBackground: {backgroundImage: 'url('+imgBanner+')'}
+                };
             }
-
-            /*const styles = {
-                styleBackground: {background: 'filter(url('+imgBlur+'), blur(5px))'}
-            };*/
-
-            /*
-             <div className="commonOverlay userProfileOverlayBanner"></div>
-             */
 
             return (
             <div>
@@ -150,14 +175,27 @@ var UserProfile = React.createClass({
                     {
                         p ?
                             <div className="row userProfileBanner" >
-                                <div className="commonOverlay userProfileBlur" style={styles.styleBackground}></div>
+                                {
+                                    (p['bannerPicture']!=null && p['bannerPicture']!=undefined) ?
+                                        <div style={styles2.styleBackground}></div>
+                                        :
+                                        <div className="commonOverlay userProfileBlur" style={styles.styleBackground}></div>
+                                }
+                                {
+                                    getEmail()==this.props.params.id
+                                        ?
+                                        <form className="userProfileEdit" onSubmit={this.handleClick}>
+                                            <button type="submit" className="btn btn-default btn-sm pull-right">[ edit ]</button>
+                                        </form>
+                                        :
+                                        null
+                                }
                                 <img className="userProfilePicture img-circle" src={p['profilePicture']}/>
                                 <div className="userProfileInfo">
                                     <h3 className="commonColorWhite">{p['profileName']}</h3>
                                     <p className="commonColorWhite">{p['status']}</p>
                                     <p className="commonColorWhite">{p['universityName']}</p>
                                 </div>
-
                                 <h1 className="userProfileSectionTitle">{this.props.params.sectionName}</h1>
                                 {this.displaySections()}
                             </div>
@@ -173,8 +211,7 @@ var UserProfile = React.createClass({
             </div>
             )
         }
-
-        });
+});
 
 
 module.exports = UserProfile;

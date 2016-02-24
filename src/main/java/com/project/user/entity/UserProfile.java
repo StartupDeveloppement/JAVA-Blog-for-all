@@ -27,6 +27,7 @@ public class UserProfile implements java.io.Serializable {
     private String lastname;*/
     private String profileName;
     private String profilePicture;
+    private String bannerPicture;
     private String status;
     private String facebook;
     private String twitter;
@@ -60,6 +61,9 @@ public class UserProfile implements java.io.Serializable {
 
     public String getProfilePicture() {return profilePicture;}
     public void setProfilePicture(String profilePicture) {this.profilePicture = profilePicture;}
+
+    public String getBannerPicture() {return bannerPicture;}
+    public void setBannerPicture(String bannerPicture) {this.bannerPicture = bannerPicture;}
 
     public List<Article> getArticleList() {return articleList;}
     public void setArticleList(List<Article> articleList) {this.articleList = articleList;}

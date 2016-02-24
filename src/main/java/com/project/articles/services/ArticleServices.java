@@ -101,6 +101,7 @@ public class ArticleServices {
         UserProfileResponseDto userProfileResponseDto = new UserProfileResponseDto();
             userProfileResponseDto.setProfileName(userProfile.getProfileName());
             userProfileResponseDto.setProfilePicture(userProfile.getProfilePicture());
+            userProfileResponseDto.setBannerPicture(userProfile.getBannerPicture());
             userProfileResponseDto.setStatus(userProfile.getStatus());
             userProfileResponseDto.setUniversityName(userProfile.getUniversityName());
             userProfileResponseDto.setUniversityCity(userProfile.getUniversityCity());

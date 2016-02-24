@@ -72,6 +72,7 @@ public class TestDao {
         caroleProfile.setUser(carole);
         caroleProfile.setProfileName("Carole");
         caroleProfile.setProfilePicture("./images/test/profile-martinique.jpg");
+        caroleProfile.setBannerPicture("./images/test/banner-picture-example.jpg");
         caroleProfile.setUniversityName("Centrale Paris");
         caroleProfile.setUniversityCity("Paris");
         caroleProfile.setStatus("open to projects");
