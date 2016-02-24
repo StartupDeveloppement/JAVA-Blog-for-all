@@ -1,3 +1,22 @@
 .loginMargin{
     margin-top: 10rem;
 }
+
+.loginForm{
+    position: relative;
+    z-index:1;
+}
+
+.loginBlur{
+    -webkit-filter: blur(0px) grayscale(50%) contrast(100%) brightness(40%);
+    -o-filter: blur(0px) grayscale(50%) contrast(100%) brightness(40%);
+    -ms-filter: blur(70px); /* grayscale(50%) contrast(100%) brightness(40%);*/
+    filter: blur(0px) grayscale(50%) contrast(100%) brightness(40%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-position: center;*/
+}
+
+.loginContainerNavBar{
+    margin-top: 51px;
+}

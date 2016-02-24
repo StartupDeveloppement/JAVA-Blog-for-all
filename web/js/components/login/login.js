@@ -29,6 +29,9 @@ var Login = React.createClass({
     },
 
     render: function () {
+        const styles = {
+            styleBackground: {backgroundImage: 'url("./images/homepage/homepage-background1.jpg")'}
+        };
         return (
             <div>
                 <div className="navbar navbar-default navbar-fixed-top commonBoxShadowNavbar">
@@ -45,9 +48,10 @@ var Login = React.createClass({
                         </div>
                     </div>
                 </div>
-                <div className="commonContainerNavBar commonHeight">
-                    <div className="">
-                        <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile loginMargin">
+                <div className="loginContainerNavBar">
+                    <div className="commonOverlay loginBlur" style={styles.styleBackground}></div>
+                    <div className="loginForm">
+                        <div className="col-sm-4 col-sm-offset-4 container commonRadius commonForm formProfile loginMargin">
                             <h3>login</h3>
                             <form onSubmit={this.handleClick}>
                                 <div className="form-group">
@@ -61,11 +65,31 @@ var Login = React.createClass({
                         </div>
                     </div>
                 </div>
-                <CommonFooter />
             </div>
-
         )
     }
 });
 
 module.exports = Login;
+
+
+/*
+<div className="commonContainerNavBar commonHeight commonOverlay">
+    <div className="loginBlur"></div>
+    <div className="">
+        <div className="col-sm-6 col-sm-offset-3 container commonRadius commonForm formProfile loginMargin">
+            <h3>login</h3>
+            <form onSubmit={this.handleClick}>
+                <div className="form-group">
+                    <input id="signupEmail" className="form-control" type="email" placeholder="e-mail" value={this.state.email} onChange={this._onChangeEmail}  />
+                </div>
+                <div className="form-group">
+                    <input id="signupPassword" className="form-control" type="password" placeholder="password" value={this.state.password} onChange={this._onChangePassword} />
+                </div>
+                <button type="submit" className="btn btn-default">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+ <CommonFooter />
+*/
