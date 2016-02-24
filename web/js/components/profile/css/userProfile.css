@@ -1,35 +1,21 @@
 .userProfileBanner{
     min-height: 20rem;
-    /*background-color: #77B5C9;*/
     padding-top: 7rem;
     padding-left: 8rem;
     position: relative;
-    /*filter: blur(20%);*/
-    /*position: fixed;*/
-    /*left: 0;
-    right: 0;
-    z-index: 0;*/
-    /*margin-left: 20px;
-    margin-right: 20px;*/
-    /*position:relative;*/
-    /*-webkit-filter: blur(80px) grayscale(10%) contrast(50%) brightness(150%);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*background-position: center;*/
-    /*transform: scale(1.6);*/
 }
 
 .userProfileBlur{
     /*position:absolute;*/
     /*background-color: black;
     opacity: 0.2;*/
-    -webkit-filter: blur(80px) grayscale(10%) contrast(50%) brightness(150%);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(7px) grayscale(000%) contrast(70%) brightness(50%);
+    -o-filter: blur(7px) grayscale(000%) contrast(70%) brightness(50%);
+    -ms-filter: blur(5px); /*grayscale(0%) contrast(40%) brightness(90%);*/
+    filter: blur(7px) grayscale(000%) contrast(70%) brightness(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -40,17 +26,16 @@
     border: 0.15rem solid white;
     position: relative;
     z-index:1;
-    /*z-index:9999;*/
-
 }
+
 
 .userProfileInfo{
     position: relative;
     display: inline-block;
     padding-left: 1rem;
     z-index:1;
-    /*z-index:9999;*/
 }
+
 
 .userProfileSectionTitle{
     position: relative;
@@ -60,10 +45,8 @@
     font-size: 3rem;
     color:white;
     z-index:1;
-    /*z-index:9999;*/
 }
 
 .userProfileSection a{
     color:white;
-    /*z-index:9999;*/
 }

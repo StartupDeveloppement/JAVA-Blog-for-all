@@ -125,10 +125,15 @@ var UserProfile = React.createClass({
             var p = this.state.store['sectionContents']['userProfileResponseDto'];
             var a = this.state.store['sectionContents']['articlesResponseDto'];
 
-            var imgBlur = "http://ecx.images-amazon.com/images/I/51NKIM5LzzL.jpg"; //p["profilePicture"];
-            const styles = {
-                styleBackground: {backgroundImage: 'url('+imgBlur+')'}
-            };
+
+            var imgBlur;
+            var styles;
+            if (p!=null && p!= undefined) {
+                imgBlur = p['profilePicture']; //"http://ecx.images-amazon.com/images/I/51NKIM5LzzL.jpg";
+                styles = {
+                    styleBackground: {backgroundImage: 'url('+imgBlur+')'}
+                };
+            }
 
             /*const styles = {
                 styleBackground: {background: 'filter(url('+imgBlur+'), blur(5px))'}
