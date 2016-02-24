@@ -2,7 +2,6 @@ var React = require('react');
 var CommonNavBar = require('../_common/commonNavBar.js');
 var CommonImageCropper = require('../_common/commonImageCropper.js');
 
-
 var EditProfile = React.createClass({
 
     render: function () {
