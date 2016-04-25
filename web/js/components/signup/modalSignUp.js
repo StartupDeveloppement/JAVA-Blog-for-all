@@ -2,11 +2,11 @@ var React = require('react');
 var Reflux = require('reflux');
 var Modal = require('react-bootstrap').Modal;
 
-var AuthenticationActions = require('../../actions/authenticationActions.js');
-var AuthenticationStore = require('../../stores/authenticationStore.js');
+var AccountCreationActions = require('../../actions/accountCreationActions.js');
+var AccountCreationStore = require('../../stores/accountCreationStore.js');
 
 var ModalSignUp = React.createClass({
-    mixins: [Reflux.connect(AuthenticationStore)],
+    mixins: [Reflux.connect(AccountCreationStore)],
     getInitialState() {
         return {
             showModal: false,
@@ -24,7 +24,7 @@ var ModalSignUp = React.createClass({
 
     handleClick:function(event){
         event.preventDefault();
-        AuthenticationActions.authenticate(this.state.email,this.state.password);
+        AccountCreationActions.create(this.state.email,this.state.password);
         this.setState({email: ''});
         this.setState({password: ''});
     },
