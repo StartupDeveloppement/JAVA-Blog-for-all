@@ -24,7 +24,7 @@ var ModalSignUp = React.createClass({
 
     handleClick:function(event){
         event.preventDefault();
-        AccountCreationActions.create(this.state.email,this.state.password);
+        AccountCreationActions.createAccount(this.state.email,this.state.password);
         this.setState({email: ''});
         this.setState({password: ''});
     },

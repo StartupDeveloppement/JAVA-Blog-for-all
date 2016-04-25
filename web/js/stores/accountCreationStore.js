@@ -4,19 +4,21 @@ var $ = require('jquery');
 var base64 = require('base-64');
 var utf8 = require('utf8');
 
-/**/
-
-var UserCreationAction = require('../actions/accountCreationActions.js');
-
 import { Link } from 'react-router';
 import { useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
-var UserCreationStore = Reflux.createStore({
-    listennables: UserCreationAction,
+/**/
 
-    onCreate: function (email, password){
+var AccountCreationAction = require('../actions/accountCreationActions.js');
+
+
+
+var AccountCreationStore = Reflux.createStore({
+    listenables: AccountCreationAction,
+
+    onCreateAccount: function (email, password){
         $.ajax({
             url: 'http://localhost:8080/rest/user/create',
             type:'POST',
@@ -45,7 +47,7 @@ var UserCreationStore = Reflux.createStore({
                 }
             },
             error : function (){
-
+                console.log("User Creation ERROR");
             }
 
         })
@@ -53,4 +55,4 @@ var UserCreationStore = Reflux.createStore({
 
 });
 
-module.exports = UserCreationStore;
+module.exports = AccountCreationStore;

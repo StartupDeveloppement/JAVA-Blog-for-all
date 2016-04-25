@@ -1,7 +1,7 @@
 var Reflux = require('reflux');
 
-var AccountCreationAction = Reflux.createAction([
-    'create'
+var AccountCreationAction = Reflux.createActions([
+    'createAccount'
 ]);
 
 module.exports = AccountCreationAction;

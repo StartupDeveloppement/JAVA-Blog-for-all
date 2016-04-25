@@ -87,13 +87,16 @@ public class UserServices {
             newUserParameters.setUser(newUser);
 
         if (userAuthDao.create(newUser)){
-            userProfileDao.create(newUserProfile);
-            userParametersDao.create(newUserParameters);
             StringTokenizer st = new StringTokenizer(email,"@");
             String username = "";
             try{
                 username = st.nextToken();
+                newUserProfile.setProfileName(username);
             }catch(Exception e){e.printStackTrace();}
+
+            userProfileDao.create(newUserProfile);
+            userParametersDao.create(newUserParameters);
+
 
             String token = email + ":" + username + ":" + md5Hex(email + ":" + password + ":" + key);
             byte[] bytesToken = token.getBytes(StandardCharsets.UTF_8);
