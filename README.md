@@ -1,5 +1,5 @@
 # JAVA-Blog-for-all
-**[ J2EE | JPA (Hibernate) | ReactJS | MySQL ]**
+**[ J2EE | JPA (Hibernate) | ReactJS | MySQL | RestEasy ]**
 
 
 ## Requirements

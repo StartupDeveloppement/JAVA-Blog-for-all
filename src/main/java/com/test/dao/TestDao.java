@@ -38,10 +38,25 @@ public class TestDao {
             carole.setEmail("carole@carole.com");
             carole.setPassword("hello");
 
+        /*List<UserAuth> meganList = new ArrayList<UserAuth>();
+            meganList.add(helen);
+        List<UserAuth> helenList = new ArrayList<UserAuth>();
+            helenList.add(megan);
+        List<UserAuth> caroleList = new ArrayList<UserAuth>();
+            caroleList.add(helen);*/
+
+       /* megan.getFollowingList().add(helen);
+        helen.getFollowingList().add(megan);
+        carole.getFollowingList().add(megan);
+        carole.getFollowingList().add(helen);*/
+
+
         UserAuthDao userAuthDao = new UserAuthDaoImpl();
         boolean meganOk = userAuthDao.create(megan);
         boolean helenOk = userAuthDao.create(helen);
         boolean caroleOk = userAuthDao.create(carole);
+
+
 
         UserProfile meganProfile = new UserProfile();
             /*userProfile.setBirthday(new Date());
