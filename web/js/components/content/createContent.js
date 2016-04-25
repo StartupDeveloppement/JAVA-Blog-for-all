@@ -41,6 +41,11 @@ var CreateContent = React.createClass({
         });
     },
 
+    handleClickEditable: function(){
+        var content = document.getElementById('editableMediumContent')
+        console.log(content);
+    },
+
     render: function () {
 
         const styles = {
@@ -52,9 +57,9 @@ var CreateContent = React.createClass({
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
                     <br />
-                    <form onSubmit={this.handleClick}>
+                    <form onSubmit={this.handleClickEditable}>
                         <div>
-                            <div className="editable commonForm container col-sm-7 col-sm-offset-1 commonRadius">
+                            <div id="editableMediumContent" className="editable commonForm container col-sm-7 col-sm-offset-1 commonRadius">
                                 <p>Start writing here...</p>
                                 <p>By simply underlining text, you will have access to styling...</p>
                                 <p>Going to a next line allow you to import picture or add video link...</p>
