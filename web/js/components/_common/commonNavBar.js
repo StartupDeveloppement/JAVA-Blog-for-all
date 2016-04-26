@@ -116,7 +116,7 @@ var CommonNavBar = React.createClass({
                             ?
                             <ul className="nav navbar-nav">
                                 <li className="navbar-left"><Link to="/actualities">Actualities</Link></li>
-                                <li className="navbar-left"><a href="#">Projects</a></li>
+                                <li className="navbar-left"><a href="#"></a></li>
                                 <li><a className="fontModalAddContent" onClick={this.openModal}> <b>add content</b> </a></li>
                             </ul>
                             :

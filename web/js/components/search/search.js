@@ -90,17 +90,6 @@ var Search = React.createClass({
                                         <button type="submit" className="btn btn-default">invite</button>
                                     </form>
                                 </div>
-                                <div className="rightElement commonRadius marginPromotion">
-                                    <form>
-                                        <div className="form-group">
-                                            <h3 className="rightTitle">Invite your friends</h3>
-                                        </div>
-                                        <div className="form-group">
-                                            <input type="email" className="form-control" placeholder="type email of your friends" />
-                                        </div>
-                                        <button type="submit" className="btn btn-default">invite</button>
-                                    </form>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -108,6 +97,5 @@ var Search = React.createClass({
             )
         }
 });
-
 
 module.exports = Search;
