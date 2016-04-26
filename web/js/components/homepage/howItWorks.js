@@ -14,7 +14,7 @@ var HowItWorks = React.createClass({
                 </div>
                 <div className="col-sm-4 col-md-4">
                     <img className="howItWorksImage" src="./images/homepage/good-job.jpg" alt="242x200" />
-                    <h2>3. </h2><span> Get rewarded <b>financially</b> for your good work</span>
+                    <h2>3. </h2><span> Get rewarded <b></b> for your good work</span>
                 </div>
             </div>
         )

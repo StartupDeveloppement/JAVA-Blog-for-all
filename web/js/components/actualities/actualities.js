@@ -14,7 +14,7 @@ var Actualities = React.createClass({
                 <CommonNavBar />
                 <div className="commonContainerNavBar">
                     <div className="row">
-                        <h4 className="commonMainTitle">LAST SHARED OF MY CONTENTS</h4>
+                        <h4 className="commonMainTitle">LAST SHARED OF MY CONTACTS</h4>
                         <div>
                             <div className="container col-sm-7 col-sm-offset-1">
                                 <ActualitiesLeft></ActualitiesLeft>
